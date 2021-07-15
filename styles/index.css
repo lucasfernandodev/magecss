@@ -1,0 +1,16 @@
+.post-author{
+    color: var(--color-white-medium);
+    line-height: 1.75;
+    margin-top: 12px;
+}
+.post-author p{
+    color: inherit;
+}
+.post-author__name{
+    font-weight: bold;
+    display: inline;
+    margin: 0 4px;
+}
+.post-author__data{
+    margin: 0 4px;
+}
