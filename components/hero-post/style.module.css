@@ -83,3 +83,52 @@
 .heroPost__info a:hover{
     text-decoration: underline;
 }
+
+@media (max-width: 999px){
+    .heroPost{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 32px;
+    }
+
+    .heroPost__image, .heroPost__info{
+        flex: 1;
+        height: 100%;
+        width: 100%;
+    }
+
+    .heroPost__image{
+        position: absolute;
+        flex: unset;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        z-index: 1;
+    }
+
+    .heroPost__image a, .heroPost__image div{
+        display: flex;
+        height: 100%;
+        width: 100%;
+    }
+    .heroPost__image img{
+        height: 100%;
+        width: 100%;
+
+        min-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        filter: brightness(0.4);
+    }
+
+    .heroPost__info{
+        position: relative;
+        z-index: 10;
+    }
+}
