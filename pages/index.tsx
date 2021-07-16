@@ -20,9 +20,6 @@ const Index = ({ allPosts }: Props) => {
         <Head>
           <title>Mage Css - Dicas de front-end</title>
         </Head>
-        <Container>
-          <Header />
-        </Container>
         {heroPost && (
           <HeroPost
             title={heroPost.title}

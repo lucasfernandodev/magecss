@@ -1,15 +1,13 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import Container from "../../components/Container";
-import Header from "../../components/Header";
-
-import PostBody from "../../components/post/post-body";
-import PostHeader from "../../components/post/post-header";
+import Section from '../../components/Section';
+import Header from "../../components/Section/Header";
+import Article from "../../components/Section/Article";
 
 import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import Head from "next/head";
-import { CMS_NAME } from "../../lib/constants";
+
 import markdownToHtml from "../../lib/markdownToHtml";
 import PostType from "../../types/post";
 
@@ -26,27 +24,22 @@ const Post = ({ post, morePosts, preview }: Props) => {
   }
   return (
     <Layout preview={preview}>
-      <Container>
-        <Header />
-      </Container>
       {router.isFallback ? (
         <h1>Loading…</h1>
       ) : (
-        <article>
+        <Section>
           <Head>
             <title>{post.title} - Mage Css</title>
             <meta property="og:image" content={post.ogImage.url} />
           </Head>
-          <PostHeader
+          <Header
             title={post.title}
             coverImage={post.coverImage}
             date={post.date}
             author={post.author}
           />
-          <Container>
-            <PostBody content={post.content} />
-          </Container>
-        </article>
+          <Article content={post.content} />
+        </Section>
       )}
     </Layout>
   );

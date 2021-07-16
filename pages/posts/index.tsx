@@ -19,7 +19,6 @@ const Index = ({ allPosts }: Props) => {
           <title>Todos as postagens - Mage Css</title>
         </Head>
         <Container>
-          <Header />
           {postAll.length > 0 && <PostAll posts={postAll} />}
         </Container>
       </Layout>

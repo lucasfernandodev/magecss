@@ -1,13 +1,10 @@
-.markdown {
-  font-size: 1.125rem;
- max-width: 100%;
-}
+
 
 .markdown p,
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  margin: 19px auto;
+  margin: 4px auto;
 }
 
 
@@ -38,12 +35,12 @@
 .markdown h2 {
   margin-top: 12px;
   margin-bottom: 4px;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 1.375;
 }
 
 .markdown h3 {
-  font-size: 28px;
+  font-size: 22px;
   line-height: 1.375;
   margin-top: 8px;
   margin-bottom: 4px;
@@ -93,4 +90,11 @@
   font-size: inherit;
   font-family: inherit;
   line-height: inherit;
+}
+
+
+@media(max-width: 410px){
+  .markdown{
+    padding: 0 8px;
+  }
 }
