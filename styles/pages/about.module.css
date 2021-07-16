@@ -52,7 +52,11 @@
     }
     .containerAuthor__header h1 {
       font-size: 34px;
+      line-height: 48px;
       text-align: center;
+      width: 100%;
+      display: inline-block;
+
     }
     .containerAuthor__header p{
         text-align: center;   
@@ -80,6 +84,6 @@
 
 @media (max-width: 410px) {
     .containerAuthor__body {
-        font-size: 14px;
+        font-size: 16px;
     }
 }

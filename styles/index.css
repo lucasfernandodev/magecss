@@ -1,3 +1,16 @@
+body{
+    font-family: Roboto, var(--font-family-sans-serif);
+    color: #383f4d;
+    font-size: 17px;
+}
+
+body,
+button,
+a,
+input {
+    font-family: Roboto, var(--font-family-sans-serif);  
+}
+
 .post-author{
     color: var(--color-white-medium);
     line-height: 1.75;
