@@ -10,8 +10,9 @@ type Props = {
   allPosts: Post[];
 };
 
+// Eu removi o slice(1) do allPost
 const Index = ({ allPosts }: Props) => {
-  const postAll = allPosts.slice(1);
+  const postAll = allPosts
   return (
     <>
       <Layout>

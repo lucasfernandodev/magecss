@@ -3,11 +3,11 @@ import ErrorPage from "next/error";
 import Section from '../../components/Section';
 import Header from "../../components/Section/Header";
 import Article from "../../components/Section/Article";
-
+import Footer from "../../components/Section/Footer";
 import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import Head from "next/head";
-
+import Comments from '../../components/Comments';
 import markdownToHtml from "../../lib/markdownToHtml";
 import PostType from "../../types/post";
 
@@ -39,6 +39,9 @@ const Post = ({ post, morePosts, preview }: Props) => {
             author={post.author}
           />
           <Article content={post.content} />
+          <Footer>
+          <Comments post={({id : '1235444', title : post.title})} />
+          </Footer>
         </Section>
       )}
     </Layout>

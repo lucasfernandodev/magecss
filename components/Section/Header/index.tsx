@@ -5,7 +5,7 @@ import styles from "./style.module.css";
 
 type Props = {
   title: string;
-  subtitle: string;
+  subtitle?: string | undefined;
   coverImage?: string | undefined;
   date?: string | undefined;
   author?: Author;
