@@ -21,7 +21,7 @@ export default function Sobre() {
             subtitle="Desenvolvedor front-end freelancer, apaixonado desenvolvimento
                 web e café."
           ></Header>
-          <Article content="no">
+          <Article content='false' >
             <p>
               Meu nome é Lucas Fernando, tenho 20 anos e sou desenvolvedor web
               freelancer, apaixonado por programação e cafe.

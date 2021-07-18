@@ -7,17 +7,17 @@ export default function Header() {
     <header className={styles.header}>
       <Container>
         <div className={styles.header__content}>
-          <h2>
+          <h1>
             <Link href="/">
-              <div>
+              <div className={styles.header__brand}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
-                  stroke-width="1.75"
+                  strokeWidth="1.75"
                   stroke="var(--color-primary)"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <defs />
                   <path d="M0 0h24v24H0z" stroke="none" />
@@ -26,7 +26,7 @@ export default function Header() {
                 <a>Mage Css</a>
               </div>
             </Link>
-          </h2>
+          </h1>
           <Navbar />
         </div>
       </Container>

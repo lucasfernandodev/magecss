@@ -1,21 +1,31 @@
 import Author from "../../../types/author";
-import DateFormatter from "../../date-formatter";
-
+import MetaPost from "../../meta-post";
 import styles from "./style.module.css";
 
 type Props = {
   title: string;
-  subtitle?: string | undefined;
-  coverImage?: string | undefined;
-  date?: string | undefined;
-  author?: Author;
+  subtitle?: string;
+  coverImage?: string;
+  date?: string;
   page?: boolean;
+  readTime?: string;
+  excerpt?: string;
 };
 
-const Header = ({ title, subtitle, coverImage, date, author, page }: Props) => {
+const Header = ({
+  title,
+  subtitle,
+  coverImage,
+  date,
+  page,
+  readTime,
+  excerpt,
+}: Props) => {
   if (page == true) {
     return (
-      <header className={`${styles["section__header--page"]} ${styles.section__header}`}>
+      <header
+        className={`${styles["section__header--page"]} ${styles.section__header}`}
+      >
         <div className={styles.content}>
           <h1>{title}</h1>
           <p className={styles.subtitle}>{subtitle}</p>
@@ -29,19 +39,15 @@ const Header = ({ title, subtitle, coverImage, date, author, page }: Props) => {
       >
         <div className={styles.content}>
           <h1>{title}</h1>
-          <div className="post-author">
-            <p>
-              por
-              <span className="post-author__name">
-                {" "}
-                {author ? author.name : "Erro ao buscar o nome do autor"}{" "}
-              </span>
-              em
-              <span className="post-author__data">
-                <DateFormatter dateString={date ? date : "2020-07-21"} />
-              </span>
-            </p>
-          </div>
+          <p className={styles.subtitle}>
+            {excerpt}
+          </p>
+
+            <MetaPost
+              date={date ? date : "0000-01-01"}
+              readTime={readTime ? readTime : "sem tempo"}
+            />
+
         </div>
       </header>
     );

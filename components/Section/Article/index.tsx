@@ -20,7 +20,7 @@ const Article = ({ content, children }: Props) => {
       <article className={styles.section__article}>
         <Container>
           <div
-            className={markdownStyles["markdown"]}
+            className={`${markdownStyles["markdown"]} ${markdownStyles["language-"]}`}
             dangerouslySetInnerHTML={{ __html: content }}
           />
         </Container>

@@ -13,9 +13,8 @@
     color: #333;
     font-weight: bold;
 
-    padding-bottom: 2px;
     border: 2px solid transparent;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.5px;
     font-size: 14px;
     transition: 0.25s linear;
 }
@@ -23,4 +22,10 @@
 .navbar ul li a:hover{
     color: var(--color-primary);
     border-bottom: 2px solid var(--color-primary);
+}
+
+@media (max-width: 320px){
+    .navbar ul li a{
+        font-size: 12px;
+    }
 }

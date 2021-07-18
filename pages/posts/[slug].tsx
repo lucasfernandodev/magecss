@@ -15,9 +15,10 @@ type Props = {
   post: PostType;
   morePosts: PostType[];
   preview?: boolean;
+  readTime: string;
 };
 
-const Post = ({ post, morePosts, preview }: Props) => {
+const Post = ({ post, morePosts, preview, readTime, }: Props) => {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -36,8 +37,10 @@ const Post = ({ post, morePosts, preview }: Props) => {
             title={post.title}
             coverImage={post.coverImage}
             date={post.date}
-            author={post.author}
+            readTime={post.readTime}
+            excerpt={post.excerpt}
           />
+          {console.log(post.readTime)}
           <Article content={post.content} />
           <Footer>
           <Comments post={({id : '1235444', title : post.title})} />
@@ -65,6 +68,8 @@ export async function getStaticProps({ params }: Params) {
     "content",
     "ogImage",
     "coverImage",
+    "readTime",
+    "excerpt"
   ]);
   const content = await markdownToHtml(post.content || "");
 
