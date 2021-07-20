@@ -1,7 +1,8 @@
 ---
 title: 'Um podcast sobre saúde mental para pessoas da periferia'
-excerpt: 'No busão lotado, trampo longe de casa, rotina doméstica, busca por evolução profissional, estabilidade financeira e muito mais, a única maneira não perder o controle é malabarizar!'
+summary: 'No busão lotado, trampo longe de casa, rotina doméstica, busca por evolução profissional, estabilidade financeira e muito mais, a única maneira não perder o controle é malabarizar!'
 coverImage: '/assets/blog/ultimo/office.jpg'
+category: 'frontend css html5'
 date: '2020-03-16T05:35:07.322Z'
 author:
   name: Luca Fernando

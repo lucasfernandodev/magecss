@@ -9,7 +9,7 @@ type Props = {
   date?: string;
   page?: boolean;
   readTime?: string;
-  excerpt?: string;
+  summary?: string;
 };
 
 const Header = ({
@@ -19,7 +19,7 @@ const Header = ({
   date,
   page,
   readTime,
-  excerpt,
+  summary,
 }: Props) => {
   if (page == true) {
     return (
@@ -40,7 +40,7 @@ const Header = ({
         <div className={styles.content}>
           <h1>{title}</h1>
           <p className={styles.subtitle}>
-            {excerpt}
+            {summary}
           </p>
 
             <MetaPost

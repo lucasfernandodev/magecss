@@ -38,7 +38,7 @@ const Post = ({ post, morePosts, preview, readTime, }: Props) => {
             coverImage={post.coverImage}
             date={post.date}
             readTime={post.readTime}
-            excerpt={post.excerpt}
+            summary={post.summary}
           />
           {console.log(post.readTime)}
           <Article content={post.content} />
@@ -69,7 +69,7 @@ export async function getStaticProps({ params }: Params) {
     "ogImage",
     "coverImage",
     "readTime",
-    "excerpt"
+    "summary"
   ]);
   const content = await markdownToHtml(post.content || "");
 

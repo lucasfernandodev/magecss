@@ -7,7 +7,7 @@ type Props = {
   title: string;
   coverImage: string;
   date: string;
-  excerpt: string;
+  summary: string;
   author: Author;
   slug: string;
 };
@@ -16,7 +16,7 @@ const PostPreview = ({
   title,
   coverImage,
   date,
-  excerpt,
+  summary,
   author,
   slug,
 }: Props) => {
@@ -32,7 +32,7 @@ const PostPreview = ({
           </Link>
         </h3>
         <p>
-          {excerpt}
+          {summary}
         </p>
         <div className="hero-post__author">
             <p>

@@ -1,7 +1,7 @@
 ---
 title: 'Static Sites with Next.js 9.3 and Prisma'
 date: '2020-03-16T05:35:07.322Z'
-excerpt: 'Learn how to build & deploy a static site using Next.js, Prisma, and a SQLite database.'
+summary: 'Learn how to build & deploy a static site using Next.js, Prisma, and a SQLite database.'
 coverImage: '/assets/blog/next-prisma/banner.jpg'
 author:
   name: Luca Fernando
