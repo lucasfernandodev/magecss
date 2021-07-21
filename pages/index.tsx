@@ -17,10 +17,11 @@ const Index = ({ allPosts }: Props) => {
     <>
       <Layout>
         <Head>
-          <title>Mage Css - Dicas de front-end</title>
+          <title>MAGE CSS - Dicas de front-end</title>
         </Head>
         {heroPost && (
           <HeroPost
+            tags = {heroPost.tags}
             title={heroPost.title}
             coverImage={heroPost.coverImage}
             date={heroPost.date}
@@ -44,10 +45,10 @@ export const getStaticProps = async () => {
     "title",
     "date",
     "slug",
-    "author",
     "coverImage",
     "summary",
     "readTime",
+    "tags",
   ]);
 
   return {

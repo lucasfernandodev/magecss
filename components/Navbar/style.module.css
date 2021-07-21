@@ -9,19 +9,20 @@
 }
 
 .navbar ul li a{
-    text-transform: uppercase;
-    color: #333;
-    font-weight: bold;
-
+    text-transform: capitalize;
+    color: #e5e5e5;
+    font-weight: 500;
+    letter-spacing: 1.2px;
     border: 2px solid transparent;
-    letter-spacing: 1.5px;
-    font-size: 14px;
+    font-size: 16px;
     transition: 0.25s linear;
+    padding: 8px 12px;
+    border-radius: 16px;
 }
 
 .navbar ul li a:hover{
-    color: var(--color-primary);
-    border-bottom: 2px solid var(--color-primary);
+    background: #3a3a3f;
+    color: var(--color-white);
 }
 
 @media (max-width: 320px){

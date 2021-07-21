@@ -21,6 +21,8 @@ const MoreStories = ({ posts }: Props) => {
             author={post.author}
             slug={post.slug}
             summary={post.summary}
+            tags={post.tags}
+            readTime={post.readTime}
           />
         ))}
       </div>

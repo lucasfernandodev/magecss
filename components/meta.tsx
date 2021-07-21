@@ -37,12 +37,14 @@ const Meta = () => {
         content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
       />
 
+
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
       <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet"
       ></link>
+      <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet"></link>
     </Head>
   );
 };

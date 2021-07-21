@@ -1,0 +1,26 @@
+.brand {
+  width: fit-content;
+  margin-right: 32px;
+}
+
+.brand__title {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  font-family: "Play", sans-serif;
+}
+
+.brand h1,
+.brand svg {
+  cursor: pointer;
+  color: var(--color-white-medium);
+  fill: var(--color-white-medium);
+  stroke: var(--color-white-medium);
+}
+
+.brand svg {
+  height: 50px;
+  width: 50px;
+}

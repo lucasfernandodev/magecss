@@ -1,0 +1,25 @@
+.summary {
+  font-size: inherit;
+  letter-spacing: 0.5px;
+  line-height: 1.7;
+  margin: 20px 0;
+  color: var(--color-white-medium);
+  opacity: 0.7;
+}
+
+p.summary--limitRow {
+  height: fit-content;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-y: hidden;
+  text-align: start;
+  text-overflow: ellipsis;
+}
+
+.summary--limitRow[data-row="3"] {
+  -webkit-line-clamp: 3;
+}
+.summary--limitRow[data-row="4"] {
+  -webkit-line-clamp: 4;
+}

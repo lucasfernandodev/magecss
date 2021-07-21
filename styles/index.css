@@ -1,13 +1,32 @@
-body{
-    font-family: Roboto, var(--font-family-sans-serif);
-    font-size: 17px;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
+body {
+  font-family: Roboto, var(--font-family-sans-serif);
+  font-size: 17px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-bg-component);
 }
 
 body,
 button,
 a,
 input {
-    font-family: Roboto, var(--font-family-sans-serif);  
+  font-family: Roboto, var(--font-family-sans-serif);
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner,
+::-webkit-resizer{
+  background-color: var(--color-bg-scrollbar)
+}
+
+::-webkit-scrollbar-button {
+  background-color: var(--color-bg-scrollbar);
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-bg-scrollbar-thumb);
+  border-radius: 4px;
 }

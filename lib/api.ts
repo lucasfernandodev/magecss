@@ -52,7 +52,7 @@ export function getAllPosts(fields: string[] = []) {
   return posts;
 }
 
-export default function getPostByCategory(filtro: string) {
+export default function getPostBytags(filtro: string) {
   const arq = getPostSlugs();
 
   const posts = arq.map((post) => {
@@ -69,24 +69,24 @@ export default function getPostByCategory(filtro: string) {
 
     // O problem do filtro é que ele so filtra uma tag por vez
     
-    const categoryString = post.category || "geral";
-    const categoryToArray = categoryString.split(" ");
+    const tagsString = post.tags || "geral";
+    const tagsToArray = tagsString.split(" ");
     
-    if(categoryToArray.length === 1){
-      if(categoryToArray[0] == filtro){
+    if(tagsToArray.length === 1){
+      if(tagsToArray[0] == filtro){
         return post
       }
     }
 
-    if(categoryToArray.length > 1){
-      const isExistCategory = categoryToArray.filter((item : string) => {
+    if(tagsToArray.length > 1){
+      const isExisttags = tagsToArray.filter((item : string) => {
         if(item == filtro) {
           return item;
         }
       })
 
       // Essa confirmação so funciona enquanto não houver mais de duas tags sendo buscadas ao mesmo tempo
-      if(isExistCategory == filtro){
+      if(isExisttags == filtro){
         return post
       }
     }

@@ -1,15 +1,18 @@
-import DateFormatter from "../date-formatter";
 import CoverImage from "../cover-image";
 import Link from "next/link";
-import Author from "../../types/author";
 import styles from "./style.module.css";
+import Tags from "../tags";
+import MetaPost from "../meta-post";
+import Summary from "../Summary";
+
 type Props = {
   title: string;
   coverImage: string;
   date: string;
   summary: string;
-  author: Author;
   slug: string;
+  tags: string;
+  readTime: string
 };
 
 const PostPreview = ({
@@ -17,13 +20,19 @@ const PostPreview = ({
   coverImage,
   date,
   summary,
-  author,
+  readTime,
   slug,
+  tags,
 }: Props) => {
+  const tagsToArray = tags.split(" ");
+
   return (
-    <div className={styles.postPreview}>
+    <div className={styles['post-preview']}>
       <div className={styles.cardImage}>
         <CoverImage slug={slug} title={title} src={coverImage} />
+      </div>
+      <div className={styles.cardTags}>
+        <Tags tags={tagsToArray} />
       </div>
       <div className={styles.content}>
         <h3>
@@ -31,19 +40,9 @@ const PostPreview = ({
             <a>{title}</a>
           </Link>
         </h3>
-        <p>
-          {summary}
-        </p>
-        <div className="hero-post__author">
-            <p>
-              por
-              <span className="hero-post__author-name"> {author.name} </span>
-              em
-              <span className="hero-post__data">
-                <DateFormatter dateString={date} />
-              </span>
-            </p>
-          </div>
+
+        <Summary limitRow={3}>{summary}</Summary>
+        <MetaPost date={date} readTime={readTime} Simplify={true} />
       </div>
     </div>
   );

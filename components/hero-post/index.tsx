@@ -1,34 +1,43 @@
-import DateFormatter from "../date-formatter";
 import CoverImage from "../cover-image";
 import Link from "next/link";
-import Author from "../../types/author";
+import Tags from '../tags';
 import styles from "./style.module.css";
 import MetaPost from "../meta-post";
+import Summary from "../Summary";
 type Props = {
   title: string;
   coverImage: string;
   date: string;
-  excerpt: string;
+  summary: string;
   readTime: string;
   slug: string;
+  tags: string
 };
 
 const HeroPost = ({
   title,
+  tags,
   coverImage,
   date,
-  excerpt,
+  summary,
   readTime,
   slug,
 }: Props) => {
+
+  const tagsToArray = tags.split(' ');
+
   return (
     <section className={styles.heroPost}>
+
       <div className={styles.heroPost__thumbnail}>
         <CoverImage title={title} src={coverImage} slug={slug} />
       </div>
 
       <div className={styles.heroPost__header}>
-        <span className={styles.heroPost__tag}>Último Artigo</span>
+        <span className={styles.heroPost__tag}>
+          <span>Último Artigo</span>
+          <Tags tags={tagsToArray} limitTags={3}/>
+          </span>
 
         <h2 className={styles.heroPost__title}>
           <Link as={`/posts/${slug}`} href="/posts/[slug]">
@@ -36,7 +45,9 @@ const HeroPost = ({
           </Link>
         </h2>
 
-        <p className={styles.heroPost__summary}>{excerpt}</p>
+        <Summary>
+          {summary}
+        </Summary>
 
         <MetaPost date={date} readTime={readTime} />
       </div>

@@ -1,4 +1,4 @@
-import getPostByCategory, { getAllPosts, getPostBySlug } from "../../lib/api";
+import getPostBytags, { getAllPosts, getPostBySlug } from "../../lib/api";
 import PostType from "../../types/post";
 import { useRouter } from "next/router";
 
@@ -24,8 +24,8 @@ const Post = (posts : string[]) => {
 
 export async function getStaticProps({params} : {params : {slug: string}}) {
 
-  const category = params.slug;
-  const posts = getPostByCategory(category); // Temq ue ser um array
+  const tags = params.slug;
+  const posts = getPostBytags(tags); // Temq ue ser um array
 
   return {
     props: {
@@ -36,10 +36,10 @@ export async function getStaticProps({params} : {params : {slug: string}}) {
 
 export async function getStaticPaths() {
 
-  const category = [{name: 'css'}, {name: 'next'}, {name: 'geral'}, {name: 'frontend'}];
+  const tags = [{name: 'css'}, {name: 'next'}, {name: 'geral'}, {name: 'frontend'}];
 
 
-  const paths = category.map(item => ({
+  const paths = tags.map(item => ({
     params: { slug: item.name }
   }));
 
