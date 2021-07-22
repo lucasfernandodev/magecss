@@ -20,10 +20,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #3a3a3f;
+    border: 2px solid #3a3a3f;
     padding: 8px 12px;
     opacity: 1;
     border-radius: 16px;
+    transition: 0.3s;
 }
 
 

@@ -1,31 +1,30 @@
-.moreStore{
-    margin-top: 128px;
+.moreStore {
+  margin-top: 128px;
 }
 
-.moreStore h2{
-    border-bottom: 1px solid var(--color-bg-component);
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin-bottom: 27px;
-
-    color: var(--color-white);
+.moreStore h2 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 27px;
+  border-bottom: 1px solid var(--color-bg-scrollbar-thumb);
+  color: var(--color-white);
 }
 
-.moreStore h2 span{
-    border-bottom: 1px solid var(--color-primary);
-    text-transform: capitalize;
-    padding-bottom: 24px;
-    display: inline-block;
+.moreStore h2 span {
+  border-bottom: 1px solid var(--color-primary);
+  text-transform: capitalize;
+  padding: 24px;
+  display: inline-block;
+  margin: -1px;
 }
 
-.moreStore > div{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 100%;
-    gap: 32px;
-    padding-top: 24px;
-    padding-bottom: 64px;
-
+.moreStore > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 32px;
+  padding-top: 37px;
+  margin-bottom: 64px;
 }

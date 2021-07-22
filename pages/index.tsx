@@ -1,6 +1,6 @@
 import Container from "../components/Container";
 import MoreStories from "../components/more-stories";
-import HeroPost from "../components/hero-post";
+import HeroPost from "../components/HeroPost";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";

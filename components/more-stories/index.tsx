@@ -1,4 +1,4 @@
-import PostPreview from "../post-preview";
+import PostPreview from "../PostPreview";
 import Post from "../../types/post";
 import styles from "./style.module.css";
 type Props = {
@@ -18,7 +18,6 @@ const MoreStories = ({ posts }: Props) => {
             title={post.title}
             coverImage={post.coverImage}
             date={post.date}
-            author={post.author}
             slug={post.slug}
             summary={post.summary}
             tags={post.tags}

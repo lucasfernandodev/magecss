@@ -1,5 +1,5 @@
 import Author from "../../../types/author";
-import MetaPost from "../../meta-post";
+import MetaPost from "../../PostMeta";
 import styles from "./style.module.css";
 
 type Props = {

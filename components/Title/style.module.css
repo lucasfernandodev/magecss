@@ -1,0 +1,14 @@
+.title{
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+
+    height: fit-content;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    overflow-y: hidden;
+    text-align: start;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}

@@ -1,4 +1,4 @@
-import PostPreview from "../post-preview";
+import PostPreview from "../PostPreview";
 import Post from "../../types/post";
 import styles from "./style.module.css";
 type Props = {

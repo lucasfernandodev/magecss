@@ -1,0 +1,33 @@
+.post-meta{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 14px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 410px;
+    gap: 8px;
+}
+
+.post-meta p {
+    font-weight: 400;
+    color: var(--color-white-medium);
+    opacity: 0.3;
+    font-size: 14px;
+    display: flex;
+    line-height: 22px;
+    align-items: center;
+}
+
+.post-meta p span{
+    gap: 4px;
+}
+
+.post-meta svg{
+    color: var(--color-white-medium);
+    stroke-width: 1.35px;
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+} 

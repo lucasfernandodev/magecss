@@ -1,9 +1,10 @@
-import CoverImage from "../cover-image";
 import Link from "next/link";
+import CoverImage from "../cover-image";
 import styles from "./style.module.css";
-import Tags from "../tags";
-import MetaPost from "../meta-post";
+import Tags from "../Tags";
+import MetaPost from "../PostMeta";
 import Summary from "../Summary";
+import Title from "../Title";
 
 type Props = {
   title: string;
@@ -12,7 +13,7 @@ type Props = {
   summary: string;
   slug: string;
   tags: string;
-  readTime: string
+  readTime: string;
 };
 
 const PostPreview = ({
@@ -27,22 +28,26 @@ const PostPreview = ({
   const tagsToArray = tags.split(" ");
 
   return (
-    <div className={styles['post-preview']}>
-      <div className={styles.cardImage}>
+    <div className={styles["card"]}>
+      <div className={styles["card__thumbnail"]}>
         <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
-      <div className={styles.cardTags}>
+
+      <div className={styles["card__tags"]}>
         <Tags tags={tagsToArray} />
       </div>
-      <div className={styles.content}>
+
+      <div className={styles["card__content"]}>
         <h3>
-          <Link as={`/posts/${slug}`} href="/posts/[slug]">
-            <a>{title}</a>
-          </Link>
+          <Title>
+            <Link as={`/posts/${slug}`} href="/posts/[slug]">
+              {title}
+            </Link>
+          </Title>
         </h3>
 
         <Summary limitRow={3}>{summary}</Summary>
-        <MetaPost date={date} readTime={readTime} Simplify={true} />
+        <MetaPost date={date} readTime={readTime} />
       </div>
     </div>
   );

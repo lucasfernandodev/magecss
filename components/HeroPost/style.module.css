@@ -9,7 +9,7 @@
   height: calc(105vh - 150px);
   justify-content: center;
   margin: 64px auto;
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-component);
 }
 
 .heroPost__thumbnail,
@@ -47,6 +47,7 @@
   height: 100%;
   min-width: 100%;
   min-height: 100%;
+  opacity: 0.8;
   object-fit: cover;
 }
 
@@ -93,9 +94,11 @@
   color: var(--color-white);
 }
 
+.heroPost__header h2 a:hover {
+  opacity: 0.7;
+}
 
-
-.heroPost__header a:hover {
+.heroPost__header a:hover h2 {
   opacity: 0.7;
 }
 

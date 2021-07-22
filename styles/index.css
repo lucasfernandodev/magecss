@@ -3,7 +3,7 @@ body {
   font-size: 17px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--color-bg-component);
+  background-color: var(--color-bg);
 }
 
 body,

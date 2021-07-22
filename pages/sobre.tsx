@@ -1,7 +1,5 @@
 import Layout from "../components/layout";
 import Head from "next/head";
-import Container from "../components/Container";
-import styles from "../styles/pages/about.module.css";
 import Section from "../components/Section";
 import Header from "../components/Section/Header";
 import Article from "../components/Section/Article";
