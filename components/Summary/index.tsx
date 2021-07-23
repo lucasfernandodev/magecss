@@ -6,8 +6,17 @@ type Props = {
 };
 
 const Summary = ({ children, limitRow }: Props) => {
+  if (children == "") {
+    return null;
+  }
+
   if (limitRow) {
-    return <p data-Row={3} className={`${styles.summary} ${styles['summary--limitRow']}`}>{children}</p>;
+    return (
+      <p data-row={3} className={`${styles.summary} ${styles["summary--limitRow"]}`}
+      >
+        {children}
+      </p>
+    );
   } else {
     return <p className={styles.summary}>{children}</p>;
   }

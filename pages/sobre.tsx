@@ -1,8 +1,8 @@
 import Layout from "../components/layout";
 import Head from "next/head";
 import Section from "../components/Section";
-import Header from "../components/Section/Header";
-import Article from "../components/Section/Article";
+import Header from "../components/PostHeader";
+import Article from "../components/PostBody";
 
 export default function Sobre() {
   return (

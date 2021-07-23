@@ -1,12 +1,16 @@
 import markdownStyles from "./markdown-styles.module.css";
 import styles from "./style.module.css";
-import Container from "../../Container/";
+import Container from "../Container";
+import CardImage from "../CardImage";
 type Props = {
   content: string;
   children?: React.ReactNode;
+  thumbnail: string;
+  title: string;
 };
 
-const Article = ({ content, children }: Props) => {
+const PostBody = ({ content, children, thumbnail, title }: Props) => {
+
   if (children) {
     return (
       <article className={styles.section__article}>
@@ -17,16 +21,15 @@ const Article = ({ content, children }: Props) => {
     );
   } else {
     return (
+
       <article className={styles.section__article}>
-        <Container>
-          <div
-            className={`${markdownStyles["markdown"]} ${markdownStyles["language-"]}`}
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
-        </Container>
+        <div
+          className={`${markdownStyles["markdown"]} ${markdownStyles["language-"]}`}
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
       </article>
     );
   }
 };
 
-export default Article;
+export default PostBody;

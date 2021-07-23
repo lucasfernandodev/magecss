@@ -2,7 +2,7 @@ import CoverImage from "../cover-image";
 import Link from "next/link";
 import Tags from "../Tags";
 import styles from "./style.module.css";
-import MetaPost from "../PostMeta";
+import PostMeta from "../PostMeta";
 import Summary from "../Summary";
 import Title from "../Title";
 type Props = {
@@ -48,7 +48,7 @@ const HeroPost = ({
 
         <Summary>{summary}</Summary>
 
-        <MetaPost date={date} readTime={readTime} likes={34} views={18} />
+        <PostMeta date={date} readTime={readTime} likes={34} views={18} />
       </div>
     </section>
   );

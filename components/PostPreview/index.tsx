@@ -2,7 +2,7 @@ import Link from "next/link";
 import CoverImage from "../cover-image";
 import styles from "./style.module.css";
 import Tags from "../Tags";
-import MetaPost from "../PostMeta";
+import PostMeta from "../PostMeta";
 import Summary from "../Summary";
 import Title from "../Title";
 
@@ -47,7 +47,7 @@ const PostPreview = ({
         </h3>
 
         <Summary limitRow={3}>{summary}</Summary>
-        <MetaPost date={date} readTime={readTime} />
+        <PostMeta date={date} readTime={readTime} />
       </div>
     </div>
   );

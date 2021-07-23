@@ -1,0 +1,117 @@
+.postreaction{
+    width: 100%;
+    max-width: var(--width-post);
+    padding: 16px 32px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--color-bg-lines);
+    gap: 12px;
+}
+
+.postreaction__tags a{
+    font-size: 10px;
+    margin: 0;
+}
+
+.postreaction__reaction{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.postreaction__reactInline{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px
+}
+
+.postreaction__hearth {
+    display: flex;
+    align-items: center;
+    color: #f5f5f5cd;
+}
+
+.postreaction__hearth button{
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    margin-right: 4px;
+}
+
+.postreaction__hearth svg{
+    width: 26px;
+    height: 26px;
+    stroke-width: 1.45;
+    stroke: #f5f5f5aa;
+    transition: 0.3s;
+}
+
+.postreaction__hearth button:hover svg{
+    fill: rgb(202, 36, 58);
+    stroke: rgb(202, 36, 58);
+}
+
+.postreaction__hearth button:active svg{
+    fill: rgb(202, 36, 58);
+    stroke: rgb(202, 36, 58);
+    animation: heart ease-in-out 0.3s infinite;
+}
+
+@keyframes heart {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.4);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}
+
+.postreaction__comment{
+    display: flex;
+    align-items: center;
+}
+
+.postreaction__comment button{
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    margin-right: 4px;
+}
+
+.postreaction__comment svg{
+    width: 26px;
+    height: 26px;
+    stroke-width: 1.45;
+    stroke: #f5f5f5aa;
+    transition: 0.3s;
+}
+
+.postreaction__shared{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.postreaction__item {
+    cursor: pointer;
+}
+
+.postreaction__item svg{
+    width: 26px;
+    height: 26px;
+    stroke-width: 1.45;
+    stroke: #f5f5f5aa;
+}

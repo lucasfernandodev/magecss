@@ -1,8 +1,10 @@
 # Coisas que tenho que fazer
 
-- Tenho que transformar a brand em um componente
-- transformar o summary em um component
-- terminar de estilizar os cards
-- terminar de estilizar o meta-post (talvez alterar o nome?)
-- refazer o footer
-- melhorar alinhamento
+- adicionar uma imagem de thumb as postagens
+- adicionar contador de visitas e botão de gostei
+- melhorar o card de autor
+- editar a sessão sobre
+- transformar todos os componentes em pastas
+- usar variáveis em todos os componentes
+- arrumar a sessão de tags
+- adicionar arquivo responsável pelas rotas de tags

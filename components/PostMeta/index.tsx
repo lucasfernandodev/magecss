@@ -9,8 +9,7 @@ type Props = {
 };
 
 const PostMeta = ({ date, readTime, likes, views }: Props) => {
-
-  const componentData = (data: string) => {
+  const componentData = () => {
     return (
       <p>
         <svg
@@ -18,8 +17,8 @@ const PostMeta = ({ date, readTime, likes, views }: Props) => {
           viewBox="0 0 24 24"
           stroke="currentColor"
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
           <rect x="4" y="5" width="16" height="16" rx="2"></rect>
@@ -28,7 +27,9 @@ const PostMeta = ({ date, readTime, likes, views }: Props) => {
           <line x1="4" y1="11" x2="20" y2="11"></line>
           <rect x="8" y="15" width="2" height="2"></rect>
         </svg>
-        <span>Publicado em <DateFormatter dateString={data} /></span>
+        <span>
+          Publicado em <DateFormatter dateString={date} />
+        </span>
       </p>
     );
   };
@@ -41,8 +42,8 @@ const PostMeta = ({ date, readTime, likes, views }: Props) => {
           viewBox="0 0 24 24"
           stroke="currentColor"
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
           <circle cx="12" cy="12" r="9"></circle>
@@ -59,11 +60,11 @@ const PostMeta = ({ date, readTime, likes, views }: Props) => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          stroke-width="2"
+          strokeWidth="2"
           stroke="currentColor"
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
@@ -81,8 +82,8 @@ const PostMeta = ({ date, readTime, likes, views }: Props) => {
           viewBox="0 0 24 24"
           stroke="currentColor"
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
           <circle cx="12" cy="12" r="2"></circle>
@@ -95,10 +96,10 @@ const PostMeta = ({ date, readTime, likes, views }: Props) => {
 
   return (
     <div className={styles["post-meta"]}>
-      {date?.length >= 6  ? componentData(date) : ""}
-      {readTime ? componentTime() : ""}
-      {likes ? componentLikes() : ""}
-      {views ? componentViews() : ""}
+      {date?.length >= 6 ? componentData() : null}
+      {readTime ? componentTime() : null}
+      {likes ? componentLikes() : null}
+      {views ? componentViews() : null}
     </div>
   );
 };

@@ -20,8 +20,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #3a3a3f;
-    padding: 8px 12px;
+    border: 2px solid #5a5a5f;
+    padding: 4px 12px;
     opacity: 1;
     border-radius: 16px;
     transition: 0.3s;
@@ -37,52 +37,62 @@
 
 .c-tags__item--html a:hover{
     background: #f0932b;
-    color: var(--color-dark);
+    color: var(--color-white);
+    border-color: #f0932b;
 }
 
 .c-tags__item--html5 a:hover{
     background: #f0932b;
-    color: var(--color-dark);
+    color: var(--color-white);
+    border-color: #f0932b;
 }
 
 .c-tags__item--css a:hover{
     background: #686de0;
-    color: var(--color-dark);
+    color: var(--color-white);
+    border-color: #686de0;
 }
 
 .c-tags__item--css3 a:hover{
     background: #686de0;
-    color: var(--color-dark);
+    color: var(--color-white);
+    border-color: #686de0;
 }
 
 .c-tags__item--js a:hover{
     background: #f9ca24;
     color: var(--color-dark);
+    border-color: #f9ca24;
 }
 
 .c-tags__item--javascript a:hover{
     background: #f9ca24;
     color: var(--color-dark);
+    border-color: #f9ca24;
 }
 
 .c-tags__item--react a:hover{
-    background: #7ed6df;
-    color: var(--color-dark);
+    background: #9b9b9b;
+    color: var(--color-white);
+    border-color: #f9ca24;
 }
 
 .c-tags__item--reactjs a:hover{
     background: #7ed6df;
-    color: var(--color-dark);
+    color: var(--color-white);
+    border-color: #7ed6df;
 }
 
 .c-tags__item--frontend a:hover{
-    background: #fff;
+    background: #ffffff;
     color: var(--color-dark);
+    border-color: #ffffff;
 }
 
 .c-tags__item--front-end a:hover{
     background: #fff;
     color: var(--color-dark);
+    border-color: #ffffff;
 }
 
 .c-tags__item--instagram a:hover{
@@ -91,41 +101,49 @@
     background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
       
-    color: var(--color-dark);
+    color: var(--color-white);
+    border-color: #f09433;
 }
 
 .c-tags__item--facebook a:hover{
     background: #4267B2;
-    color: var(--color-dark);
+    color: var(--color-white);
+    border-color: #4267B2;
 }
 
 .c-tags__item--node a:hover{
     background: #6ab04c;
-    color: var(--color-dark);
+    color: var(--color-white);
+    border-color: #6ab04c;
 }
 
 .c-tags__item--nodejs a:hover{
     background: #6ab04c;
-    color: var(--color-dark);
+    color: var(--color-white);
+    border-color: #6ab04c;
 }
 
 .c-tags__item--next a:hover{
     background: #111;
     color: #fff;
+    border-color: #111111;
 }
 
 .c-tags__item--nextjs a:hover{
-    background: #111;
+    background: #111111;
     color: #fff;
+    border-color: #111111;
 }
 
 .c-tags__item--backend a:hover{
     background: #e056fd;
-    color: var(--color-dark);
+    color: var(--color-white);
+    border-color: #e056fd;
 }
 
 .c-tags__item--back-end a:hover{
     background: #e056fd;
-    color: var(--color-dark);
+    color: var(--color-white);
+    border-color: #e056fd;
 }
 

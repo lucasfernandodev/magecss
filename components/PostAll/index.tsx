@@ -18,9 +18,10 @@ const PostAll = ({ posts }: Props) => {
             title={post.title}
             coverImage={post.coverImage}
             date={post.date}
-            author={post.author}
+            tags={post.tags}
             slug={post.slug}
             summary={post.summary}
+            readTime={post.readTime}
           />
         ))}
       </div>
