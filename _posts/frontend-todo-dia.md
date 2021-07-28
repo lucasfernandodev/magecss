@@ -1,16 +1,17 @@
 ---
-title: 'Static Sites with Next.js 9.3 and Prisma'
+title: 'Frontend todo dia'
+summary: 'Frontend todo dia, codificando diretamente da sua casa de uma maneira confortável';
+coverImage: '/assets/blog/ultimo/office.jpg'
+tags: 'frontend nextjs facebook'
 date: '2020-03-16T05:35:07.322Z'
-summary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro delectus suscipit magni sint nam dicta distinctio, incidunt, corrupti consectetur doloribus harum nihil aut minus quis ex beatae ut deleniti praesentium.'
-tags: 'frontend css nextjs'
-coverImage: '/assets/blog/next-prisma/banner.jpg'
 author:
   name: Luca Fernando
   picture: '/assets/blog/authors/joe.jpeg'
 ogImage:
-  url: '/assets/blog/next-prisma/banner.jpg'
+  url: '/assets/blog/ultimo/office.jpg'
 ---
 
+# Introdução
 
 Volutpat ornare pharetra nostra amet duis mi ut curabitur ante curabitur, egestas nunc donec ut netus donec etiam lorem curabitur auctor ut, himenaeos donec class lobortis malesuada tempor consequat tincidunt aliquam. ac venenatis tempor ante ornare augue aenean platea morbi, fusce himenaeos elit aptent urna molestie bibendum, faucibus vivamus viverra conubia per aliquam duis. ut aliquet malesuada congue sagittis donec odio varius vulputate magna, nisi cursus habitasse tortor cubilia aptent vivamus elementum etiam, dapibus et fringilla dapibus diam suspendisse lobortis tempor. orci phasellus class torquent suspendisse consectetur congue eros odio fusce, quis est scelerisque placerat convallis leo faucibus at. 
 

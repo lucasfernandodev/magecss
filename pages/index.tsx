@@ -43,7 +43,6 @@ const Index = ({ allPosts }: Props) => {
             />
           ))}
         </CardCollection>
-
       </Layout>
     </>
   );

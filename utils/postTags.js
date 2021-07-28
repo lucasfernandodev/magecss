@@ -5,6 +5,8 @@ const postTags = [
   { name: "geral" },
   { name: "frontend" },
   { name: "nextjs" },
+  { name: "backend" },
+  { name: "facebook" },
 ];
 
 export default postTags;
