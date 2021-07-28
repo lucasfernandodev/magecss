@@ -47,7 +47,7 @@ const PostPreview = ({
         </h3>
 
         <Summary limitRow={3}>{summary}</Summary>
-        <PostMeta date={date} readTime={readTime} />
+        <PostMeta slug={slug} date={date} readTime={readTime} />
       </div>
     </div>
   );

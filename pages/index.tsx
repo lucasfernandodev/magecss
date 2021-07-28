@@ -1,10 +1,10 @@
-import Container from "../components/Container";
-import MoreStories from "../components/more-stories";
 import HeroPost from "../components/HeroPost";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import Post from "../types/post";
+import CardCollection from "../components/CardCollection";
+import PostPreview from "../components/PostPreview";
 
 type Props = {
   allPosts: Post[];
@@ -21,7 +21,7 @@ const Index = ({ allPosts }: Props) => {
         </Head>
         {heroPost && (
           <HeroPost
-            tags = {heroPost.tags}
+            tags={heroPost.tags}
             title={heroPost.title}
             coverImage={heroPost.coverImage}
             date={heroPost.date}
@@ -30,9 +30,22 @@ const Index = ({ allPosts }: Props) => {
             summary={heroPost.summary}
           />
         )}
-        <Container>
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
+
+        <CardCollection title="Publicações recentes">
+          {morePosts.map((post) => (
+            <PostPreview
+              key={post.slug}
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              slug={post.slug}
+              summary={post.summary}
+              tags={post.tags}
+              readTime={post.readTime}
+            />
+          ))}
+        </CardCollection>
+
       </Layout>
     </>
   );

@@ -1,9 +1,9 @@
-import Container from "../../components/Container";
-import PostAll from "../../components/PostAll";
 import Layout from "../../components/layout";
 import { getAllPosts } from "../../lib/api";
 import Head from "next/head";
 import Post from "../../types/post";
+import CardCollection from "../../components/CardCollection";
+import PostPreview from "../../components/PostPreview";
 
 type Props = {
   allPosts: Post[];
@@ -11,16 +11,27 @@ type Props = {
 
 // Eu removi o slice(1) do allPost
 const Index = ({ allPosts }: Props) => {
-  const postAll = allPosts
+  const postAll = allPosts;
   return (
     <>
       <Layout>
         <Head>
           <title>Todos as postagens - Mage Css</title>
         </Head>
-        <Container>
-          {postAll.length > 0 && <PostAll posts={postAll} />}
-        </Container>
+        <CardCollection title="Todas as publicações">
+          {postAll.map((post) => (
+            <PostPreview
+              key={post.slug}
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              tags={post.tags}
+              slug={post.slug}
+              summary={post.summary}
+              readTime={post.readTime}
+            />
+          ))}
+        </CardCollection>
       </Layout>
     </>
   );
@@ -36,7 +47,7 @@ export const getStaticProps = async () => {
     "author",
     "coverImage",
     "summary",
-    "tags"
+    "tags",
   ]);
 
   return {

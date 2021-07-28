@@ -23,8 +23,11 @@
   --color-dark: #171717; /* title */
   --color-gray: #373737; /* Textos */
 
+  --color-white-transparent: #f2f9ff55;
 
   --width-post: 790px;
+
+  --width-break: calc(100vw - 190px);
 
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
@@ -35,3 +38,27 @@
 }
 
 
+
+@media (max-width: 910px){
+  :root{
+    --width-break: calc(100vw - 120px);
+  }
+}
+
+@media (max-width: 710px){
+  :root{
+    --width-break: calc(100vw - 64px);
+  }
+}
+
+@media (max-width: 640px){
+  :root{
+    --width-break: calc(100vw - 32px);
+  }
+}
+
+@media (max-width: 410px){
+  :root{
+    --width-break: calc(100vw - 16px);
+  }
+}

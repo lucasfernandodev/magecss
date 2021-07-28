@@ -78,7 +78,8 @@
 
 .postreaction__comment{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    
 }
 
 .postreaction__comment button{
@@ -90,13 +91,13 @@
     margin-right: 4px;
 }
 
-.postreaction__comment svg{
+/* .postreaction__comment svg{
     width: 26px;
     height: 26px;
     stroke-width: 1.45;
     stroke: #f5f5f5aa;
     transition: 0.3s;
-}
+} */
 
 .postreaction__shared{
     display: flex;
@@ -107,11 +108,12 @@
 
 .postreaction__item {
     cursor: pointer;
+    display: flex;
 }
 
 .postreaction__item svg{
     width: 26px;
     height: 26px;
     stroke-width: 1.45;
-    stroke: #f5f5f5aa;
+    stroke: var(--color-white-transparent);
 }

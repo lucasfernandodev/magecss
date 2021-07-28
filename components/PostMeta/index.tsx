@@ -1,17 +1,24 @@
 import styles from "./style.module.css";
 import DateFormatter from "../date-formatter";
-
+import ViewCounter from "../ViewCounter";
+import { useState } from "react";
+import ButtonLike from "../ButtonLike";
+import Label from "../Label";
 type Props = {
   date: string;
   readTime?: string;
-  likes?: number;
-  views?: number;
+  likes?: true;
+  views?: {
+    slug: string;
+    observer?: boolean;
+  };
+  slug: string;
 };
 
-const PostMeta = ({ date, readTime, likes, views }: Props) => {
+const PostMeta = ({ date, readTime, likes, views, slug }: Props) => {
   const componentData = () => {
     return (
-      <p>
+      <Label>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -30,76 +37,52 @@ const PostMeta = ({ date, readTime, likes, views }: Props) => {
         <span>
           Publicado em <DateFormatter dateString={date} />
         </span>
-      </p>
+      </Label>
     );
   };
 
   const componentTime = () => {
     return (
       <p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <circle cx="12" cy="12" r="9"></circle>
-          <polyline points="12 7 12 12 15 15"></polyline>
-        </svg>
-        <span>{` ${readTime} min de leitura`}</span>
+        <Label>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="12" cy="12" r="9"></circle>
+            <polyline points="12 7 12 12 15 15"></polyline>
+          </svg>
+          <span>{` ${readTime} min de leitura`}</span>
+        </Label>
       </p>
     );
   };
 
-  const componentLikes = () => {
-    return (
-      <p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          strokeWidth="2"
-          stroke="currentColor"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-        </svg>
-        <span>4 Curtidas</span>
-      </p>
-    );
-  };
-
-  const componentViews = () => {
-    return (
-      <p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <circle cx="12" cy="12" r="2"></circle>
-          <path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7"></path>
-        </svg>
-        <span>110 Visualizações</span>
-      </p>
-    );
-  };
+  const [isLiked, setIsLiked] = useState(" ");
 
   return (
     <div className={styles["post-meta"]}>
       {date?.length >= 6 ? componentData() : null}
       {readTime ? componentTime() : null}
-      {likes ? componentLikes() : null}
-      {views ? componentViews() : null}
+      {likes ? (
+        <ButtonLike
+          size="small"
+          isLiked={isLiked}
+          slug={slug}
+          onClick={() => setIsLiked(isLiked == "like" ? "unlike" : "like")}
+        />
+      ) : null}
+      {views ? (
+        <ViewCounter
+          slug={views.slug}
+          observer={views.observer ? true : false}
+        />
+      ) : null}
     </div>
   );
 };

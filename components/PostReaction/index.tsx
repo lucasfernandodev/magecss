@@ -1,11 +1,18 @@
 import style from "./style.module.css";
 import Tags from "../Tags";
+import { useState } from "react";
 import Link from "next/link";
+import ButtonLike from "../ButtonLike";
+import Label from "../Label";
+
 type Props = {
   tags: string;
-  likes: number;
+  slug: string;
 };
-const PostReaction = ({ tags, likes }: Props) => {
+
+const PostReaction = ({ tags, slug }: Props) => {
+  const [isLiked, setIsLiked] = useState(" ");
+
   const tagsToArray = tags.split(" ");
   return (
     <div className={style.postreaction}>
@@ -14,39 +21,27 @@ const PostReaction = ({ tags, likes }: Props) => {
       </div>
       <div className={style.postreaction__reaction}>
         <div className={style.postreaction__reactInline}>
-          <div className={style.postreaction__hearth}>
-            <button>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                strokeWidth="1.75"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
-              </svg>
-            </button>
-            <span>{likes}</span>
-          </div>
+          <ButtonLike
+            size="large"
+            isLiked={isLiked}
+            slug={slug}
+            onClick={() => setIsLiked(isLiked == "like" ? "unlike" : "like")}
+          />
           <div className={style.postreaction__comment}>
             <button>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                strokeWidth="1.75"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 20l-3 -3h-2a3 3 0 0 1 -3 -3v-6a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-2l-3 3"></path>
-                <line x1="8" y1="9" x2="16" y2="9"></line>
-                <line x1="8" y1="13" x2="14" y2="13"></line>
-              </svg>
+              <Label size="large">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </Label>
             </button>
           </div>
         </div>
@@ -57,11 +52,11 @@ const PostReaction = ({ tags, likes }: Props) => {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                stroke-width="1.75"
+                strokeWidth="1.75"
                 stroke="currentColor"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <rect x="4" y="4" width="16" height="16" rx="2"></rect>

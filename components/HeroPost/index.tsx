@@ -48,7 +48,7 @@ const HeroPost = ({
 
         <Summary>{summary}</Summary>
 
-        <PostMeta date={date} readTime={readTime} likes={34} views={18} />
+        <PostMeta slug={slug} views={{slug, observer: false}} date={date} readTime={readTime} likes/>
       </div>
     </section>
   );

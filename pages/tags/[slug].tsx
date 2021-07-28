@@ -1,11 +1,9 @@
-import getPostBytags, { getAllPosts, getPostBySlug } from "../../lib/api";
-import PostType from "../../types/post";
+import getPostBytags from "../../lib/api";
 import { useRouter } from "next/router";
 import Layout from "../../components/layout";
 import Head from "next/head";
-import Container from "../../components/Container";
-import PostAll from "../../components/PostAll";
 import PostPreview from "../../components/PostPreview";
+import CardCollection from "../../components/CardCollection";
 
 type Props = {
   slug: string;
@@ -28,19 +26,19 @@ export function myUrl() {
 }
 
 const Post = (posts: Props[]) => {
-
   const url = useRouter();
   const tagName = url.query;
 
-  const obj = Object.values(posts)
+  const obj = Object.values(posts);
   console.log(obj);
   return (
     <>
       <Layout>
         <Head>
-        <title>Todas as postagens em {tagName.slug} - MAGE CSS</title>
+          <title>Todas as postagens em {tagName.slug} - MAGE CSS</title>
         </Head>
-        <Container>
+
+        <CardCollection title={`Todas as publicações com a tag ${tagName.slug}`} >
           {obj.map((post) => (
             <PostPreview
               title={post.title}
@@ -52,7 +50,7 @@ const Post = (posts: Props[]) => {
               readTime={post.readTime}
             />
           ))}
-        </Container>
+        </CardCollection>
       </Layout>
     </>
   );

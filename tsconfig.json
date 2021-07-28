@@ -15,5 +15,5 @@
     "isolatedModules": true
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/PostAll"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/PostAll", "pages/api/[slug].js", "pages/api/likes/[slug].js"]
 }

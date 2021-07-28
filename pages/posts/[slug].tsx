@@ -7,12 +7,12 @@ import Footer from "../../components/Section/Footer";
 import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import Head from "next/head";
-import Comments from "../../components/Comments";
 import markdownToHtml from "../../lib/markdownToHtml";
 import PostType from "../../types/post";
 import PostAuthor from "../../components/PostAuthor";
-import Tags from '../../components/Tags';
 import PostReaction from "../../components/PostReaction";
+import ButtonLike from "../../components/ButtonLike";
+
 type Props = {
   post: PostType;
   morePosts: PostType[];
@@ -24,10 +24,11 @@ const Post = ({ post, morePosts, preview, readTime }: Props) => {
   const router = useRouter();
   const tagsToArray = post.tags.split(" ");
 
-
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+
+
   return (
     <Layout preview={preview}>
       {router.isFallback ? (
@@ -43,6 +44,7 @@ const Post = ({ post, morePosts, preview, readTime }: Props) => {
             date={post.date}
             readTime={post.readTime}
             summary={post.summary}
+            slug={post.slug}
           />
           <Article
             content={post.content}
@@ -50,7 +52,7 @@ const Post = ({ post, morePosts, preview, readTime }: Props) => {
             title={post.title}
           />
           <Footer>
-            <PostReaction likes={4} tags={post.tags}/>
+            <PostReaction tags={post.tags} slug={post.slug}/>
             <PostAuthor />
             {/* <Comments post={{ id: post.title, title: post.title }} /> */}
           </Footer>
