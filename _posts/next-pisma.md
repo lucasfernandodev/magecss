@@ -1,14 +1,14 @@
 ---
-title: 'Static Sites with Next.js 9.3 and Prisma'
+title: 'Preview Mode for Static Generation'
+summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
+coverImage: '/assets/blog/preview/cover.jpg'
+tags: 'frontend css html5'
 date: '2020-03-16T05:35:07.322Z'
-summary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro delectus suscipit magni sint nam dicta distinctio, incidunt, corrupti consectetur doloribus harum nihil aut minus quis ex beatae ut deleniti praesentium.'
-tags: 'frontend css nextjs'
-coverImage: '/assets/blog/next-prisma/banner.jpg'
 author:
-  name: Luca Fernando
+  name: Joe Haddad
   picture: '/assets/blog/authors/joe.jpeg'
 ogImage:
-  url: '/assets/blog/next-prisma/banner.jpg'
+  url: '/assets/blog/preview/cover.jpg'
 ---
 
 

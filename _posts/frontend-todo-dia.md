@@ -1,14 +1,14 @@
 ---
-title: 'Frontend todo dia'
-summary: 'No busão lotado, trampo longe de casa, rotina doméstica, busca por evolução profissional, estabilidade financeira e muito mais, a única maneira não perder o controle é malabarizar!'
-coverImage: '/assets/blog/ultimo/office.jpg'
-tags: 'frontend nextjs facebook'
+title: 'Preview Mode for Static Generation'
+summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
+coverImage: '/assets/blog/preview/cover.jpg'
+tags: 'frontend css html5'
 date: '2020-03-16T05:35:07.322Z'
 author:
-  name: Luca Fernando
+  name: Joe Haddad
   picture: '/assets/blog/authors/joe.jpeg'
 ogImage:
-  url: '/assets/blog/ultimo/office.jpg'
+  url: '/assets/blog/preview/cover.jpg'
 ---
 
 # Introdução
