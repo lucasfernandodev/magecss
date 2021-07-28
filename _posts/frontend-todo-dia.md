@@ -1,6 +1,6 @@
 ---
 title: 'Frontend todo dia'
-summary: 'Frontend todo dia, codificando diretamente da sua casa de uma maneira confortável';
+summary: 'Frontend todo dia, codificando diretamente da sua casa de uma maneira confortável'
 coverImage: '/assets/blog/ultimo/office.jpg'
 tags: 'frontend nextjs facebook'
 date: '2020-03-16T05:35:07.322Z'
