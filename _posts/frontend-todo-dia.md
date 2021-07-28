@@ -1,6 +1,6 @@
 ---
 title: 'Frontend todo dia'
-summary: 'Frontend todo dia, codificando diretamente da sua casa de uma maneira confortável'
+summary: 'No busão lotado, trampo longe de casa, rotina doméstica, busca por evolução profissional, estabilidade financeira e muito mais, a única maneira não perder o controle é malabarizar!'
 coverImage: '/assets/blog/ultimo/office.jpg'
 tags: 'frontend nextjs facebook'
 date: '2020-03-16T05:35:07.322Z'

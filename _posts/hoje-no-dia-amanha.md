@@ -1,6 +1,6 @@
 ---
 title: 'Amanha você se tornara um codificador melhor do que hoje'
-summary: 'codificando todos os dias, você também melhora todos os dia, independente do projeto.'
+summary: 'No busão lotado, trampo longe de casa, rotina doméstica, busca por evolução profissional, estabilidade financeira e muito mais, a única maneira não perder o controle é malabarizar!'
 coverImage: '/assets/blog/ultimo/office.jpg'
 tags: 'frontend css html5'
 date: '2020-03-16T05:35:07.322Z'
