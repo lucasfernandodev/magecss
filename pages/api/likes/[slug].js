@@ -3,8 +3,7 @@ import db from '../../../lib/firebase';
 export default async (req, res) => {
 
 
-    // const userIp = req.connection.remoteAddress;
-    const userIp = '127.0.0.5';
+    const userIp = req.connection.remoteAddress;
 
     const total = {}
 
