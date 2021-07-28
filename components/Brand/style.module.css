@@ -12,12 +12,16 @@
   font-family: "Play", sans-serif;
 }
 
+.brand__title-point{
+  color: var(--color-secondary);
+}
+
 .brand h1,
 .brand svg {
   cursor: pointer;
-  color: var(--color-white-medium);
-  fill: var(--color-white-medium);
-  stroke: var(--color-white-medium);
+  color: var(--color-title-primary);
+  fill: var(--color-secondary);
+  stroke: var(--color-secondary);
 }
 
 .brand svg {

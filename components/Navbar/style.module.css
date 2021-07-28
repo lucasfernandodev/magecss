@@ -10,19 +10,19 @@
 
 .navbar ul li a{
     text-transform: capitalize;
-    color: var(--color-white);
+    color: var(--color-title-primary);
     font-weight: 500;
     letter-spacing: 1.2px;
     border: 2px solid transparent;
     font-size: 16px;
-    transition: 0.25s linear;
+    transition: 0.3s linear;
     padding: 8px 12px;
     border-radius: 16px;
 }
 
 .navbar ul li a:hover{
     background: var(--color-bg-lines);
-    color: var(--color-white);
+    color: var(--color-title-primary);
 }
 
 @media (max-width: 320px){

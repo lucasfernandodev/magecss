@@ -1,9 +1,9 @@
 import styles from "./style.module.css";
 import Container from "../Container";
-import Brand from "../Brand";
-import Navbar from "../Navbar";
+import Brand from "../../Brand";
+import Navbar from "../../Navbar";
 import Link from "next/link";
-const Footer = () => {
+const PageFooter = () => {
   return (
     <footer className={styles.footer}>
       <Container>
@@ -60,4 +60,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default PageFooter;

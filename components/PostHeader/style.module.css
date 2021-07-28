@@ -1,8 +1,8 @@
 .post-header {
   width: 100%;
-  background: var(--color-primary);
+  background: var(--color-bg-component);
   height: auto;
-  padding: 64px 0;
+
   margin: 0;
   display: flex;
   flex-direction: row;
@@ -11,10 +11,11 @@
 }
 
 .post-header .content {
-  color: var(--color-white);
+  color: var(--color-title-primary);
   width: 100%;
   max-width: 792px;
   margin: 0 auto;
+  padding: 64px 0;
 }
 
 .post-header h1 {
@@ -31,9 +32,7 @@
   padding-top: 0;
   margin: 0 auto;
   padding-bottom: 20px;
-  color: var(--color-white-medium);
   font-weight: 400;
-  opacity: 0.8;
 }
 
 .post-header__text p{
@@ -46,9 +45,7 @@
 
 .post-header__meta p{
   font-size: 16px;
-  opacity: 0.7;
   font-weight: 400;
-  color: var(--color-black);
   margin: 0;
 }
 

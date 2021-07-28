@@ -1,9 +1,13 @@
 import Layout from "../../components/layout";
 import { getAllPosts } from "../../lib/api";
-import Head from "next/head";
+import Head from '../../components/Layout/Head';
 import Post from "../../types/post";
 import CardCollection from "../../components/CardCollection";
 import PostPreview from "../../components/PostPreview";
+import Header from "../../components/Header";
+import Title from "../../components/Title";
+import Divider from "../../components/Layout/Divider";
+import Summary from "../../components/Summary";
 
 type Props = {
   allPosts: Post[];
@@ -14,11 +18,16 @@ const Index = ({ allPosts }: Props) => {
   const postAll = allPosts;
   return (
     <>
-      <Layout>
-        <Head>
-          <title>Todos as postagens - Mage Css</title>
-        </Head>
-        <CardCollection title="Todas as publicações">
+      <Layout pageType='primary'>
+        <Head title='Todos as postagens' />
+        <Header align="center">
+          <Title variant='h1'>Todos as postagens</Title>
+          <Summary>
+            Esses são todos os artigos postados no blog até o momento.
+          </Summary>
+        </Header>
+        <Divider type="space" space='large'/>
+        <CardCollection>
           {postAll.map((post) => (
             <PostPreview
               key={post.slug}

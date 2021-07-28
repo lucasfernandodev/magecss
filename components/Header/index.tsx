@@ -1,16 +1,15 @@
-import Brand from '../Brand';
-import Navbar from "../Navbar";
-import Container from "../Container";
 import styles from "./style.module.css";
-export default function Header() {
+
+type Props = {
+  children: React.ReactNode;
+  align?: string;
+};
+const Header = ({ children, align }: Props) => {
   return (
     <header className={styles.header}>
-      <Container>
-        <div className={styles.header__content}>
-          <Brand />
-          <Navbar />
-        </div>
-      </Container>
+      <div className={`${styles.content} ${align ? styles[`${align}`] : null}`}>{children}</div>
     </header>
   );
-}
+};
+
+export default Header;

@@ -1,3 +1,4 @@
+
 import PostMeta from "../PostMeta";
 import Summary from "../Summary";
 import styles from "./style.module.css";
@@ -16,7 +17,6 @@ const PostHeader = ({ slug, title, subtitle, date, readTime, summary }: Props) =
     <header className={`${styles["post-header"]}`}>
 
       <div className={styles.content}>
-
         <h1>{title}</h1>
 
         <div className={styles["post-header__text"]}>

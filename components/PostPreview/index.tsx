@@ -1,5 +1,5 @@
 import Link from "next/link";
-import CoverImage from "../cover-image";
+import CoverImage from "../Utils/cover-image";
 import styles from "./style.module.css";
 import Tags from "../Tags";
 import PostMeta from "../PostMeta";
@@ -34,17 +34,16 @@ const PostPreview = ({
       </div>
 
       <div className={styles["card__tags"]}>
-        <Tags tags={tagsToArray} />
+        <Tags tags={tagsToArray} limitTags={3}/>
       </div>
 
       <div className={styles["card__content"]}>
-        <h3>
-          <Title>
+          <Title variant="h3">
             <Link as={`/posts/${slug}`} href="/posts/[slug]">
               {title}
             </Link>
           </Title>
-        </h3>
+
 
         <Summary limitRow={3}>{summary}</Summary>
         <PostMeta slug={slug} date={date} readTime={readTime} />

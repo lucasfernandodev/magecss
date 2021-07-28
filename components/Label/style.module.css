@@ -9,6 +9,7 @@
     font-size: 14px;
     height: 18px;
     line-height: 18px;
+    letter-spacing: 0.5px;
 }
 
 .label *:first-child{
@@ -18,7 +19,6 @@
     align-items: center;
     align-content: center;
     justify-content: center;
- 
 }
 
 .label *{
@@ -62,7 +62,10 @@
     height: 26px;
     line-height: 26px;
 }
+
 .large svg{
     height: 26px;
     width: 26px;
 }
+
+

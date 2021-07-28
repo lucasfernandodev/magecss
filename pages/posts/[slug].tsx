@@ -3,26 +3,23 @@ import ErrorPage from "next/error";
 import Section from "../../components/Section";
 import Header from "../../components/PostHeader";
 import Article from "../../components/PostBody";
-import Footer from "../../components/Section/Footer";
+import Footer from "../../components/PostFooter";
 import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
-import Head from "next/head";
+import Head from '../../components/Layout/Head';
 import markdownToHtml from "../../lib/markdownToHtml";
 import PostType from "../../types/post";
 import PostAuthor from "../../components/PostAuthor";
 import PostReaction from "../../components/PostReaction";
-import ButtonLike from "../../components/ButtonLike";
 
 type Props = {
   post: PostType;
   morePosts: PostType[];
-  preview?: boolean;
-  readTime: string;
 };
 
-const Post = ({ post, morePosts, preview, readTime }: Props) => {
+const Post = ({ post }: Props) => {
   const router = useRouter();
-  const tagsToArray = post.tags.split(" ");
+
 
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -30,15 +27,12 @@ const Post = ({ post, morePosts, preview, readTime }: Props) => {
 
 
   return (
-    <Layout preview={preview}>
+    <Layout pageType='primary'>
       {router.isFallback ? (
         <h1>Loading…</h1>
       ) : (
         <Section>
-          <Head>
-            <title>{post.title} - MAGE CSS</title>
-            <meta property="og:image" content={post.ogImage.url} />
-          </Head>
+          <Head title={post.title} ogImage={post.ogImage.url} />
           <Header
             title={post.title}
             date={post.date}
@@ -54,7 +48,6 @@ const Post = ({ post, morePosts, preview, readTime }: Props) => {
           <Footer>
             <PostReaction tags={post.tags} slug={post.slug}/>
             <PostAuthor />
-            {/* <Comments post={{ id: post.title, title: post.title }} /> */}
           </Footer>
         </Section>
       )}

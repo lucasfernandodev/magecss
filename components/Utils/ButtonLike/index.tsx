@@ -2,7 +2,7 @@ import style from "./style.module.css";
 import { useEffect } from "react";
 import { useState } from "react";
 import useSWR from "swr";
-import Label from "../Label";
+import Label from "../../Label";
 
 type ButtonType = {
   slug: string;
@@ -62,7 +62,7 @@ const ButtonLike = ({ slug, isLiked, onClick, size }: ButtonType) => {
           <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
         </svg>
 
-        {`${likeCount > 0 ? likeCount : ""}`}
+        {`${likeCount > 0 ? likeCount : ""} ${likeCount === 1 ? 'Reação' : 'Reações'}`}
       </Label>
     </button>
   );

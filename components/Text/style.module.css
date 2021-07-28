@@ -1,0 +1,32 @@
+.text{
+    width: calc(100% - 32px);
+    max-width: var(--width-post);
+
+    font-size: 19px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    word-break: break-word;
+    letter-spacing: 0.4px;
+    line-height: 1.6;
+    margin: 20px auto;
+    color: var(--color-white-transparent-subtitle);
+}
+
+.color-dark{
+    color: var(--color-dark);
+}
+
+.color-white{
+    color: var(--color-white-transparent-subtitle);
+}
+
+.font-size-large{
+    font-size: 22px;
+}
+.font-size-small{
+    font-size: 14px;
+}
+.font-size-normal{
+    font-size: 19px;
+}

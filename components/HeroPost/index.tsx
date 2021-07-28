@@ -1,4 +1,4 @@
-import CoverImage from "../cover-image";
+import CoverImage from "../Utils/cover-image";
 import Link from "next/link";
 import Tags from "../Tags";
 import styles from "./style.module.css";

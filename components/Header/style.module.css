@@ -1,15 +1,37 @@
 .header {
-  display: flex;
   width: 100%;
-  height: 150px;
+  background: var(--color-bg-component);
+  height: auto;
+
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
-.header__content {
-  height: 100%;
+.header .content {
+  color: var(--color-title-primary);
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+  max-width: 792px;
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+.center{
+
+    align-items: center;
+    text-align: center;
+}
+
+.center *{
+    text-align: center;
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
 }

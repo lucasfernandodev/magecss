@@ -1,23 +1,21 @@
 .section__article {
   width: calc(100% - 30px);
-  max-width: 790px;
+  max-width: 792px;
   height: 100%;
-  margin: 32px auto;
+  margin: 0 auto;
   display: block;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: left;
-  color: #e5e5e5e0;
-  padding: 32px 25px;
+  color: var(--color-white-transparent-subtitle);
+  padding: 0 45px;
   overflow-x: visible;
 }
 
-.section__article div p:nth-child(1) {
-  margin-top: 64px;
+.section__article *:first-child{
+  margin-top: 0;
 }
-
-
 .section__article p {
   font-size: 19px;
   display: inline-block;

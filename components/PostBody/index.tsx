@@ -1,6 +1,6 @@
 import markdownStyles from "./markdown-styles.module.css";
 import styles from "./style.module.css";
-import Container from "../Container";
+import Container from "../Layout/Container";
 import CardImage from "../CardImage";
 type Props = {
   content: string;
@@ -10,7 +10,6 @@ type Props = {
 };
 
 const PostBody = ({ content, children, thumbnail, title }: Props) => {
-
   if (children) {
     return (
       <article className={styles.section__article}>
@@ -21,13 +20,15 @@ const PostBody = ({ content, children, thumbnail, title }: Props) => {
     );
   } else {
     return (
-
-      <article className={styles.section__article}>
-        <div
-          className={`${markdownStyles["markdown"]} ${markdownStyles["language-"]}`}
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
-      </article>
+      <>
+        <CardImage src={thumbnail} alt={title}/>
+        <article className={styles.section__article}>
+          <div
+            className={`${markdownStyles["markdown"]} ${markdownStyles["language-"]}`}
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
+        </article>
+      </>
     );
   }
 };

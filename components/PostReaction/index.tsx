@@ -2,7 +2,7 @@ import style from "./style.module.css";
 import Tags from "../Tags";
 import { useState } from "react";
 import Link from "next/link";
-import ButtonLike from "../ButtonLike";
+import ButtonLike from "../Utils/ButtonLike";
 import Label from "../Label";
 
 type Props = {

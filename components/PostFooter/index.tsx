@@ -1,10 +1,10 @@
-import Container from '../../Container'
+import Container from '../Layout/Container'
 import styles from './style.module.css';
 type Props = {
   children: React.ReactNode;
 };
 
-const Footer = ({ children }: Props) => {
+const PostFooter = ({ children }: Props) => {
   return (
     <footer className={styles.footer}>
       <Container>
@@ -14,4 +14,4 @@ const Footer = ({ children }: Props) => {
   )
 };
 
-export default Footer;
+export default PostFooter;

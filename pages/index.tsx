@@ -1,10 +1,10 @@
 import HeroPost from "../components/HeroPost";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
-import Head from "next/head";
 import Post from "../types/post";
 import CardCollection from "../components/CardCollection";
 import PostPreview from "../components/PostPreview";
+import Head from "../components/Layout/Head";
 
 type Props = {
   allPosts: Post[];
@@ -16,9 +16,7 @@ const Index = ({ allPosts }: Props) => {
   return (
     <>
       <Layout>
-        <Head>
-          <title>MAGE CSS - Dicas de front-end</title>
-        </Head>
+        <Head />
         {heroPost && (
           <HeroPost
             tags={heroPost.tags}
@@ -31,7 +29,7 @@ const Index = ({ allPosts }: Props) => {
           />
         )}
 
-        <CardCollection title="Publicações recentes">
+        <CardCollection title="Publicações recentes" titleColor="primary">
           {morePosts.map((post) => (
             <PostPreview
               key={post.slug}
