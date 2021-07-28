@@ -39,7 +39,7 @@ const HeroPost = ({
         </span>
 
         <h2 className={styles.heroPost__title} title={title}>
-          <Title>
+          <Title variant="h2">
             <Link as={`/posts/${slug}`} href="/posts/[slug]">
               {title}
             </Link>
