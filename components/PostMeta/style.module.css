@@ -10,7 +10,7 @@
     gap: 12px;
 }
 
-.post-meta p {
+.post-meta div {
     font-weight: 400;
     color: var(--color-white-medium);
     gap: 12px;
@@ -19,16 +19,5 @@
     flex-wrap: wrap;
     line-height: 22px;
     align-items: center;
-}
-
-.post-meta p span{
     gap: 4px;
 }
-
-.post-meta svg{
-    color: var(--color-white-medium);
-    stroke-width: 1.35px;
-    width: 18px;
-    height: 18px;
-    margin-right: 4px;
-} 

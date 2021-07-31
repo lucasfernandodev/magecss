@@ -48,22 +48,13 @@ const ButtonLike = ({ slug, isLiked, onClick, size }: ButtonType) => {
       className={`${!userLiked ? style.like : style.unlike} ${style.button}`}
       onClick={onClick}
     >
-      <Label size={size}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          strokeWidth="1.75"
-          stroke="currentColor"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
-        </svg>
-
-        {`${likeCount > 0 ? likeCount : ""} ${likeCount === 1 ? 'Reação' : 'Reações'}`}
-      </Label>
+      <Label
+        size={size}
+        icon="heart"
+        text={`${likeCount > 0 ? likeCount : ""} ${
+          likeCount === 1 ? "Reação" : "Reações"
+        }`}
+      />
     </button>
   );
 };

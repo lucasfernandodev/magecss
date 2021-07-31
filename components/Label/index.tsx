@@ -1,17 +1,22 @@
+import Icon from "../Icon";
 import style from "./style.module.css";
 
 type Props = {
-  children: React.ReactNode;
   size?: string;
+  icon: string;
+  text: string
 };
 
-const Label = ({ children, size }: Props) => {
+const Label = ({size, text, icon }: Props) => {
   return (
-    <>
-    <span className={`${style.label} ${style[`${size ? size : null}`]}`}>
-      {children}
-    </span>
-    </>
+
+    <div className={`${style.label}`}>
+      <span className={style.label__icon}>
+        <Icon icon={icon} stroke="var(--color-white-transparent)"/>
+      </span>
+      <span className={style.label__text}>{text}</span>
+    </div>
+
   );
 };
 

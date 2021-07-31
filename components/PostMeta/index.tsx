@@ -21,14 +21,14 @@ const PostMeta = ({ date, readTime, likes, views, slug }: Props) => {
 
   return (
     <div className={styles["post-meta"]}>
-      <p>
+      <div>
       {date?.length >= 6 ? <PublishTime data={date}/> : null}
       {readTime ? (<ReadTime time={readTime} />) : null}
-      </p>
-      <p>
+      </div>
+      <div>
       {views ? ( <ViewCounter slug={views.slug} observer={views.observer ? true : false} /> ) : null}
       {likes ? ( <ButtonLike size="small" isLiked={isLiked} slug={slug} onClick={() => setIsLiked(isLiked == "like" ? "unlike" : "like")} /> ) : null}
-      </p>
+      </div>
     </div>
   );
 };

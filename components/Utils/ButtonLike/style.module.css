@@ -11,21 +11,7 @@
     transition: 0.3s ease-in-out;
 }
 
-.button span{
 
-    font-size: 22px;
-    display: flex;
-    vertical-align: center;
-    align-items: flex-end;
-    max-height: 26px;
-}
-
-.button svg{
-    stroke: inherit;
-    stroke-width: 1.45;
-    transition: 0.3s;
-    margin-right: 4px;
-}
 
 .button:hover svg{
     fill: rgb(202, 36, 58);

@@ -1,4 +1,4 @@
- /* .label{
+.label{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -6,66 +6,23 @@
     justify-content: center;
     width: fit-content;
     color: var(--color-white-transparent);
-    font-size: 14px;
+
     height: 18px;
     line-height: 18px;
     letter-spacing: 0.5px;
+    gap: 4px;
 }
 
-.label *:first-child{
-    height: 100%;
-    margin-right: 4px;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-}
-
-.label *{
-    background: unset;
-    color: inherit;
-    font-size: inherit;
-    border: unset;
-    font-weight: inherit;
-    color: inherit;
-}
-
-.label a{
-    text-decoration: none;
-}
-
-.label svg{
-    color: var(--color-white-transparent);
-    stroke: var(--color-white-transparent);
-    stroke-width: 1.35px;
-    width: 18px;
-    height: 18px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.label span, .label p{
+.label span{
     color: var(--color-white-transparent);
     display: inline-flex;
     align-items: flex-start;
     justify-content: center;
     vertical-align: center;
-    gap: 4px;
+
 }
 
-.small{}
-.small svg{}
-
-.large{
-    font-size: 16px;
-    height: 26px;
-    line-height: 26px;
+.label__text{
+    font-size: 14px;
+    font-weight: 300;
 }
-
-.large svg{
-    height: 26px;
-    width: 26px;
-}
-
- */

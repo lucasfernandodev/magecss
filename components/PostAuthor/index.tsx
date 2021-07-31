@@ -5,7 +5,7 @@ const PostAuthor = () => {
     return (
         <div className={styles.postauthor}>
             <div className={styles.postauthor__avatar}>
-                <Image src={'/assets/blog/authors/lucasfernando_autor.jpg'} quality={65} layout="intrinsic" width={92} height={92} alt="Lucas fernando"/>
+                <Image src={'/assets/blog/author/lucasfernando_autor.jpg'} quality={65} layout="intrinsic" width={92} height={92} alt="Lucas fernando"/>
             </div>
             <div className={styles.postauthor__Content}>
                 <h3 className={styles.postauthor__title}>Lucas Fernando</h3>
