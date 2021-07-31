@@ -10,11 +10,9 @@ type Props = {
 export default function PageHeader({bg} : Props) {
   return (
     <header className={`${styles.header} ${bg == 'primary' ? styles['header--primary'] : ''}`}>
-      <Container>
-        <div className={styles.header__content}>
+      <Container alignY="center" alignX="space-between">
           <Brand />
           <Navbar />
-        </div>
       </Container>
     </header>
   );

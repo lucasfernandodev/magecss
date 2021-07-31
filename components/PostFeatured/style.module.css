@@ -1,6 +1,5 @@
-.heroPost {
+.PostFeatured {
   width: 100%;
-  max-width: calc(100% - 200px);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -12,8 +11,8 @@
   background-color: var(--color-bg-component);
 }
 
-.heroPost__thumbnail,
-.heroPost__header {
+.PostFeatured__thumbnail,
+.PostFeatured__header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -22,14 +21,17 @@
   height: 100%;
 }
 
-.heroPost__thumbnail {
+.PostFeatured__thumbnail {
   height: 100%;
   min-height: 100%;
-  background: var(--color-bg-component-high)
+  background: var(--color-bg-component-high);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.heroPost__thumbnail div,
-.heroPost__thumbnail a {
+.PostFeatured__thumbnail div,
+.PostFeatured__thumbnail a {
   display: flex;
   align-items: center;
   width: 100%;
@@ -38,7 +40,7 @@
   min-height: 100%;
 }
 
-.heroPost__thumbnail img {
+.PostFeatured__thumbnail img {
   width: 100%;
   height: 100%;
   min-width: 100%;
@@ -46,18 +48,18 @@
   object-fit: cover;
 }
 
-.heroPost__header {
+.PostFeatured__header {
   color: var(--color-white-medium);
   padding: 64px 32px;
 }
 
-.heroPost__tag {
+.PostFeatured__tag {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.heroPost__tag > span {
+.PostFeatured__tag > span {
   padding: 8px 12px;
   border-radius: 16px;
   background: var(--color-bg-component-high);
@@ -71,7 +73,7 @@
   color: var(--color-title-primary);
 }
 
-.heroPost__tag::before {
+.PostFeatured__tag::before {
   content: "";
   position: absolute;
   left: -45px;
@@ -82,23 +84,23 @@
   margin-right: 6px;
 }
 
-.heroPost__header h2 {
+.PostFeatured__header h2 {
   margin-top: 32px;
   font-size: 34px;
   line-height: 1.2;
   color: var(--color-title-primary);
 }
 
-.heroPost__header h2 a:hover {
+.PostFeatured__header h2 a:hover {
   opacity: 0.7;
 }
 
-.heroPost__header a:hover h2 {
+.PostFeatured__header a:hover h2 {
   opacity: 0.7;
 }
 
 @media (max-width: 999px) {
-  .heroPost {
+  .PostFeatured {
     position: relative;
     display: flex;
     align-items: center;
@@ -109,13 +111,13 @@
     padding: 64px 32px;
   }
 
-  .heroPost__tag {
+  .PostFeatured__tag {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
   }
 
-  .heroPost__tag::before {
+  .PostFeatured__tag::before {
     content: "";
     position: absolute;
     left: unset;
@@ -126,14 +128,14 @@
     margin-right: 6px;
   }
 
-  .heroPost__thumbnail,
-  .heroPost__header {
+  .PostFeatured__thumbnail,
+  .PostFeatured__header {
     flex: 1;
     height: 100%;
     width: 100%;
   }
 
-  .heroPost__thumbnail {
+  .PostFeatured__thumbnail {
     position: absolute;
     flex: unset;
     height: 100%;
@@ -143,13 +145,13 @@
     z-index: 1;
   }
 
-  .heroPost__thumbnail a,
-  .heroPost__thumbnail div {
+  .PostFeatured__thumbnail a,
+  .PostFeatured__thumbnail div {
     display: flex;
     height: 100%;
     width: 100%;
   }
-  .heroPost__thumbnail img {
+  .PostFeatured__thumbnail img {
     height: 100%;
     width: 100%;
 
@@ -159,24 +161,24 @@
     filter: brightness(0.2);
   }
 
-  .heroPost__header {
+  .PostFeatured__header {
     position: relative;
     z-index: 10;
   }
 }
 
 @media (max-width: 790px) {
-  .heroPost__summary {
+  .PostFeatured__summary {
     line-height: 1.8;
   }
 }
 
 @media (max-width: 640px) {
-  .heroPost__header h2 {
+  .PostFeatured__header h2 {
     font-size: 32px;
   }
 
-  .heroPost__summary {
+  .PostFeatured__summary {
     font-size: 15px;
     padding-bottom: 15px;
     max-width: 80%;
@@ -184,15 +186,15 @@
 }
 
 @media (max-width: 410px) {
-  .heroPost {
+  .PostFeatured {
     padding: 64px 16px;
   }
 
-  .heroPost__header h2 {
+  .PostFeatured__header h2 {
     font-size: 26px;
   }
 
-  .heroPost__summary {
+  .PostFeatured__summary {
     font-size: 15px;
     line-height: 1.5;
     padding-bottom: 15px;

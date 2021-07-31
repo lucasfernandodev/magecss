@@ -1,3 +1,4 @@
+import Container from "../Layout/Container";
 import styles from "./style.module.css";
 type Children = {
   title?: string;
@@ -8,6 +9,7 @@ const CardCollection = ({ children, title, titleColor }: Children) => {
   return (
     
     <section className={styles.cardCollection}>
+      <Container>
       {title ? (
         <h2 className={styles.cardCollection__header}>
           <span
@@ -23,6 +25,7 @@ const CardCollection = ({ children, title, titleColor }: Children) => {
       <div className={styles.cardCollection__content}>
         {children ? children : null}
       </div>
+      </Container>
     </section>
   );
 };

@@ -31,7 +31,7 @@ export default function ViewCounter({ slug, observer, size }: ViewCountProp) {
   }, [slug]);
 
   return (
-    <p className={`${style.viewCounter} ${style[`${size ? size : ""}`]}`}>
+    <p className={`${style.viewCounter} ${style[`${size ? size : null}`]}`}>
       <Label>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,9 @@ export default function ViewCounter({ slug, observer, size }: ViewCountProp) {
           <path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7"></path>
         </svg>
         <span>
-          {`${views > 0 ? views.toLocaleString() : ""} ${views === 1 ? 'Visualização' : 'Visualizações'}`}
+          {`${views > 0 ? views.toLocaleString() : ""} ${
+            views === 1 ? "Visualização" : "Visualizações"
+          }`}
         </span>
       </Label>
     </p>

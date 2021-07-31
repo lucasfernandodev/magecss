@@ -13,9 +13,15 @@
 .post-header .content {
   color: var(--color-title-primary);
   width: 100%;
-  max-width: 792px;
+  max-width: var(--width-post);
   margin: 0 auto;
   padding: 64px 0;
+}
+
+@media (max-width: px){
+  .post-header .content{
+    padding: 64px 32px;
+  }
 }
 
 .post-header h1 {

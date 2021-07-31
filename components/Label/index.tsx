@@ -5,8 +5,14 @@ type Props = {
   size?: string;
 };
 
-const Label = ({ children , size}: Props) => {
-  return <div className={`${style.label} ${style[`${size ? size : ''}`]}`}>{children}</div>;
+const Label = ({ children, size }: Props) => {
+  return (
+    <>
+    <span className={`${style.label} ${style[`${size ? size : null}`]}`}>
+      {children}
+    </span>
+    </>
+  );
 };
 
 export default Label;

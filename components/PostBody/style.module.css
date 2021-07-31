@@ -1,6 +1,6 @@
 .section__article {
   width: calc(100% - 30px);
-  max-width: 792px;
+  max-width: var(--width-post);
   height: 100%;
   margin: 0 auto;
   display: block;
@@ -16,6 +16,7 @@
 .section__article *:first-child{
   margin-top: 0;
 }
+
 .section__article p {
   font-size: 19px;
   display: inline-block;

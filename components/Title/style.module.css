@@ -6,11 +6,11 @@
   height: fit-content;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  overflow: hidden;
-  overflow-y: hidden;
+
   text-align: start;
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
+  margin: 16px 0;
 }
 
 .title h1 {
@@ -26,3 +26,13 @@
   line-height: 1.2;
   color: var(--color-title-primary);
 }
+
+.card__content h3 {
+  font-weight: bold;
+  font-size: 19px;
+  margin: 24px 0px;
+  color: var(--color-white-medium);
+  display: flex;
+}
+
+.title *:first-letter { text-transform: capitalize; }

@@ -1,4 +1,4 @@
-import HeroPost from "../components/HeroPost";
+import HeroPost from "../components/PostFeatured";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Post from "../types/post";

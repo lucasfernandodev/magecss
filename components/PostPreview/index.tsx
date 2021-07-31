@@ -33,20 +33,20 @@ const PostPreview = ({
         <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
 
-      <div className={styles["card__tags"]}>
-        <Tags tags={tagsToArray} limitTags={3}/>
-      </div>
-
       <div className={styles["card__content"]}>
-          <Title variant="h3">
-            <Link as={`/posts/${slug}`} href="/posts/[slug]">
-              {title}
-            </Link>
-          </Title>
+        <Tags tags={tagsToArray} limitTags={3} />
 
+        <Title variant="h3">
+          <Link as={`/posts/${slug}`} href="/posts/[slug]">
+            {title}
+          </Link>
+        </Title>
 
         <Summary limitRow={3}>{summary}</Summary>
-        <PostMeta slug={slug} date={date} readTime={readTime} />
+
+        <div className={styles["card__footer"]}>
+          <PostMeta slug={slug} date={date} readTime={readTime} />
+        </div>
       </div>
     </div>
   );

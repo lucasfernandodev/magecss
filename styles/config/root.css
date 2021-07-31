@@ -33,8 +33,11 @@
   --color-title-primary: #e5e5e5;
 
   --width-post: 792px;
-
   --width-break: calc(100vw - 190px);
+
+  --width-break-lg: 1311px;
+  --width-break-md: 768px;
+  --width-break-sm: 576px;
 
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,

@@ -3,6 +3,7 @@ import Head from "next/head";
 const Meta = () => {
   return (
     <Head>
+      
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -36,14 +37,22 @@ const Meta = () => {
         content={`Conheça um pouco sobre front-end e outras tecnologias voltadas para o desenvolvimento web.`}
       />
 
+
       {/* Typography */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="true"
+      />
       <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet"
       ></link>
-      <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet"></link>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap"
+        rel="stylesheet"
+      ></link>
     </Head>
   );
 };
