@@ -8,5 +8,3 @@
 - usar variáveis em todos os componentes
 - arrumar a sessão de tags
 - adicionar arquivo responsável pelas rotas de tags
-
-# git commit > Alteração da estrutura do blog & Refatorando os componentes & Consertando erro das tags não renderizar o tempo de leitura & alternando variáveis css.
