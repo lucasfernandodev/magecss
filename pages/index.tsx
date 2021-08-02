@@ -1,54 +1,20 @@
-import HeroPost from "../components/PostFeatured";
-import Layout from "../components/layout";
+import Home from "@/components/Templates/Home";
 import { getAllPosts } from "../lib/api";
 import Post from "../types/post";
-import CardCollection from "../components/CardCollection";
-import PostPreview from "../components/PostPreview";
-import Head from "../components/Layout/Head";
 
 type Props = {
   allPosts: Post[];
 };
 
 const Index = ({ allPosts }: Props) => {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
-  return (
-    <>
-      <Layout>
-        <Head />
-        {heroPost && (
-          <HeroPost
-            tags={heroPost.tags}
-            title={heroPost.title}
-            coverImage={heroPost.coverImage}
-            date={heroPost.date}
-            readTime={heroPost.readTime}
-            slug={heroPost.slug}
-            summary={heroPost.summary}
-          />
-        )}
+  const lastPost = allPosts[0];
+  const listPost = allPosts.slice(1);
 
-        <CardCollection title="Publicações recentes" titleColor="primary">
-          {morePosts.map((post) => (
-            <PostPreview
-              key={post.slug}
-              title={post.title}
-              coverImage={post.coverImage}
-              date={post.date}
-              slug={post.slug}
-              summary={post.summary}
-              tags={post.tags}
-              readTime={post.readTime}
-            />
-          ))}
-        </CardCollection>
-      </Layout>
-    </>
-  );
+  return <Home lastPost={lastPost} listPost={listPost} />;
 };
 
 export default Index;
+
 
 export const getStaticProps = async () => {
   const allPosts = getAllPosts([

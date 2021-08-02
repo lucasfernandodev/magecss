@@ -12,7 +12,16 @@
     "noEmit": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/Atoms/*": ["components/Atoms/*"],
+      "@/Molecules/*": ["components/Molecules/*"],
+      "@/Organisms/*": ["components/Organisms/*"],
+      "@/Templates/*": ["components/Templates/*"],
+      "@/Utils/*": ["components/Utils/*"]
+    }
   },
   "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/PostAll", "pages/api/[slug].js", "pages/api/likes/[slug].js"]

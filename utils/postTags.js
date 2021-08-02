@@ -1,4 +1,5 @@
 // Tags que contenham algum post
+
 const postTags = [
   { name: "css" },
   { name: "next" },
@@ -7,6 +8,7 @@ const postTags = [
   { name: "nextjs" },
   { name: "backend" },
   { name: "facebook" },
+  { name: "html5" },
 ];
 
 export default postTags;

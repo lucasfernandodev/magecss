@@ -1,0 +1,22 @@
+:root{
+  --color-bg-scrollbar: #343438;
+  --color-bg-scrollbar-thumb: #555555;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner,
+::-webkit-resizer{
+  background-color: var(--color-bg-scrollbar)
+}
+
+::-webkit-scrollbar-button {
+  background-color: var(--color-bg-scrollbar);
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-bg-scrollbar-thumb);
+  border-radius: 4px;
+}

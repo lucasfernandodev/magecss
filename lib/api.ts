@@ -59,42 +59,40 @@ export default function getPostBytags(filtro: string) {
     const realSlug = post.replace(/\.md$/, "");
     const fullPath = join(postsDirectory, `${realSlug}.md`);
     const fileContents = fs.readFileSync(fullPath, "utf8");
-    const { data } = matter(fileContents);
 
-    return data
+    const { data, content } = matter(fileContents);
+
+    const readTime = getReadTime(content);
+    data.readTime = readTime;
+
+    return data;
   });
 
-
   const filtroPost = posts.filter((post) => {
-
     // O problem do filtro é que ele so filtra uma tag por vez
-    
+
     const tagsString = post.tags || "geral";
     const tagsToArray = tagsString.split(" ");
-    
-    if(tagsToArray.length === 1){
-      if(tagsToArray[0] == filtro){
-        return post
+
+    if (tagsToArray.length === 1) {
+      if (tagsToArray[0] == filtro) {
+        return post;
       }
     }
 
-    if(tagsToArray.length > 1){
-      const isExisttags = tagsToArray.filter((item : string) => {
-        if(item == filtro) {
+    if (tagsToArray.length > 1) {
+      const isExisttags = tagsToArray.filter((item: string) => {
+        if (item == filtro) {
           return item;
         }
-      })
+      });
 
       // Essa confirmação so funciona enquanto não houver mais de duas tags sendo buscadas ao mesmo tempo
-      if(isExisttags == filtro){
-        return post
+      if (isExisttags == filtro) {
+        return post;
       }
     }
-
-  })
-
-  console.log("O filtro é ::::::::::::::::::::::::::", filtroPost)
-
+  });
 
   return filtroPost;
 }

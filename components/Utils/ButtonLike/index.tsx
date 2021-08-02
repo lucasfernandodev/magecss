@@ -2,7 +2,7 @@ import style from "./style.module.css";
 import { useEffect } from "react";
 import { useState } from "react";
 import useSWR from "swr";
-import Label from "../../Label";
+import Label from "../../Atoms/Label";
 
 type ButtonType = {
   slug: string;

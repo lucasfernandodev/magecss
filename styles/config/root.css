@@ -1,74 +1,22 @@
 :root {
-  --space: 16px;
-  --space1: 4px;
-  --space2: 8px;
-  --space3: 12px;
-  --space4: 16px;
-  --space5: 20px;
-  --space6: 24px;
-  --space8: 32px;
-  --space9: 36px;
 
-  --color-bg-component-high: #1a1a22aa;
-  --color-bg-component: #2a2a33;
-  --color-bg:#1a1a21 ;
+  /* Colors */
 
-  --color-bg-lines: #3a3a3f;
-  --color-bg-scrollbar: #343438;
-  --color-bg-scrollbar-thumb: #555;
-
-
-  --color-dark: #171717; /* title */
-
-
-
-  --color-white: #e5e5e5; /* Title, subtitles */
-  --color-white-medium: #f2f9ff;
-  --color-white-transparent: #f2f9ff55;
-  --color-white-transparent-subtitle: #f2f9ffcc;
+  --color-text: #f2f9ffcc;
+  --color-title: #f2f9ff;
+  --color-subtitle: #f2f9ff55;
 
   --color-primary: #218c74;
   --color-secondary: #EAB543;
 
-  --color-title-primary: #e5e5e5;
+  --color-bg:#1a1a21 ;
+  --color-bg-component: #2a2a33;
+  --color-bg-component-high: #1a1a22aa;
+
+  --color-bg-lines: #3a3a3f;
+
+  /* End Colors */
+
 
   --width-post: 792px;
-  --width-break: calc(100vw - 190px);
-
-  --width-break-lg: 1311px;
-  --width-break-md: 768px;
-  --width-break-sm: 576px;
-
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-}
-
-
-
-@media (max-width: 910px){
-  :root{
-    --width-break: calc(100vw - 120px);
-  }
-}
-
-@media (max-width: 710px){
-  :root{
-    --width-break: calc(100vw - 64px);
-  }
-}
-
-@media (max-width: 640px){
-  :root{
-    --width-break: calc(100vw - 32px);
-  }
-}
-
-@media (max-width: 410px){
-  :root{
-    --width-break: calc(100vw - 16px);
-  }
 }
