@@ -19,7 +19,7 @@
 .brand h1,
 .brand svg {
   cursor: pointer;
-  color: var(--color-title-primary);
+  color: var(--color-title);
   fill: var(--color-secondary);
   stroke: var(--color-secondary);
 }

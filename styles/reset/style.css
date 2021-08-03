@@ -43,16 +43,8 @@ h6 {
 }
 
 
-:focus {
-  outline: 2px dashed;
-  outline-offset: 0.25rem;
-}
 
 main:focus {
   outline: none;
 }
 
-::selection {
-  color: #fff;
-  background: #EAB543cc;
-}

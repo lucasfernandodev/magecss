@@ -4,7 +4,7 @@ import styles from "./style.module.css";
 import Tags from "../../Molecules/Tags";
 import PostMeta from "../../Molecules/PostMeta";
 import Summary from "../../Atoms/Summary";
-import Title from "../../Molecules/Title";
+import Title from "../../Atoms/Title";
 
 type Props = {
   title: string;
@@ -36,7 +36,7 @@ const PostPreview = ({
       <div className={styles["card__content"]}>
         <Tags tags={tagsToArray} limitTags={3} />
 
-        <Title variant="h3">
+        <Title variant="h3" lineOverflow={2}>
           <Link as={`/posts/${slug}`} href="/posts/[slug]">
             {title}
           </Link>

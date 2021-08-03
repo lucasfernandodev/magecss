@@ -1,3 +1,4 @@
+import Title from "@/components/Atoms/Title";
 import Container from "../../Atoms/Container";
 import styles from "./style.module.css";
 type Children = {
@@ -7,24 +8,16 @@ type Children = {
 };
 const CardCollection = ({ children, title, titleColor }: Children) => {
   return (
-    
     <section className={styles.cardCollection}>
       <Container>
-      {title ? (
-        <h2 className={styles.cardCollection__header}>
-          <span
-            className={`${styles.cardCollection__title} ${
-              titleColor ? styles[`${titleColor}`] : ""
-            }`}
-          >
-            {title}
-          </span>
-        </h2>
-      ) : null}
 
-      <div className={styles.cardCollection__content}>
-        {children ? children : null}
-      </div>
+        <div className={styles.cardCollection__header}>
+        {title ? <Title variant="h2">{title}</Title> : null}
+        </div>
+
+        <div className={styles.cardCollection__content}>
+          {children ? children : null}
+        </div>
       </Container>
     </section>
   );

@@ -2,7 +2,7 @@ import Layout from "@/Molecules/Layout";
 import Head from "@/Atoms/Head";
 import PostPreview from "@/Organisms/PostPreview";
 import CardCollection from "@/Organisms/CardCollection";
-import Title from "@/Molecules/Title";
+import Title from "@/components/Atoms/Title";
 import Header from "@/Organisms/Header";
 import Summary from "@/Atoms/Summary";
 import Divider from "@/Atoms/Divider";

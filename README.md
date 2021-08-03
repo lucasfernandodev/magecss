@@ -8,3 +8,6 @@
 - usar variáveis em todos os componentes
 - arrumar a sessão de tags
 - adicionar arquivo responsável pelas rotas de tags
+
+
+- add Titulos no lugar do h1,h2,h3 etc.. dos componentes & criar buttons

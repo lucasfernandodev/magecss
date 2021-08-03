@@ -79,24 +79,9 @@
   left: -45px;
   width: 42px;
   height: 1px;
-  background: var(--color-white-medium);
+  background: var(--color-title);
   opacity: 0.5;
   margin-right: 6px;
-}
-
-.PostFeatured__header h2 {
-  margin-top: 32px;
-  font-size: 34px;
-  line-height: 1.2;
-  color: var(--color-title-primary);
-}
-
-.PostFeatured__header h2 a:hover {
-  opacity: 0.7;
-}
-
-.PostFeatured__header a:hover h2 {
-  opacity: 0.7;
 }
 
 @media (max-width: 999px) {

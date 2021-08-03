@@ -1,0 +1,51 @@
+.title{
+  margin: 20px 0;
+  transition: 0.3s ease-in-out;
+}
+
+.title h1 {
+  font-size: 40px;
+}
+
+.title h2 {
+  font-size: 32px;
+}
+
+.title h3 {
+  font-size: 20px;
+}
+
+.title__item {
+  color: var(--color-title);
+  line-height: 1.3;
+  transition: 0.3s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+}
+
+.title__item a {
+  transition: 0.3s ease-in-out;
+  
+}
+
+.title__item:hover{
+  color: currentColor;
+}
+
+.title__item a:hover {
+  color: var(--color-secondary);
+}
+
+.title__item{
+  display: block;
+  text-transform: lowercase;
+  max-width: 60ch;
+}
+
+
+.title__item:first-letter,
+.title__item *:first-letter {
+  text-transform: capitalize;
+}

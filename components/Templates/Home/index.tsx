@@ -5,6 +5,7 @@ import PostPreview from "@/Organisms/PostPreview";
 import Head from "@/Atoms/Head";
 
 import Post from "../../../types/post";
+import Divider from "@/components/Atoms/Divider";
 
 type HomeProps = {
   lastPost: Post;
@@ -27,6 +28,8 @@ const Home = ({ lastPost, listPost }: HomeProps) => {
         />
       )}
 
+      <Divider space="large" type="row"/>
+      
       <CardCollection title="Publicações recentes" titleColor="primary">
         {listPost.map((post) => (
           <PostPreview

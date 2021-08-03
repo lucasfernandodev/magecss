@@ -4,7 +4,7 @@ import Tags from "../../Molecules/Tags";
 import styles from "./style.module.css";
 import PostMeta from "../../Molecules/PostMeta";
 import Summary from "../../Atoms/Summary";
-import Title from "../../Molecules/Title";
+import Title from "../../Atoms/Title";
 import Container from "../../Atoms/Container";
 type Props = {
   title: string;

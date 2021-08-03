@@ -3,10 +3,10 @@ import Head from "@/Atoms/Head";
 import Section from "@/Atoms/Section";
 import Header from "@/Organisms/Header";
 import Container from "@/Atoms/Container";
-import Title from "@/Molecules/Title";
+import Title from "@/components/Atoms/Title";
 import Summary from "@/Atoms/Summary";
 import Divider from "@/Atoms/Divider";
-import Text from "@/Molecules/Text";
+import Text from "@/components/Atoms/Text";
 
 const About = () => {
   return (

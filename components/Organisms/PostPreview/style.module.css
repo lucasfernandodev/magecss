@@ -19,7 +19,6 @@
 @media (max-width: 1311px){
   .card{
     max-width: calc((100% - 32px) / 3);
-
   }
 }
 
@@ -74,9 +73,6 @@
   margin-bottom: 16px;
 }
 
-.card__content > h3{
-  margin: 16px 0;
-}
 
 .card__footer{
   position: absolute;

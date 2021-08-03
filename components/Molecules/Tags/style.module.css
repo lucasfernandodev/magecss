@@ -11,7 +11,7 @@
     letter-spacing: 1.5px;
     font-weight: 700;
 
-    color: var(--color-white);
+    color: var(--color-subtitle);
 }
 
 .c-tags__item a{
@@ -20,18 +20,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #5a5a5f;
+    border: 2px solid var(--color-bg-component-high);
     padding: 4px 12px;
     opacity: 1;
     border-radius: 16px;
     transition: 0.3s;
 }
 
-
+.c-tags__item:hover{
+    color: var(--color-text);
+}
 
 .c-tags__item a:hover{
     background: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-text);
     opacity: 1;
 }
 

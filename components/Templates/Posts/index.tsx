@@ -4,7 +4,7 @@ import Post from "../../../types/post";
 import CardCollection from "@/Organisms/CardCollection";
 import PostPreview from "@/Organisms/PostPreview";
 import Header from "@/Organisms/Header";
-import Title from "@/Molecules/Title";
+import Title from "@/components/Atoms/Title";
 import Divider from "@/Atoms/Divider";
 import Summary from "@/Atoms/Summary";
 
