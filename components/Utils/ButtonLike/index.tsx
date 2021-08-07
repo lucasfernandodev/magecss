@@ -3,12 +3,14 @@ import { useEffect } from "react";
 import { useState } from "react";
 import useSWR from "swr";
 import Label from "../../Atoms/Label";
+import Icon from "../Icon";
 
 type ButtonType = {
   slug: string;
   isLiked: string;
   onClick: () => void;
   size?: string;
+  countReact?: number
 };
 
 async function fetcher(...args: [string]) {
@@ -16,7 +18,7 @@ async function fetcher(...args: [string]) {
   return res.json();
 }
 
-const ButtonLike = ({ slug, isLiked, onClick, size }: ButtonType) => {
+const ButtonLike = ({ slug, isLiked, onClick, size, countReact }: ButtonType) => {
   const { data } = useSWR(`/api/likes/${slug}`, fetcher);
 
   const [userLiked, setUserLiked] = useState(data?.total.isLiked);
@@ -44,18 +46,23 @@ const ButtonLike = ({ slug, isLiked, onClick, size }: ButtonType) => {
   }, [isLiked]);
 
   return (
+    <>
     <button
       className={`${!userLiked ? style.like : style.unlike} ${style.button}`}
       onClick={onClick}
     >
-      <Label
+      <Icon icon="heart" width={24} height={24}/>
+    </button>
+
+    <Label
         size={size}
-        icon="heart"
+
         text={`${likeCount > 0 ? likeCount : ""} ${
           likeCount === 1 ? "Reação" : "Reações"
         }`}
       />
-    </button>
+    </>
+
   );
 };
 

@@ -1,10 +1,11 @@
 .summary {
   font-size: inherit;
   letter-spacing: 0.5px;
-  line-height: 1.7;
+  line-height: 2;
   margin: 20px 0;
   color: var(--color-subtitle);
   opacity: 0.7;
+  font-size: 17px;
 }
 
 p.summary--limitRow {

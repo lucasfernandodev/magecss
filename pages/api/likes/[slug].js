@@ -9,7 +9,6 @@ export default async (req, res) => {
 
     if (req.method === 'POST') {
 
-
         const ref = db.ref('likes').child(req.query.slug);
         const usersRef = ref.child('likes'); // define o nome do objeto para o do post
 
@@ -70,7 +69,7 @@ export default async (req, res) => {
 
         const isLiked = await usersRef.child('likesByUser').orderByValue().equalTo(userIp).once('value');
         total.likes = await usersRef.child('likeCount').once('value');
-        total.isLiked = isLiked.val() != null ? false : true;
+        total.isLiked = isLiked.val() === null ? false : true;
 
         return res.status(200).json({ total });
     }
@@ -83,7 +82,7 @@ export default async (req, res) => {
 
         const isLiked = await usersRef.child('likesByUser').orderByValue().equalTo(userIp).once('value');
         total.likes = await usersRef.child('likeCount').once('value');
-        total.isLiked = isLiked.val() != null ? false : true;
+        total.isLiked = isLiked.val() === null ? false : true;
 
         return res.status(200).json({ total });
     }

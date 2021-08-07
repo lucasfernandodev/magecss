@@ -15,7 +15,7 @@ const About = () => {
 
       <Section>
         <Header align="center">
-          <Title variant="h1">Saiba um puco sobre o site e sobre mim</Title>
+          <Title variant="h1">Conheça um pouco sobre mim e o blog</Title>
           <Summary>
             Esse é um blog experimental que criei para compartilhar um pouco de
             conhecimento sobre from-end e ao mesmo tempo brincar com algumas
@@ -29,13 +29,11 @@ const About = () => {
             freelancer, apaixonado por programação e cafe.
           </Text>
           <Text>
-            Depois de conhecer a programação e suas possibilidades, comecei a
-            estudar tecnologias front-end e back-end, buscando sempre aprender
-            novas tecnologias e inovar nos desenvolvimentos dos meus projetos.
+          Esse blog é um projeto desenvolvido com next.js e Typescript com o intuído de aprender mais sobre essas tecnologias
+          e em conjuntura desenvolver  um blog para ensinar e compartilhar conhecimentos e ideias de Frontend.
           </Text>
           <Text>
-            Como a tecnologia está sempre evoluindo e inovando, procuro sempre
-            aprender novas tecnologias e desenvolver minhas tecnologias.
+            Por aqui esterei testando algumas ideias e aprendizados e os compartilhando em forma de artigo.
           </Text>
         </Container>
         <Divider space="large" type="space" />

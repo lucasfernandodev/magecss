@@ -6,165 +6,156 @@
   margin: 4px auto;
 }
 
-/* Lista */
-.markdown ul li {
-  padding-left: 30px;
-  position: relative;
-  font-size: 1rem;
+.markdown *:first-child{
+  margin-top: 0;
 }
 
-.markdown ul li + li {
-  margin: 12px 0;
+.markdown p {
+  font-size: 18px;
+  width: 100%;
+  letter-spacing: 0.4px;
+  line-height: 1.6;
+  max-width: 65ch;
 }
 
-.markdown ul li::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 8px;
-  transform: translateY(-50%);
-  width: 6px;
-  height: 6px;
-  background: var(--color-white-medium);
-  border-radius: 50%;
+.markdown p + p{
+  margin-top: 40px;
+ 
 }
 
 /* Title */
-.markdown h1 {
-  margin: 20px 0;
-  font-size: 32px;
-  line-height: 1.5;
-}
-
-.markdown h2 {
-  font-size: 22px;
-  line-height: 2;
-  margin: 20px 0;
-}
-
-.markdown h3 {
-  font-size: 18px;
-  line-height: 1.375;
-  margin: 20px 0;
+@media only screen{
+  .markdown h1 {
+    margin: 20px 0;
+    font-size: 32px;
+    line-height: 1.5;
+  }
+  
+  .markdown h2 {
+    font-size: 22px;
+    line-height: 2;
+    margin: 20px 0;
+  }
+  
+  .markdown h3 {
+    font-size: 18px;
+    line-height: 1.375;
+    margin: 20px 0;
+  }
 }
 
 /* Links */
+@media only screen{
 
-.markdown a {
-  color: var(--color-primary);
-  transition: 0.3s;
-  opacity: 0.8;
-  text-decoration: underline;
-  font-weight: 500;
+  .markdown a {
+    color: var(--color-primary);
+    transition: 0.3s;
+    opacity: 0.8;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+  
+  .markdown a:hover {
+    opacity: 1;
+  } 
 }
 
-.markdown a:hover {
-  opacity: 1;
-}
-/* 
-.markdown pre {
-  background-color: #212121;
-  padding: 16px;
-  border-radius: 4px;
-  overflow: auto;
-  font-size: 14px;
-  margin-bottom: 4.1rem;
-  padding: 3.7rem 0 1.6rem .4rem;
-  border-radius: 12px;
-  overflow: hidden;
-
-  background-repeat: no-repeat;
-  background-size: 44px 10px;
-  background-position: 16px 14px;
-}
-
-.markdown code {
-  padding: 4px 6px;
-  font-size: 90%;
-  color: var(--color-white-medium);
-  background-color: var(--color-gray);
-  border-radius: 0.25rem;
-  font-family: var(--font-family-monospace);
-  font-weight: bold;
-}
-
-.markdown pre code {
-  background-color: transparent;
-  border-width: 0;
-  border-radius: 0;
-  padding: 0;
-  font-weight: 400;
-  color: inherit;
-  font-size: inherit;
-  font-family: inherit;
-  line-height: inherit;
-} */
-
-.markdown table {
-
-  table-layout: auto;
-  text-align: left;
-  margin: 36px 0;
-  font-size: 15px;
-  line-height: 1.5;
-  border-collapse: collapse;
-
-  padding: 15px;
-}
-
-.markdown thead th {
-  vertical-align: bottom;
-  padding-right: 8px;
-  padding-bottom: 8px;
-  padding-left: 8px;
-}
-
-.markdown thead th:first-child {
-  padding-left: 0;
-}
-
-.markdown thead th:last-child {
-  padding-right: 0;
-}
-
-.markdown tbody {
-  display: table-row-group;
-  vertical-align: middle;
-  border-color: inherit;
-}
-
-.markdown tbody tr {
-  border-bottom: 1px solid #ddd;
-  display: table-row;
-  vertical-align: inherit;
-}
-
-.markdown table tbody tr:first-child {
-  border-top: 1px solid #ddd;
-}
-
-.markdown tbody tr:last-child {
-  border-bottom-width: 0;
-}
-
-.markdown table tbody td {
-  vertical-align: top;
-  padding: 0.5714286em;
-  color: #555;
-}
-
-.markdown table tbody td:first-child {
-  padding-left: 0;
-}
-
-.markdown table body td:last-child {
-  padding-right: 0;
-}
+/* Table  */
+@media only screen{
 
 
+  .markdown table {
 
-@media (max-width: 410px) {
-  .markdown {
-    padding: 0 8px;
+    table-layout: auto;
+    text-align: left;
+    margin: 36px 0;
+    font-size: 15px;
+    line-height: 1.5;
+    border-collapse: collapse;
+  
+    padding: 15px;
+  }
+  
+  .markdown thead th {
+    vertical-align: bottom;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+  }
+  
+  .markdown thead th:first-child {
+    padding-left: 0;
+  }
+  
+  .markdown thead th:last-child {
+    padding-right: 0;
+  }
+  
+  .markdown tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+  
+  .markdown tbody tr {
+    border-bottom: 1px solid #ddd;
+    display: table-row;
+    vertical-align: inherit;
+  }
+  
+  .markdown table tbody tr:first-child {
+    border-top: 1px solid #ddd;
+  }
+  
+  .markdown tbody tr:last-child {
+    border-bottom-width: 0;
+  }
+  
+  .markdown table tbody td {
+    vertical-align: top;
+    padding: 0.5714286em;
+    color: #555;
+  }
+  
+  .markdown table tbody td:first-child {
+    padding-left: 0;
+  }
+  
+  .markdown table body td:last-child {
+    padding-right: 0;
   }
 }
+
+/* Lista */
+@media only screen{
+  .markdown ul li {
+    padding-left: 30px;
+    position: relative;
+    font-size: 1rem;
+  }
+  
+  .markdown ul li + li {
+    margin: 12px 0;
+  }
+  
+  .markdown ul li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--color-white-medium);
+    border-radius: 50%;
+  }
+}
+
+
+@media only screen{}
+@media only screen{}
+@media only screen{}
+@media only screen{}
+@media only screen{}
+@media only screen{}
+

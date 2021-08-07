@@ -1,7 +1,7 @@
 ---
-title: 'postagem de teste de titulo'
+title: '7 recursos interessantes de JavaScript obsoletos'
 summary: 'Lorem ipsum dolor sit amet labore et dolore magna aliqua.'
-coverImage: '/assets/blog/post3/img.jpg'
+coverImage: '/assets/blog/post6/img.jpg'
 tags: 'css html5'
 date: '2020-03-16T05:35:07.322Z'
 author:

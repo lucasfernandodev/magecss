@@ -1,33 +1,39 @@
 import styles from "./style.module.css";
 import ViewCounter from "../ViewCounter";
-import { useState } from "react";
-import ButtonLike from "../../Utils/ButtonLike";
 import ReadTime from "../ReadTime";
 import PublishTime from '../PublishTime';
+import CSS from 'csstype'
 type Props = {
-  date: string;
+  date?: string;
+
   readTime: string;
   likes?: true;
   views?: {
-    slug: string;
+    slug?: string;
     observer?: boolean;
   };
-  slug: string;
+  slug: string
+
 };
 
-const PostMeta = ({ date, readTime, likes, views, slug }: Props) => {
+interface date {
+  width: CSS.Property.Width;
+}
 
-  const [isLiked, setIsLiked] = useState(" ");
+const PostMeta = ({ date, readTime, views, slug }: Props) => {
+
+  const dateCss: date = {
+    width: 'fit-content',
+  }
 
   return (
     <div className={styles["post-meta"]}>
-      <div>
-      {date?.length >= 6 ? <PublishTime data={date}/> : null}
-      {readTime ? (<ReadTime time={readTime} />) : null}
+      <div style={date ? dateCss : {}}>
+       {date ? ( <PublishTime data={date ? date : 'data invalida'}/>) : null}
       </div>
       <div>
-      {views ? ( <ViewCounter slug={views.slug} observer={views.observer ? true : false} /> ) : null}
-      {likes ? ( <ButtonLike size="small" isLiked={isLiked} slug={slug} onClick={() => setIsLiked(isLiked == "like" ? "unlike" : "like")} /> ) : null}
+      {readTime ? (<ReadTime time={readTime} />) : null}
+      {views ? (<ViewCounter observer={views.observer ? views.observer : false} slug={views.slug ? views.slug : 'erro'} />) : null}
       </div>
     </div>
   );

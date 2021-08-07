@@ -1,0 +1,54 @@
+.buttonLike, .buttonUnlike{
+    height: 32px;
+    width: 132px;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 0;
+    cursor: pointer;
+}
+
+.buttonUnlike .buttonLike__icon svg{
+    stroke: var(--color-info);
+    transition: 0.3s ease-in-out;
+}
+
+.buttonLike .buttonLike__icon svg{
+    stroke: var(--color-heart);
+    fill: var(--color-heart-light);
+}
+
+.buttonLike__reaction{
+    font-size: 14px;
+    color: var(--color-info);
+    transition: 0.3s ease-in-out;
+    margin-left: 4px;
+}
+
+
+.buttonUnlike:hover svg{
+    fill: var( --color-bg-component-level);
+    stroke: var( --color-bg-component-level)
+}
+
+.buttonLike:hover .buttonLike__reaction{
+    color: var( --color-bg-component-level)
+}
+
+.buttonLike svg{
+    animation: entry 0.25s;
+}
+
+@keyframes entry{
+    0%{
+        transform: scale(1);
+       
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

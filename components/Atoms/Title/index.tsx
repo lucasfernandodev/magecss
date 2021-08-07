@@ -1,5 +1,6 @@
 import styles from "./style.module.css";
 import CSS from "csstype";
+import Box from "../Box";
 type Props = {
   children: React.ReactNode;
   variant: string;
@@ -7,6 +8,7 @@ type Props = {
 };
 
 const Title = ({ children, variant, lineOverflow }: Props) => {
+  
   const LimitWrap: CSS.Properties = {
     display: "-webkit-box",
     WebkitBoxOrient: "vertical",
@@ -14,8 +16,7 @@ const Title = ({ children, variant, lineOverflow }: Props) => {
     overflow: "hidden",
     textOverflow: "ellipsis",
     height: "max-content",
-    width: "100%",
-    color: "var(--color-secondary)",
+    color: "#EAB543",
   };
 
   const unlimitedLine: CSS.Properties = {
@@ -23,6 +24,7 @@ const Title = ({ children, variant, lineOverflow }: Props) => {
   };
 
   return (
+
     <div
       className={styles.title}
       style={lineOverflow ? LimitWrap : unlimitedLine}

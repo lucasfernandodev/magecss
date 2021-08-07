@@ -1,11 +1,9 @@
 import HeroPost from "@/Organisms/PostFeatured";
 import Layout from "@/Molecules/Layout";
-import CardCollection from "@/Organisms/CardCollection";
-import PostPreview from "@/Organisms/PostPreview";
 import Head from "@/Atoms/Head";
 
 import Post from "../../../types/post";
-import Divider from "@/components/Atoms/Divider";
+import Feed from "@/components/Organisms/Feed";
 
 type HomeProps = {
   lastPost: Post;
@@ -13,9 +11,34 @@ type HomeProps = {
 };
 
 const Home = ({ lastPost, listPost }: HomeProps) => {
+
+  const post= [
+    {
+      title: " 7 recursos interessantes de javascript obsoletos",
+      slug: "www.google.com",
+      tag: "html5",
+    },
+    {
+      title: " 7 recursos interessantes de javascript obsoletos",
+      slug: "www.google.com",
+      tag: "css",
+    },
+    {
+      title: " 7 recursos interessantes de javascript obsoletos",
+      slug: "www.google.com",
+      tag: "Frontend",
+    },
+    {
+      title: " 7 recursos interessantes de javascript obsoletos",
+      slug: "www.google.com",
+      tag: "Nextjs",
+    },
+  ];
+
   return (
     <Layout>
       <Head />
+      
       {lastPost && (
         <HeroPost
           tags={lastPost.tags}
@@ -27,23 +50,9 @@ const Home = ({ lastPost, listPost }: HomeProps) => {
           summary={lastPost.summary}
         />
       )}
+    
+      <Feed title="Postagens" listPost={listPost} listsPostByTag={post} />
 
-      <Divider space="large" type="row"/>
-      
-      <CardCollection title="Publicações recentes" titleColor="primary">
-        {listPost.map((post) => (
-          <PostPreview
-            key={post.slug}
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            slug={post.slug}
-            summary={post.summary}
-            tags={post.tags}
-            readTime={post.readTime}
-          />
-        ))}
-      </CardCollection>
     </Layout>
   );
 };

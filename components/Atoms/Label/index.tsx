@@ -3,7 +3,7 @@ import style from "./style.module.css";
 
 type Props = {
   size?: string;
-  icon: string;
+  icon?: string;
   text: string
 };
 
@@ -12,7 +12,7 @@ const Label = ({size, text, icon }: Props) => {
 
     <div className={`${style.label}`}>
       <span className={style.label__icon}>
-        <Icon icon={icon} stroke="var(--color-subtitle)"/>
+        {icon ? <Icon width={20} height={20} icon={icon} stroke="var(--color-info)"/> : null}
       </span>
       <span className={style.label__text}>{text}</span>
     </div>

@@ -1,53 +1,32 @@
-import style from "./style.module.css";
 import Tags from "../../Molecules/Tags";
-import { useState } from "react";
-import Link from "next/link";
-import ButtonLike from "../../Utils/ButtonLike";
-import Label from "../../Atoms/Label";
-import Icon from "../../Utils/Icon";
-
+import ButtonLike from "@/components/Molecules/ButtonLike";
+import ButtonComment from "@/components/Molecules/ButtonComment";
+import Box from "@/components/Atoms/Box";
+import {useState} from "react"
 type Props = {
   tags: string;
   slug: string;
 };
 
 const PostReaction = ({ tags, slug }: Props) => {
-  const [isLiked, setIsLiked] = useState(" ");
 
-  const tagsToArray = tags.split(" ");
+
+
   return (
-    <div className={style.postreaction}>
-      <div className={style.postreaction__tags}>
-        <Tags tags={tagsToArray} />
-      </div>
-      <div className={style.postreaction__reaction}>
-        <div className={style.postreaction__reactInline}>
-          <ButtonLike
-            size="large"
-            isLiked={isLiked}
-            slug={slug}
-            onClick={() => setIsLiked(isLiked == "like" ? "unlike" : "like")}
-          />
-          <div className={style.postreaction__comment}>
-            <button>
-              <Label icon="comment" text="" />
-            </button>
-          </div>
-        </div>
+    <Box direction="column" gap="16px" width="100%">
+    <Tags tags={tags} limitTags={3} />
 
-        <ul className={style.postreaction__shared}>
-          <li className={style.postreaction__item}>
-            <Icon icon="linkedin" />
-          </li>
-          <li className={style.postreaction__item}>
-            <Icon icon="twitter" />
-          </li>
-          <li className={style.postreaction__item}>
-            <Icon icon="facebook" />
-          </li>
-        </ul>
-      </div>
-    </div>
+    <Box justifyContent="space-between" width="100%" alignItens="center">
+      <Box justifyContent="flex-end">
+        <ButtonLike  slug={slug} state={false} countReact={10}  />
+        <ButtonComment onClick={() => {}} />
+      </Box>
+    {/* {console.log('button', like)} */}
+      <Box justifyContent="flex-end">
+       <span>Redes sociais</span>
+      </Box>
+    </Box>
+  </Box>
   );
 };
 

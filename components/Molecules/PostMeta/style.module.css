@@ -10,14 +10,17 @@
     gap: 12px;
 }
 
-.post-meta div {
+.post-meta > div {
     font-weight: 400;
-    color: var(--color-white-medium);
     gap: 12px;
     font-size: 14px;
     display: flex;
     flex-wrap: wrap;
     line-height: 22px;
     align-items: center;
-    gap: 4px;
+    gap: 12px;
+}
+
+.post-meta > div:first-child {
+    width: 100%;
 }

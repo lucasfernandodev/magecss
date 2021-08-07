@@ -1,5 +1,6 @@
 .footer{
     width: 100%;
     margin-bottom: 128px;
+    margin-top: 32px;
     max-width: var(--width-post);
 }

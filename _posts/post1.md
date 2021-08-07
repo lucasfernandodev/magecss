@@ -1,7 +1,7 @@
 ---
-title: 'postagem de teste de titulo'
-summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
-coverImage: '/assets/blog/post9/img.jpg'
+title: 'Como construir um menu de acordeão React a partir do zero'
+summary: 'Hoje, desenvolver e enviar aplicativos prontos para produção para a web não poderia ser mais fácil do que com Next.js e Vercel. Ele fornece uma experiência de desenvolvedor de classe mundial logo que sai da caixa e é otimizado para alimentar cargas de trabalho de produção de alto desempenho.'
+coverImage: '/assets/blog/post1/img.jpg'
 tags: 'facebook css html5'
 date: '2020-03-16T05:35:07.322Z'
 author:

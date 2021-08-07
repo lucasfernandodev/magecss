@@ -1,19 +1,18 @@
 import Layout from "@/Molecules/Layout";
 import Head from "@/Atoms/Head";
-import PostPreview from "@/Organisms/PostPreview";
-import CardCollection from "@/Organisms/CardCollection";
 import Title from "@/components/Atoms/Title";
 import Header from "@/Organisms/Header";
 import Summary from "@/Atoms/Summary";
 import Divider from "@/Atoms/Divider";
 import PostType from "../../../types/post";
+import Feed from "@/components/Organisms/Feed";
 
 type TagsProps = {
-  post: PostType[];
+  posts: PostType[];
   tag: string;
 };
 
-const Tags = ({ post, tag }: TagsProps) => {
+const Tags = ({ posts, tag }: TagsProps) => {
 
   return (
     <Layout pageType={"primary"}>
@@ -26,20 +25,7 @@ const Tags = ({ post, tag }: TagsProps) => {
         </Summary>
       </Header>
       <Divider type="space" space="large" />
-      <CardCollection>
-        {post.map((post, id) => (
-          <PostPreview
-            key={id}
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            tags={post.tags}
-            slug={post.slug}
-            summary={post.summary}
-            readTime={post.readTime}
-          />
-        ))}
-      </CardCollection>
+      <Feed  listPost={posts} template="full-post"/>
     </Layout>
   );
 };

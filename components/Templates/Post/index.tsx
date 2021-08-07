@@ -8,12 +8,16 @@ import Head from "@/Atoms/Head";
 import PostAuthor from "@/Molecules/PostAuthor";
 import PostReaction from "@/Organisms/PostReaction";
 import PostType from "../../../types/post";
+import Author from "@/components/Molecules/Author";
 
 type PostProps = {
   post: PostType;
 };
 
 const Post = ({ post }: PostProps) => {
+
+  const bioAuthor = 'Dev Apaixonado por Tecnologia & Educação! Evolua rápido como a tecnologia, aprendizado é contínuo e sempre haverá um próximo nível. Boost Yourself! 🚀'
+
   return (
     <Layout pageType="primary">
       <Section>
@@ -32,7 +36,7 @@ const Post = ({ post }: PostProps) => {
         />
         <Footer>
           <PostReaction tags={post.tags} slug={post.slug} />
-          <PostAuthor />
+          <Author name={post.author.name} src="/assets/author/lucas-transparent.png" subtitle={bioAuthor} large/>
         </Footer>
       </Section>
     </Layout>

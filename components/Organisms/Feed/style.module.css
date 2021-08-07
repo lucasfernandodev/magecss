@@ -1,0 +1,39 @@
+.feed{
+    display: flex;
+    flex-direction: column;
+    flex: wrap;
+    width: 100%;
+}
+
+.feed section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.feed section > article{
+    gap: 32px;
+    width: calc(100% - 350px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-self: flex-start;
+    align-items: flex-start;
+    padding: 32px 0;
+  
+    margin: 0 auto;
+}
+
+.feed section > aside{
+    padding: 16px 0;
+    flex: 1;
+    width: calc(100% - 16px);
+    margin-left: 16px;
+    gap: 16px;
+}
+
+.feed[data-template="full-post"]  section > article{
+    width: 100%;
+}

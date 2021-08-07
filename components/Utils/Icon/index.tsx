@@ -16,6 +16,42 @@ const Icon = ({ width, height, fill, stroke, strokeWidth, icon }: Props) => {
     strokeWidth: `${strokeWidth ? strokeWidth : 1.35}`,
   };
 
+  const arrowTo = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      strokeWidth={data.strokeWidth}
+      stroke={data.stroke}
+      fill={data.fill}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      width={`${data.width}px`}
+      height={`${data.height}px`}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <line x1="15" y1="16" x2="19" y2="12"></line>
+      <line x1="15" y1="8" x2="19" y2="12"></line>
+    </svg>
+  );
+
+  const fire = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      strokeWidth={data.strokeWidth}
+      stroke={data.stroke}
+      fill={data.fill}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      width={`${data.width}px`}
+      height={`${data.height}px`}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"></path>
+    </svg>
+  );
+
   const heart = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -160,17 +196,19 @@ const Icon = ({ width, height, fill, stroke, strokeWidth, icon }: Props) => {
       <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
     </svg>
   );
-  
+
   return (
     <>
       {icon == "heart" ? heart : null}
       {icon == "view" ? view : null}
-      {icon == "time" ? view : null}
+      {icon == "time" ? time : null}
       {icon == "PublishTime" ? PublishTime : null}
       {icon == "comment" ? comment : null}
       {icon == "twitter" ? twitter : null}
       {icon == "linkedin" ? linkedin : null}
-      {icon == 'facebook' ? facebook : null}
+      {icon == "facebook" ? facebook : null}
+      {icon == "fire" ? fire : null}
+      {icon == "arrowTo" ? arrowTo : null}
     </>
   );
 };

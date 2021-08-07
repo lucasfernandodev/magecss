@@ -1,53 +1,67 @@
 import Link from "next/link";
-import CoverImage from "../../Atoms/CoverImage";
 import styles from "./style.module.css";
-import Tags from "../../Molecules/Tags";
-import PostMeta from "../../Molecules/PostMeta";
-import Summary from "../../Atoms/Summary";
-import Title from "../../Atoms/Title";
+import CoverImage from "@/Atoms/CoverImage";
+import Tags from "@/Molecules/Tags";
+import PostMeta from "@/Molecules/PostMeta";
+import Title from "@/Atoms/Title";
+import ButtonLike from "@/components/Molecules/ButtonLike";
+import ButtonComment from "@/components/Molecules/ButtonComment";
+import Author from "@/components/Molecules/Author";
+import Box from "@/components/Atoms/Box";
 
 type Props = {
   title: string;
   coverImage: string;
   date: string;
-  summary: string;
   slug: string;
   tags: string;
   readTime: string;
+  id?: number;
 };
 
 const PostPreview = ({
+  id,
   title,
   coverImage,
   date,
-  summary,
   readTime,
   slug,
   tags,
-}: Props) => {
-  const tagsToArray = tags.split(" ");
 
+}: Props) => {
   return (
-    <div className={styles["card"]}>
-      <div className={styles["card__thumbnail"]}>
-        <CoverImage slug={slug} title={title} src={coverImage} />
-      </div>
+    <div className={styles.card} data-lastoost={id}>
+      {id === 0 ? (
+        <div className={styles.card__thumbnail}>
+          <CoverImage slug={slug} title={title} src={coverImage} />
+        </div>
+      ) : null}
+
+      <Box>
+        <Author name="Lucas Fernando" src="/assets/author/lucas-transparent.png" data={date} />
+      </Box>
 
       <div className={styles["card__content"]}>
-        <Tags tags={tagsToArray} limitTags={3} />
-
-        <Title variant="h3" lineOverflow={2}>
+        <Title variant="h2" lineOverflow={2}>
           <Link as={`/posts/${slug}`} href="/posts/[slug]">
             {title}
           </Link>
         </Title>
 
-        <Summary limitRow={3}>{summary}</Summary>
+        <Box direction="column" gap="16px" width="100%">
+          <Tags tags={tags} limitTags={3} />
 
-        <div className={styles["card__footer"]}>
-     
-          <PostMeta slug={slug} date={date} readTime={readTime} />
-        </div>
+          <Box justifyContent="space-between" width="100%" alignItens="center">
+            <Box justifyContent="flex-end">
+              <ButtonLike slug={slug} />
+              <ButtonComment onClick={() => {}} />
+            </Box>
+
+            <Box justifyContent="flex-end">
+              <PostMeta slug={slug} readTime={readTime} />
+            </Box>
+          </Box>
+        </Box>
       </div>
     </div>
   );

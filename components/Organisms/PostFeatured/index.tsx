@@ -1,11 +1,11 @@
-import CoverImage from "../../Atoms/CoverImage";
+import CoverImage from "@/Atoms/CoverImage";
 import Link from "next/link";
-import Tags from "../../Molecules/Tags";
+import Tags from "@/Molecules/Tags";
 import styles from "./style.module.css";
-import PostMeta from "../../Molecules/PostMeta";
-import Summary from "../../Atoms/Summary";
-import Title from "../../Atoms/Title";
-import Container from "../../Atoms/Container";
+import PostMeta from "@/Molecules/PostMeta";
+import Summary from "@/Atoms/Summary";
+import Title from "@/Atoms/Title";
+import Container from "@/Atoms/Container";
 type Props = {
   title: string;
   coverImage: string;
@@ -25,8 +25,6 @@ const PostFeatured = ({
   readTime,
   slug,
 }: Props) => {
-  const tagsToArray = tags.split(" ");
-
   return (
     <Container>
       <section className={styles.PostFeatured}>
@@ -35,25 +33,25 @@ const PostFeatured = ({
         </div>
 
         <div className={styles.PostFeatured__header}>
-          <span className={styles.PostFeatured__tag}>
-            <span>Último Artigo</span>
-            <Tags tags={tagsToArray} limitTags={3} />
-          </span>
+          <div className={styles.PostFeatured__tags}>
+            <Tags tags={tags} limitTags={4} />
+          </div>
 
-          <Title variant="h2">
-            <Link as={`/posts/${slug}`} href="/posts/[slug]">
-              {title}
-            </Link>
-          </Title>
+          <div className={styles.PostFeatured__title}>
+            <Title variant="h2">
+              <Link as={`/posts/${slug}`} href="/posts/[slug]">
+                {title}
+              </Link>
+            </Title>
+          </div>
 
-          <Summary>{summary}</Summary>
-
+          <div className={styles.PostFeatured__subtitle}>
+            <Summary limitRow={4}>{summary}</Summary>
+          </div>
           <PostMeta
             slug={slug}
             views={{ slug, observer: false }}
-            date={date}
             readTime={readTime}
-            likes
           />
         </div>
       </section>

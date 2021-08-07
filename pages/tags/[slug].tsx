@@ -11,7 +11,7 @@ const index = ( posts : PostType[]) => {
   const tag = slug as string;
 
   const obj = Object.values(posts);
-  return <Tags post={obj} tag={tag}/>
+  return <Tags posts={obj} tag={tag}/>
 };
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {

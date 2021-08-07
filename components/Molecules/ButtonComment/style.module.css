@@ -1,0 +1,29 @@
+.buttonLike{
+    height: 32px;
+    width: 132px;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 0;
+    cursor: pointer;
+}
+
+.buttonLike__icon svg{
+    stroke: var(--color-info);
+    transition: 0.3s ease-in-out;
+}
+
+.buttonLike__reaction{
+    font-size: 14px;
+    color: var(--color-info);
+    transition: 0.3s ease-in-out;
+    margin-left: 4px;
+}
+
+.buttonLike:hover svg{
+    stroke: var( --color-bg-component-level)
+}
+.buttonLike:hover .buttonLike__reaction{
+    color: var( --color-bg-component-level)
+}

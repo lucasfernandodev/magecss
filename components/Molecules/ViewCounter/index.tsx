@@ -20,7 +20,7 @@ export default function ViewCounter({ slug, observer, size }: ViewCountProp) {
   const views = new Number(data?.total);
 
   useEffect(() => {
-    if (observer) {
+    if (observer === true) {
       const registerView = () =>
         fetch(`/api/views/${slug}`, {
           method: "POST",
@@ -31,10 +31,10 @@ export default function ViewCounter({ slug, observer, size }: ViewCountProp) {
   }, [slug]);
 
   return (
-    <p className={`${style.viewCounter} ${style[`${size ? size : null}`]}`}>
+    <div className={`${style.viewCounter} ${style[`${size ? size : null}`]}`}>
       <Label icon="view" text={`${views > 0 ? views.toLocaleString() : ""} ${
             views === 1 ? "Visualização" : "Visualizações"
           }`} />
-    </p>
+    </div>
   );
 }

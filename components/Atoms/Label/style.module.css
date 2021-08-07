@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     width: fit-content;
-    color: var(--color-white-transparent);
+    color: var(--color-info);
 
     height: 18px;
     line-height: 18px;
@@ -14,7 +14,7 @@
 }
 
 .label span{
-    color: var(--color-subtitle);
+    color: var(--color-info);
     display: inline-flex;
     align-items: flex-start;
     justify-content: center;
@@ -23,6 +23,11 @@
 }
 
 .label__text{
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 300;
+
+}
+
+.label__text::first-letter{
+    text-transform: uppercase;
 }
