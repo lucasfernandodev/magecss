@@ -12,15 +12,14 @@ type Props = {
 
 const Container = ({ children, alignX,direction, alignY, display, overflow, wrap }: Props) => {
   return (
-  <div className={
-    `
+  <div className={ `
     ${styles.container}
-    ${alignX ? styles[`align-x-${alignX}`] : null}
-    ${alignY ? styles[`align-y-${alignY}`] : null}
-    ${display ? styles[`display-${display}`] : null}
-    ${overflow ? styles[`overflow-${overflow}`] : null}
-    ${direction ? styles[`direction-${direction}`] : null}
-    ${wrap ? styles[`wrap-${wrap}`] : null}
+    ${alignX ? styles[`align-x-${alignX}`] : ""}
+    ${alignY ? styles[`align-y-${alignY}`] : ""}
+    ${display ? styles[`display-${display}`] : ""}
+    ${overflow ? styles[`overflow-${overflow}`] : ""}
+    ${direction ? styles[`direction-${direction}`] : ""}
+    ${wrap ? styles[`wrap-${wrap}`] : ""}
     `
     }>
     {children}

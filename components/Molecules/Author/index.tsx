@@ -22,6 +22,9 @@ const Author = ({ src, name, data, subtitle, large }: AuthorProp) => {
           <span className="author-data-post">
             {subtitle ? subtitle : 'Erro subtitle não informado'}
           </span>
+          <button className={styles.button}>
+            Seguir
+          </button>
         </div>
       </div>
       )}

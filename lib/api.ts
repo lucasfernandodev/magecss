@@ -52,7 +52,7 @@ export function getAllPosts(fields: string[] = []) {
   return posts;
 }
 
-export default function getPostBytags(filtro: string) {
+export default function getPostByTags(filtro: string) {
   const arq = getPostSlugs();
 
   const posts = arq.map((post) => {
@@ -64,6 +64,7 @@ export default function getPostBytags(filtro: string) {
 
     const readTime = getReadTime(content);
     data.readTime = readTime;
+    data.slug = realSlug;
 
     return data;
   });

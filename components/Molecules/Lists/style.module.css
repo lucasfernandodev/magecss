@@ -14,8 +14,16 @@
 }
 
 .list article{
-    border-top: 1px solid var(--color-bg-lines);
+    border-top: 1px solid var(--color-primary);
     border-bottom: 1px solid var(--color-bg-lines);
+}
+
+.list header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    background: var(--color-primary);
 }
 
 
@@ -24,9 +32,8 @@
     text-transform: lowercase;
     font-size: 18px;
     font-weight: 500;
+    position: relative;
 }
-
-
 
 .list header *::first-letter{
     text-transform: capitalize;
@@ -38,6 +45,8 @@
     font-weight: 400;
     padding-bottom: 4px;
 }
+
+
 
 .list article p{
     color: var(--color-info);

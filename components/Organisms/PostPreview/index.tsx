@@ -57,7 +57,7 @@ const PostPreview = ({
               <ButtonComment onClick={() => {}} />
             </Box>
 
-            <Box justifyContent="flex-end">
+            <Box justifyContent="center" alignItens="center">
               <PostMeta slug={slug} readTime={readTime} />
             </Box>
           </Box>

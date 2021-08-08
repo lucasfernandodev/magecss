@@ -1,13 +1,7 @@
 # Coisas que tenho que fazer
 
-- adicionar uma imagem de thumb as postagens
-- adicionar contador de visitas e botão de gostei
-- melhorar o card de autor
-- editar a sessão sobre
-- transformar todos os componentes em pastas
-- usar variáveis em todos os componentes
-- arrumar a sessão de tags
-- adicionar arquivo responsável pelas rotas de tags
 
-
-- add Titulos no lugar do h1,h2,h3 etc.. dos componentes & criar buttons
+- Criar um componente de Read-more para o PostFeature
+- Estilizar o Title do Feed
+- Adicionar versão mobile
+- Testar como fica os comentarios..

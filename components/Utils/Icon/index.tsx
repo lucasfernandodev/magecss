@@ -16,6 +16,26 @@ const Icon = ({ width, height, fill, stroke, strokeWidth, icon }: Props) => {
     strokeWidth: `${strokeWidth ? strokeWidth : 1.35}`,
   };
 
+  const hash = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      strokeWidth={data.strokeWidth}
+      stroke={data.stroke}
+      fill={data.fill}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      width={`${data.width}px`}
+      height={`${data.height}px`}
+    >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <line x1="5" y1="9" x2="19" y2="9"></line>
+    <line x1="5" y1="15" x2="19" y2="15"></line>
+    <line x1="11" y1="4" x2="7" y2="20"></line>
+    <line x1="17" y1="4" x2="13" y2="20"></line>
+  </svg>
+  )
+
   const arrowTo = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -209,6 +229,7 @@ const Icon = ({ width, height, fill, stroke, strokeWidth, icon }: Props) => {
       {icon == "facebook" ? facebook : null}
       {icon == "fire" ? fire : null}
       {icon == "arrowTo" ? arrowTo : null}
+      {icon == "hash" ? hash : null}
     </>
   );
 };

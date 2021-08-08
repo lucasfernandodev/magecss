@@ -1,4 +1,4 @@
-import getPostBytags from "../../lib/api";
+import getPostByTags from "../../lib/api";
 import { useRouter } from "next/router";
 import postTags from "../../utils/postTags";
 import Tags from '@/Templates/Tags';
@@ -16,7 +16,7 @@ const index = ( posts : PostType[]) => {
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   const tags = params.slug;
-  const posts = getPostBytags(tags); // Tem que ser um array
+  const posts = getPostByTags(tags); // Tem que ser um array
 
   return {
     props: {
