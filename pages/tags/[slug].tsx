@@ -1,6 +1,6 @@
 import getPostByTags from "../../lib/api";
 import { useRouter } from "next/router";
-import postTags from "../../utils/postTags";
+import postTags from "../../data/postTags";
 import Tags from '@/Templates/Tags';
 import PostType from '../../types/post';
 

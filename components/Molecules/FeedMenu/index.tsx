@@ -1,5 +1,6 @@
 import style from "./style.module.css";
 import { useState, useEffect } from "react";
+
 interface Tab {
   [key: string] : boolean
 }

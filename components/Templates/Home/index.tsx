@@ -1,7 +1,7 @@
 import HeroPost from "@/Organisms/PostFeatured";
 import Layout from "@/Molecules/Layout";
 import Head from "@/Atoms/Head";
-import List from '../../../utils/list';
+import List from '../../../data/list';
 import Post from "../../../types/post";
 import Feed from "@/components/Organisms/Feed";
 
