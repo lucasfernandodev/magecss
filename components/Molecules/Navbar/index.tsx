@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/Atoms/Link";
 import styles from "./style.module.css";
 function Navbar() {
   return (
@@ -11,7 +11,7 @@ function Navbar() {
           <Link href="/sobre/">Sobre</Link>
         </li>
         <li>
-          <Link href="https://lucasfernandodev.com.br">Portifolio</Link>
+          <Link href="https://lucasfernandodev.com.br">Portfólio</Link>
         </li>
         <li>
           <Link href="/posts/">Postagens</Link>

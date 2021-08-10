@@ -4,8 +4,9 @@ import Title from "@/components/Atoms/Title";
 import Header from "@/Organisms/Header";
 import Summary from "@/Atoms/Summary";
 import Divider from "@/Atoms/Divider";
-import PostType from "../../../types/post";
+import PostType from "@/types/post";
 import Feed from "@/components/Organisms/Feed";
+import Container from "@/components/Atoms/Container";
 
 type TagsProps = {
   posts: PostType[];
@@ -13,7 +14,6 @@ type TagsProps = {
 };
 
 const Tags = ({ posts, tag }: TagsProps) => {
-
   return (
     <Layout pageType={"primary"}>
       <Head title={`Todas as postagens com a tag ${tag}`} />
@@ -25,7 +25,9 @@ const Tags = ({ posts, tag }: TagsProps) => {
         </Summary>
       </Header>
       <Divider type="space" space="large" />
-      <Feed  listPost={posts} template="full-post"/>
+      <Container>
+        <Feed listPost={posts} template="full-post" />
+      </Container>
     </Layout>
   );
 };

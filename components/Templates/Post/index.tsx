@@ -5,9 +5,8 @@ import Footer from "@/Organisms/PostFooter";
 import Layout from "@/Molecules/Layout";
 import Head from "@/Atoms/Head";
 
-import PostAuthor from "@/Molecules/PostAuthor";
 import PostReaction from "@/Organisms/PostReaction";
-import PostType from "../../../types/post";
+import PostType from "@/types/post";
 import Author from "@/components/Molecules/Author";
 
 type PostProps = {

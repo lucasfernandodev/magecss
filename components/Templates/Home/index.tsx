@@ -1,9 +1,12 @@
-import HeroPost from "@/Organisms/PostFeatured";
+import PostFeatured from "@/Organisms/PostFeatured";
 import Layout from "@/Molecules/Layout";
 import Head from "@/Atoms/Head";
-import List from '../../../data/list';
-import Post from "../../../types/post";
+import Post from "@/types/post";
 import Feed from "@/components/Organisms/Feed";
+import Container from "@/components/Atoms/Container";
+import TopicsList from "@/components/Organisms/Topics";
+
+import ListTopics from "../../../data/listTopics";
 
 type HomeProps = {
   lastPost: Post;
@@ -11,26 +14,23 @@ type HomeProps = {
 };
 
 const Home = ({ lastPost, listPost }: HomeProps) => {
-
-
   return (
     <Layout>
       <Head />
-      
-      {lastPost && (
-        <HeroPost
-          tags={lastPost.tags}
+
+      <Container>
+        <PostFeatured
           title={lastPost.title}
           coverImage={lastPost.coverImage}
-          date={lastPost.date}
-          readTime={lastPost.readTime}
           slug={lastPost.slug}
           summary={lastPost.summary}
         />
-      )}
-    
-      <Feed title="Postagens recentes" listPost={listPost} listsPostByTag={List} />
+      </Container>
 
+      <Container direction="row" display="flex">
+        <Feed title="Postagens recentes" listPost={listPost} template="feed" />
+        <TopicsList listTopics={ListTopics} />
+      </Container>
     </Layout>
   );
 };

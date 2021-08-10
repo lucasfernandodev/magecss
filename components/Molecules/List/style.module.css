@@ -6,15 +6,18 @@
     justify-content: space-between;
     background: var(--color-bg-component);
     border: 1px solid var(--color-bg-component-high);
-    margin: 16px 0;
     border-radius: 4px;
 }
 
-.list header, .list article,.list footer{
+.list + .list{
+    margin: 16px 0;
+}
+
+.list header, .list section,.list footer{
     padding: 16px;
 }
 
-.list article{
+.list section{
     border-top: 1px solid var(--color-bg-component-high);
     border-bottom: 1px solid var(--color-bg-component-high);
 }
@@ -23,8 +26,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* background: var(--color-primary); */
-
 }
 
 
@@ -45,7 +46,7 @@
     color: var(--color-title);
 }
 
-.list article h4{
+.list section h4{
     font-size: 16px;
     line-height: 1.6;
     font-weight: 400;
@@ -55,12 +56,12 @@
 
 
 
-.list article p{
+.list section p{
     color: var(--color-info);
     font-size: 14px;
 }
 
-.list article ul{
+.list section ul{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -69,11 +70,11 @@
     gap: 16px;
 }
 
-.list article ul li{
+.list section ul li{
     width: 100%
 }
 
-.list article a:hover{
+.list section a:hover{
     color: var(--color-secondary);
 }
 

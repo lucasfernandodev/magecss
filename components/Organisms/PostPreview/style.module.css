@@ -13,7 +13,7 @@
   border-radius: 4px;
 }
 
-.card[data-lastoost="0"]{
+.card[data-key="0"]{
   margin-top: 0;
 }
 
@@ -44,11 +44,14 @@
 .card__content{
   padding: 24px 32px;
   padding-left: 70px;
-  padding-top: 0;
   max-height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.card__content > a{
+  margin-bottom: 16px;
 }
 
 .card__content > p{

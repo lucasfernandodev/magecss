@@ -1,6 +1,6 @@
 import Layout from "@/Molecules/Layout";
 import Head from '@/Atoms/Head';
-import Post from "../../../types/post";
+import Post from "@/types/post";
 import Header from "@/Organisms/Header";
 import Title from "@/components/Atoms/Title";
 import Divider from "@/Atoms/Divider";

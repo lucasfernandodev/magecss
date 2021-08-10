@@ -20,7 +20,8 @@
       "@/Molecules/*": ["components/Molecules/*"],
       "@/Organisms/*": ["components/Organisms/*"],
       "@/Templates/*": ["components/Templates/*"],
-      "@/Utils/*": ["components/Utils/*"]
+      "@/Utils/*": ["components/Utils/*"],
+      "@/types/*": ["types/*"]
     }
   },
   "exclude": ["node_modules"],

@@ -1,20 +1,8 @@
-type listItem = {
-  title: string;
-  slug: string;
-  tag: string;
-};
+import LinkTopics from '../types/list';
 
-type list = {
-  title: string;
-  tag: string,
-  target: string | boolean;
-  data: listItem[];
-};
-
-const List: list[] = [
+const List: LinkTopics[] = [
   {
     title: "Publicações mais vistas",
-    target: false,
     tag: "Geral",
     data: [
       {

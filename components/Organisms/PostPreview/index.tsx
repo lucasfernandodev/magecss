@@ -1,5 +1,6 @@
-import Link from "next/link";
 import styles from "./style.module.css";
+
+import Link from "@/Atoms/Link";
 import CoverImage from "@/Atoms/CoverImage";
 import Tags from "@/Molecules/Tags";
 import PostMeta from "@/Molecules/PostMeta";
@@ -27,10 +28,9 @@ const PostPreview = ({
   readTime,
   slug,
   tags,
-
 }: Props) => {
   return (
-    <div className={styles.card} data-lastoost={id}>
+    <div className={styles.card} data-key={id}>
       {id === 0 ? (
         <div className={styles.card__thumbnail}>
           <CoverImage slug={slug} title={title} src={coverImage} />
@@ -38,17 +38,21 @@ const PostPreview = ({
       ) : null}
 
       <Box>
-        <Author name="Lucas Fernando" src="/assets/author/lucas-transparent.png" data={date} />
+        <Author
+          name="Lucas Fernando"
+          src="/assets/author/lucas-transparent.png"
+          data={date}
+        />
       </Box>
 
       <div className={styles["card__content"]}>
-        <Title variant="h2" lineOverflow={2}>
-          <Link as={`/posts/${slug}`} href="/posts/[slug]">
+        <Link as={`/posts/${slug}`} href="/posts/[slug]">
+          <Title variant="h2" lineOverflow={2}>
             {title}
-          </Link>
-        </Title>
+          </Title>
+        </Link>
 
-        <Box direction="column" gap="16px" width="100%">
+        <Box  direction="column" gap="16px" width="100%">
           <Tags tags={tags} limitTags={3} />
 
           <Box justifyContent="space-between" width="100%" alignItens="center">

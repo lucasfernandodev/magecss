@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/Atoms/Link";
 import styles from "./style.module.css";
 
 const Brand = () => {

@@ -1,8 +1,8 @@
 import styles from "./style.module.css";
-import Container from "../../Atoms/Container";
-import Brand from "../../Atoms/Brand";
-import Navbar from "../../Molecules/Navbar";
-import Link from "next/link";
+import Container from "@/Atoms/Container";
+import Brand from "@/Atoms/Brand";
+import Navbar from "@/Molecules/Navbar";
+import Link from "@/Atoms/Link";
 const PageFooter = () => {
   return (
     <footer className={styles.footer}>

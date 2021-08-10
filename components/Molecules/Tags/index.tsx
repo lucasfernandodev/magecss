@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Link from "@/Atoms/Link";
 import styles from "./style.module.css";
-import { useState } from "react";
+
 type Props = {
   tags: string;
   limitTags?: number;
