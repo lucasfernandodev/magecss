@@ -1,4 +1,4 @@
-// Tags que contenham algum post
+// Tags que contem algum post
 
 const postTags = [
   { name: "css" },

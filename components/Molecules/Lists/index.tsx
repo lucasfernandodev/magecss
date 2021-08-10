@@ -13,13 +13,15 @@ type ListsProp = {
   list: List[];
   title: string;
   tag: string;
+  nohash?: boolean;
+  target: string | boolean;
 };
 
-const Lists = ({ list, title, tag }: ListsProp) => {
+const Lists = ({ list, title, tag, target, nohash }: ListsProp) => {
   return (
     <div className={styles.list}>
       <header>
-       <Icon icon="hash" />
+        {nohash ? null : <Icon icon="hash" />}
         <Title variant="h3">{title}</Title>
       </header>
       <article>
@@ -30,7 +32,7 @@ const Lists = ({ list, title, tag }: ListsProp) => {
                 <h4 className="title">
                   <Link href="/">{item.title}</Link>
                 </h4>
-                <p className="tag">{item.tag}</p>
+                <p className="tag">{tag}</p>
               </li>
             ))
           ) : (
@@ -38,9 +40,12 @@ const Lists = ({ list, title, tag }: ListsProp) => {
           )}
         </ul>
       </article>
-      <footer>
-        <span>Ver mais</span>
-      </footer>
+
+      {typeof target === "string" ? (
+        <footer>
+          Ver mais <Link href={target}>{tag}</Link>{" "}
+        </footer>
+      ) : null}
     </div>
   );
 };

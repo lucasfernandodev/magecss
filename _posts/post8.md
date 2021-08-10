@@ -1,5 +1,5 @@
 ---
-title: 'postagem de teste de titulo'
+title: 'Como devo estilizar meu aplicativo React?'
 summary: 'Lorem ipsum dolor sit amet labore et dolore ipsum dolor sit amet lab magna aliqua.'
 coverImage: '/assets/blog/post5/img.jpg'
 tags: 'css html5'

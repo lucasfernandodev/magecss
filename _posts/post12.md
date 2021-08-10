@@ -1,5 +1,5 @@
 ---
-title: 'postagem de teste de titulo completamente grande quase não nessesario, praesent elementum leo vel fringilla'
+title: 'Usando a API Spotify com Next.js'
 summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
 coverImage: '/assets/blog/post2/img.jpg'
 tags: 'frontend'

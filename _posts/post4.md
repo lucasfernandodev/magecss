@@ -1,5 +1,5 @@
 ---
-title: 'postagem de teste de titulo'
+title: 'Usando Serverless Redis com Next.jsUsing Serverless Redis with Next.js'
 summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
 coverImage: '/assets/blog/post4/img.jpg'
 tags: 'frontend css html5'

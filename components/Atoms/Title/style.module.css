@@ -34,7 +34,7 @@
 }
 
 .title__item a:hover {
-  color: #EAB543;
+  color: var(--color-primary);
 }
 
 .title__item{

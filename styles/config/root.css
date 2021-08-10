@@ -7,16 +7,17 @@
   --color-subtitle: #f2f9ffdd;
 
   --color-primary: #7158e2;
-  --color-secondary: #eab543;
-  --color-secondary-light: #ff9f1a;
+  --color-secondary: #7158e2;
+  --color-secondary-light: #7158e2;
   --color-heart: #ff3838;
   --color-heart-light: #ff4d4d;
 
   --color-dark: #171717;
 
-  --color-bg: #191921;
 
-  --color-bg-component: rgba(0, 0, 0, 0.3);
+  --color-bg: #1a1a22;
+
+  --color-bg-component: rgba(0,0,0,0.3);
   --color-bg-component-high: #5a5a6a99;
   --color-bg-component-level: #a2a2bf;
 

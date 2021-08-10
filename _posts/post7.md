@@ -1,5 +1,5 @@
 ---
-title: 'postagem de teste de titulo'
+title: 'Mudando para Tailwind CSS'
 summary: 'Lorem ipsum dolor sit amet labore et dolore magna aliqua.'
 coverImage: '/assets/blog/post3/img.jpg'
 tags: 'css html5'

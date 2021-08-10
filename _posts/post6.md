@@ -1,5 +1,5 @@
 ---
-title: 'postagem de teste de titulo'
+title: 'Fontes da web em 2021'
 summary: 'Lorem ipsum dolor sit amet labore et dolore magna aliqua.'
 coverImage: '/assets/blog/post3/img.jpg'
 tags: 'css html5'

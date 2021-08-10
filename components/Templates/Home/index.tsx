@@ -1,7 +1,7 @@
 import HeroPost from "@/Organisms/PostFeatured";
 import Layout from "@/Molecules/Layout";
 import Head from "@/Atoms/Head";
-
+import List from '../../../utils/list';
 import Post from "../../../types/post";
 import Feed from "@/components/Organisms/Feed";
 
@@ -12,28 +12,6 @@ type HomeProps = {
 
 const Home = ({ lastPost, listPost }: HomeProps) => {
 
-  const post= [
-    {
-      title: " 7 recursos interessantes de javascript obsoletos",
-      slug: "www.google.com",
-      tag: "html5",
-    },
-    {
-      title: " 7 recursos interessantes de javascript obsoletos",
-      slug: "www.google.com",
-      tag: "css",
-    },
-    {
-      title: " 7 recursos interessantes de javascript obsoletos",
-      slug: "www.google.com",
-      tag: "Frontend",
-    },
-    {
-      title: " 7 recursos interessantes de javascript obsoletos",
-      slug: "www.google.com",
-      tag: "Nextjs",
-    },
-  ];
 
   return (
     <Layout>
@@ -51,7 +29,7 @@ const Home = ({ lastPost, listPost }: HomeProps) => {
         />
       )}
     
-      <Feed title="Postagens" listPost={listPost} listsPostByTag={post} />
+      <Feed title="Postagens recentes" listPost={listPost} listsPostByTag={List} />
 
     </Layout>
   );

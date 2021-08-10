@@ -10,6 +10,7 @@
   border: 1px solid var(--color-bg-component-high);
   transition: 0.3s ease-in-out;
   background-color: var(--color-bg-component);
+  border-radius: 4px;
 }
 
 .card[data-lastoost="0"]{
@@ -21,11 +22,18 @@
   height: auto;
 }
 
+.card__thumbnail{
+  height: 330px;
+  overflow: hidden;
+}
+
 .card > img {
   background: var(--color-dark);
   transition: 0.3s linear;
-
-  height: 350px;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  overflow: hidden;
   width: 100%;
   max-width: 100%;
 

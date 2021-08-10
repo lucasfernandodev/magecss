@@ -31,17 +31,19 @@ const PostFeatured = ({
 }: Props) => {
   return (
     <Container>
-      <section className={styles.PostFeatured}>
-        <div className={styles.PostFeatured__thumbnail}>
+    <section className={styles.PostFeatured}>
+
+
+       <div className={styles.PostFeatured__thumbnail}>
           <CoverImage title={title} src={coverImage} slug={slug} />
         </div>
 
         <div className={styles.PostFeatured__header}>
           <div className={styles.PostFeatured__tags}>
             <span className={styles.PostFeatured__tag}>
-              <Icon icon="fire" /> Ultimo Artigo
+              <Icon icon="fire" /> Novo
             </span>
-            <Tags tags={tags} limitTags={4} />
+            {/* <Tags tags={tags} limitTags={4} /> */}
           </div>
 
           <div className={styles.PostFeatured__title}>
@@ -77,8 +79,8 @@ const PostFeatured = ({
               </Box>
             </Box>
           </div>
-        </div>
-      </section>
+        </div>       
+    </section>
     </Container>
   );
 };

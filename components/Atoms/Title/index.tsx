@@ -16,7 +16,7 @@ const Title = ({ children, variant, lineOverflow }: Props) => {
     overflow: "hidden",
     textOverflow: "ellipsis",
     height: "max-content",
-    color: "#EAB543",
+    color: "var(--color-primary)",
   };
 
   const unlimitedLine: CSS.Properties = {
