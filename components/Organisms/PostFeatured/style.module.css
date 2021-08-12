@@ -9,11 +9,9 @@
   justify-content: flex-start;
   margin: 64px auto;
   margin-top: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--color-bg-component);
   display: flex;
   position: relative;
-
-  
 }
 
 
@@ -101,6 +99,8 @@
   font-size: 36px !important;
   line-height: 1.2;
   max-width: 60ch;
+  margin-top: 32px;
+  margin-bottom: 16px;
 }
 
 

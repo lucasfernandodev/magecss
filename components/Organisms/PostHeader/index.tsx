@@ -28,6 +28,7 @@ const PostHeader = ({
           <Summary>{summary ? summary : null}</Summary>
           {subtitle ? subtitle : null}
         </div>
+        
         <div className={styles["post-header__meta"]}>
           <PostMeta
             slug={slug}

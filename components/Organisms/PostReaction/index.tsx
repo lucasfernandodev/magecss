@@ -2,7 +2,8 @@ import Tags from "../../Molecules/Tags";
 import ButtonLike from "@/components/Molecules/ButtonLike";
 import ButtonComment from "@/components/Molecules/ButtonComment";
 import Box from "@/components/Atoms/Box";
-import {useState} from "react"
+import SocialShareButtons from "@/components/Atoms/SocialShare";
+import {useRouter} from 'next/router';
 type Props = {
   tags: string;
   slug: string;
@@ -10,20 +11,20 @@ type Props = {
 
 const PostReaction = ({ tags, slug }: Props) => {
 
-
-
+  const Router = useRouter();
+  const {asPath} = Router;
   return (
     <Box direction="column" gap="16px" width="100%">
     <Tags tags={tags} limitTags={3} />
 
     <Box justifyContent="space-between" width="100%" alignItens="center">
       <Box justifyContent="flex-end">
-        <ButtonLike  slug={slug} state={false} countReact={10}  />
+        <ButtonLike slug={slug} />
         <ButtonComment onClick={() => {}} />
       </Box>
-    {/* {console.log('button', like)} */}
+
       <Box justifyContent="flex-end">
-       <span>Redes sociais</span>
+       <SocialShareButtons url={asPath}/>
       </Box>
     </Box>
   </Box>

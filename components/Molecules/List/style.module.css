@@ -40,6 +40,9 @@
 .list header *::first-letter{
     text-transform: capitalize;
 }
+.list header svg{
+    margin-right: 4px;
+}
 
 .list header h3{
     font-size: 20px;
@@ -51,7 +54,7 @@
     line-height: 1.6;
     font-weight: 400;
     padding-bottom: 4px;
-    color: var(--color-subtitle);
+    /* color: var(--color-subtitle); */
 }
 
 
@@ -74,7 +77,4 @@
     width: 100%
 }
 
-.list section a:hover{
-    color: var(--color-secondary);
-}
 

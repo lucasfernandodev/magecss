@@ -12,9 +12,11 @@ const Topics = ({ listTopics }: TopicsListProp) => {
       {listTopics
         ? listTopics.map((list, key) => {
             return (
+            
               <List
-                target={list.target}
+                id={key}
                 key={key}
+                target={list.target}
                 content={list.data}
                 title={list.title}
                 tag={list.tag}

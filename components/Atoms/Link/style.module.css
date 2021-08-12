@@ -1,12 +1,7 @@
 .link{
+  color: var(--color-text);
   text-decoration: none;
-  transition: 0.2s linear;
 }
-
-.link *{
-  transition: inherit;
-}
-
 
 .link *:hover{
   color: var(--color-primary);

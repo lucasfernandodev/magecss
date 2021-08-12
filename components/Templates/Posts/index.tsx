@@ -17,7 +17,7 @@ const Posts = ({listPosts}: PostsProps) => {
       <Head title="Todos as postagens" />
 
       <Header align="center">
-        <Title variant="h1">Todos as postagens</Title>
+        <Title variant="h1">Todas as postagens</Title>
         <Summary>
           Esses são todos os artigos postados no blog até o momento.
         </Summary>

@@ -1,0 +1,11 @@
+.badge{
+  color: var(--color-text);
+  background: var(--color-primary);
+  padding: 2px 4px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.badge[data-type="transparent"]{
+  background: transparent;
+}
