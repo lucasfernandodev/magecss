@@ -3,8 +3,6 @@ import db from '../../../lib/firebase';
 export default async (req, res) => {
 
     const userIp = process.env.ENVIRONMENT === 'development' ? req.connection.remoteAddress : req.headers['x-real-ip'];
-    
-
     const total = {}
 
     if (req.method === 'POST') {
@@ -73,8 +71,6 @@ export default async (req, res) => {
 
         return res.status(200).json({ total });
     }
-
-
 
     if (req.method === 'GET') {
         const ref = db.ref('likes').child(req.query.slug);

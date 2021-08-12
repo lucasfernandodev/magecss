@@ -16,7 +16,7 @@ type HomeProps = {
 const Home = ({ lastPost, listPost }: HomeProps) => {
   return (
     <Layout>
-      <Head />
+      <Head title="MAGE CSS - Dicas de front-end"/>
 
       <Container>
         <PostFeatured

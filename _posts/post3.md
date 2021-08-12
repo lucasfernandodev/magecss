@@ -8,7 +8,7 @@ author:
   name: Lucas Fernando
   picture: '/assets/blog/authors/joe.jpeg'
 ogImage:
-  url: '/assets/blog/preview/cover.jpg'
+  url: '/assets/blog/post3/img.jpg'
 ---
 
 # Introdução

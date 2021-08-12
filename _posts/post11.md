@@ -8,7 +8,7 @@ author:
   name: Joe Haddad
   picture: '/assets/blog/authors/joe.jpeg'
 ogImage:
-  url: '/assets/blog/preview/cover.jpg'
+  url: '/assets/blog/post1/img.jpg'
 ---
 
 # Introdução
