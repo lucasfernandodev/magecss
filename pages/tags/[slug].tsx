@@ -5,7 +5,7 @@ import Tags from '@/Templates/Tags';
 import PostType from '../../types/post';
 
 
-const index = ( posts : PostType[]) => {
+const Tag = ( posts : PostType[]) => {
   const router = useRouter();
   const {slug}  = router.query;
   const tag = slug as string;
@@ -36,4 +36,4 @@ export async function getStaticPaths() {
   };
 }
 
-export default index;
+export default Tag;

@@ -13,7 +13,8 @@ const FeedMenu = () => {
   });
 
   const ToggleTab = (e: string) => {
-    refresh == true ? useRefresh(false) : useRefresh(true);
+    const refreshToggle = refresh === true ? false : true;
+    useRefresh(refreshToggle);
 
     Object.keys(stateTab).forEach((key) => {
       

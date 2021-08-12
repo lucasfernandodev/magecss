@@ -4,9 +4,11 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "lint": "next lint"
   },
   "dependencies": {
+    "@next/eslint-plugin-next": "^11.1.0",
     "classnames": "2.3.1",
     "csstype": "^3.0.8",
     "date-fns": "2.21.3",
@@ -29,6 +31,8 @@
     "@types/react": "^17.0.6",
     "@types/react-dom": "^17.0.5",
     "autoprefixer": "^10.2.5",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.1.0",
     "postcss": "^8.3.0"
   },
   "license": "MIT"
