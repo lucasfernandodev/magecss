@@ -7,6 +7,7 @@ type HeadProp = {
 };
 
 const Head = ({ title, ogImage }: HeadProp) => {
+  const OG_Thumbnail = ogImage ? ogImage : HOME_OG_IMAGE_URL;
   return (
     <NextHead>
       {title ? (
@@ -15,11 +16,12 @@ const Head = ({ title, ogImage }: HeadProp) => {
         <title>MAGE CSS - Dicas de front-end</title>
       )}
 
-      
-      {ogImage != "undefined" ? (
+  if(!ogImage === 'undefined'){}
+
+      {OG_Thumbnail !== "undefined" ? (
         <meta property="og:image" content={`${BASE_URL}${ogImage}`} />
       ) : (
-        <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+        <meta property="og:image" content={OG_Thumbnail} />
       )}
     </NextHead>
   );
