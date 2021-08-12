@@ -1,7 +1,7 @@
 import Link from "@/Atoms/Link";
 import Icon from "@/components/Utils/Icon";
 import styles from "./style.module.css";
-
+import {BASE_URL} from '../../../lib/constants';
 
 interface SocialShareProvider {
   shareUrl: string;
@@ -29,7 +29,7 @@ interface SocialShareButtonProps {
 
 const SocialShareButtons = ({ url }: SocialShareButtonProps) => {
 
-  const MY_URL_ABSOLUTE = `http://myurl.com.br${url}`
+  const MY_URL_ABSOLUTE = `${BASE_URL}${url}`
 
   return (
     <ul className={styles.socialShareButtons}>
