@@ -6,7 +6,7 @@ import CSS from 'csstype';
 type Props = {
   date?: string;
 
-  readTime?: string;
+  reading_time?: number;
   likes?: true;
   views?: {
     slug?: string;
@@ -20,7 +20,7 @@ interface posicionamentoDatePublish {
   width: CSS.Property.Width;
 }
 
-const PostMeta = ({ date, readTime, views, slug }: Props) => {
+const PostMeta = ({ date, reading_time, views, slug }: Props) => {
 
   const dateCss: posicionamentoDatePublish = {
     width: 'fit-content',
@@ -33,7 +33,7 @@ const PostMeta = ({ date, readTime, views, slug }: Props) => {
       </div>
       ) : null}
       <div>
-      {readTime ? (<ReadTime time={readTime} />) : null}
+      {reading_time ? (<ReadTime time={reading_time} />) : null}
       {views ? (<ViewCounter observer={views.observer ? views.observer : false} slug={views.slug ? views.slug : 'erro'} />) : null}
       </div>
     </div>

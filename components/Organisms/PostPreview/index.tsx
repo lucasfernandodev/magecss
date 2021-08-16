@@ -4,6 +4,7 @@ import Link from "@/Atoms/Link";
 import CoverImage from "@/Atoms/CoverImage";
 import Tags from "@/Molecules/Tags";
 import PostMeta from "@/Molecules/PostMeta";
+import TagType from '@/types/tag';
 import Title from "@/Atoms/Title";
 import ButtonLike from "@/components/Molecules/ButtonLike";
 import ButtonComment from "@/components/Molecules/ButtonComment";
@@ -15,8 +16,8 @@ type Props = {
   coverImage: string;
   date: string;
   slug: string;
-  tags: string;
-  readTime: string;
+  tags: TagType[];
+  reading_time?: number;
   id?: number;
 };
 
@@ -25,7 +26,7 @@ const PostPreview = ({
   title,
   coverImage,
   date,
-  readTime,
+  reading_time,
   slug,
   tags,
 }: Props) => {
@@ -53,7 +54,7 @@ const PostPreview = ({
         </Link>
 
         <Box  direction="column" gap="16px" width="100%">
-          <Tags tags={tags} limitTags={3} />
+          <Tags data={tags} limitTags={3} />
 
           <Box justifyContent="space-between" width="100%" alignItens="center">
             <Box justifyContent="flex-end">
@@ -62,7 +63,7 @@ const PostPreview = ({
             </Box>
 
             <Box justifyContent="center" alignItens="center">
-              <PostMeta slug={slug} readTime={readTime} />
+              <PostMeta slug={slug} reading_time={reading_time} />
             </Box>
           </Box>
         </Box>

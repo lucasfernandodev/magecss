@@ -1,14 +1,19 @@
-# Coisas que tenho que fazer
+# FEATURES A SEREM DESENVOLVIDAS
 
+- criar uma page FRONTEND, BACKEND e LABORATÓRIO
+- Add comentários
+- add links de redes sociais no footer
+- estilizar o HMTL das postagens
+- adicionar page de Busca
+- add Cooke para views
+- add lista de cores das tags
+- add caminho certa para o slug das tags renderizadas em listas
+- diminuir o espaçamento do title do postPreview entre o titulo e o autor
+- deixar o botão de seguir do componente author funcionando
 
-- Criar um componente de Read-more para o PostFeature
-- Estilizar o Title do Feed
-- Adicionar versão mobile
-- Testar como fica os comentários..
-
-
-<!-- Feed -->
-
-feed: pega as 8 ultimas publicações e ordena por quantidade de views
-Recente: pega as 8 ultimas publicações e ordena por data
-Mais vistos: pega as ultimas publicações e ordena por data
+- Add / no url do site
+- lincar o botão de comentários com o componente de comentário dentro do post
+- Remover o site fornecido pelo ghost por padrão
+- editar paginas de tags
+- adicionar siteMap
+- add style module ao site 

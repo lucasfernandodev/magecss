@@ -7,15 +7,17 @@ import Icon from "@/components/Utils/Icon";
 import Box from "@/components/Atoms/Box";
 import ButtonLike from "@/components/Molecules/ButtonLike";
 import ButtonComment from "@/components/Molecules/ButtonComment";
-
+import Tags from "@/components/Molecules/Tags";
+import TagsType from '@/types/tag';
 type Props = {
   title: string;
   coverImage: string;
   summary: string;
   slug: string;
+  tags: TagsType[];
 };
 
-const PostFeatured = ({ title, coverImage, summary, slug }: Props) => {
+const PostFeatured = ({ title,tags, coverImage, summary, slug }: Props) => {
   return (
     <section className={styles.PostFeatured}>
       <div className={styles.PostFeatured__thumbnail}>

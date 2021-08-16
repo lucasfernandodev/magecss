@@ -9,33 +9,31 @@ import PostReaction from "@/Organisms/PostReaction";
 import PostType from "@/types/post";
 import Author from "@/components/Molecules/Author";
 
-type PostProps = {
-  post: PostType;
-};
+type GhostProps = {
+  post: PostType
+}
 
-const Post = ({ post }: PostProps) => {
-
+const Post = ({ post }: GhostProps) => {
   const bioAuthor = 'Dev Apaixonado por Tecnologia & Educação! Evolua rápido como a tecnologia, aprendizado é contínuo e sempre haverá um próximo nível. Boost Yourself! 🚀'
 
   return (
     <Layout pageType="primary">
       <Section>
-        <Head title={post.title} ogImage={post.ogImage.url} />
+        <Head title={post.title} ogImage={post.feature_image} />
         <Header
           title={post.title}
-          date={post.date}
-          readTime={post.readTime}
-          summary={post.summary}
+          date={post.published_at}
+          summary={post.excerpt}
           slug={post.slug}
         />
         <Article
-          content={post.content}
-          thumbnail={post.coverImage}
+          content={post.html}
+          thumbnail={post.feature_image}
           title={post.title}
         />
         <Footer>
-          <PostReaction tags={post.tags} slug={post.slug} />
-          <Author name={post.author.name} src="/assets/author/lucas-transparent.png" subtitle={bioAuthor} large/>
+          <PostReaction  slug={post.slug} tags={post.tags}/>
+          <Author name={'Lucas Fernando'} src="/assets/author/lucas-transparent.png" subtitle={bioAuthor} large/>
         </Footer>
       </Section>
     </Layout>

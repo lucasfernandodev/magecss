@@ -5,8 +5,6 @@ type badgeProps = {
   type?: string;
 }
 const Badge = ({text, type}: badgeProps) => {
-
-
   return(
     <span data-type={type} className={styles.badge}>{text}</span>
   )

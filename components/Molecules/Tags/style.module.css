@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--color-bg-component-high);
+    border: 1px solid var(--color-border);
     height: 26px;
     padding: 0 12px;
     opacity: 1;
@@ -123,6 +123,11 @@
 }
 
 .item[data-tag="back-end"] a:hover{
+    border-color: #e056fd;
+    background: #e056fd;
+}
+
+.item[data-tag="Getting Started"] a:hover{
     border-color: #e056fd;
     background: #e056fd;
 }

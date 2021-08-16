@@ -6,7 +6,7 @@ type Props = {
   title: string;
   subtitle?: string;
   date: string;
-  readTime: string;
+  readTime?: string;
   summary?: string;
   slug: string;
 };
@@ -34,7 +34,7 @@ const PostHeader = ({
             slug={slug}
             views={{ slug, observer: true }}
             date={date}
-            readTime={readTime}
+            // readTime={readTime}
           />
         </div>
       </div>

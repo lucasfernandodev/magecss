@@ -1,15 +1,27 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import { getPostBySlug, getAllPosts } from "../../lib/api";
-import markdownToHtml from "../../lib/markdownToHtml";
-import PostType from "../../types/post";
+import { getSinglePost, getPosts } from '../../lib/ghost';
+
 import Post from "@/Templates/Post";
 
-type Props = {
-  post: PostType;
-};
+import {GetStaticPropsContext } from 'next'
+// PostPage page component
 
-const Index = ({ post }: Props) => {
+type PostType = {
+  slug: string,
+  excerpt: string,
+  feature_image: string,
+  published_at: string,
+  title: string,
+  html: string,
+  id: string;
+}
+
+type GhostProps = {
+  post: PostType
+}
+
+const Index = ({ post }: GhostProps) => {
   const router = useRouter();
 
   if (!router.isFallback && !post?.slug) {
@@ -23,51 +35,36 @@ const Index = ({ post }: Props) => {
 
 export default Index;
 
+export async function getStaticPaths() {
+  const posts = await getPosts()
+
+  // Get the paths we want to create based on posts
+  const paths = posts.map((post: {slug: string}) => ({
+    params: { slug: post.slug },
+  }))
+
+  // { fallback: false } means posts not found should 404.
+  return { paths, fallback: false }
+}
+
+// Pass the page slug over to the "getSinglePost" function
+// In turn passing it to the posts.read() to query the Ghost Content API
+
 type Params = {
   params: {
     slug: string;
   };
 };
 
-// Content
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
-    "title",
-    "date",
-    "slug",
-    "author",
-    "content",
-    "ogImage",
-    "coverImage",
-    "readTime",
-    "summary",
-    "tags",
-  ]);
+  const post = await getSinglePost(params.slug)
 
-  const content = await markdownToHtml(post.content || "");
-
+  if (!post) {
+    return {
+      notFound: true,
+    }
+  }
   return {
-    props: {
-      post: {
-        ...post,
-        content,
-      },
-    },
-  };
-}
-
-// Urls
-export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"]);
-
-  return {
-    paths: posts.map((posts) => {
-      return {
-        params: {
-          slug: posts.slug,
-        },
-      };
-    }),
-    fallback: false,
-  };
+    props: { post }
+  }
 }

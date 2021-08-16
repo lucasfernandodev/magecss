@@ -1,19 +1,25 @@
 import PostFeatured from "@/Organisms/PostFeatured";
 import Layout from "@/Molecules/Layout";
 import Head from "@/Atoms/Head";
-import Post from "@/types/post";
+import PostType from "@/types/post";
+import ListType from '@/types/list'
 import Feed from "@/components/Organisms/Feed";
 import Container from "@/components/Atoms/Container";
 import TopicsList from "@/components/Organisms/Topics";
 
 import ListTopics from "../../../data/listTopics";
+import Divider from "@/components/Atoms/Divider";
+import { FeedProvider } from "@/components/Context/Feed";
+
+
 
 type HomeProps = {
-  lastPost: Post;
-  listPost: Post[];
+  lastPost: PostType;
+  listPost: PostType[];
+  listTopics: ListType[];
 };
 
-const Home = ({ lastPost, listPost }: HomeProps) => {
+const HomeTemplate = ({ lastPost, listPost, listTopics}: HomeProps) => {
   return (
     <Layout>
       <Head title="MAGE CSS - Dicas de front-end"/>
@@ -21,18 +27,22 @@ const Home = ({ lastPost, listPost }: HomeProps) => {
       <Container>
         <PostFeatured
           title={lastPost.title}
-          coverImage={lastPost.coverImage}
+          coverImage={lastPost.feature_image}
           slug={lastPost.slug}
-          summary={lastPost.summary}
+          summary={lastPost.excerpt}
+          tags={lastPost.tags}
         />
       </Container>
-
+      <Divider space="large" type="row"/>
       <Container direction="row" display="flex">
+      <FeedProvider>
         <Feed title="Postagens recentes" listPost={listPost} template="feed" />
-        <TopicsList listTopics={ListTopics} />
+      </FeedProvider>
+      
+        <TopicsList listTopics={listTopics} />
       </Container>
     </Layout>
   );
 };
 
-export default Home;
+export default HomeTemplate;

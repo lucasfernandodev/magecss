@@ -10,30 +10,39 @@
 }
 
 .buttonUnlike .buttonLike__icon svg{
-    stroke: var(--color-info);
+    stroke: var(--color-gray);
     transition: 0.3s ease-in-out;
 }
 
 .buttonLike .buttonLike__icon svg{
-    stroke: var(--color-heart);
-    fill: var(--color-heart-light);
+    stroke: var(--color-red);
+    fill: var(--color-red-light);
 }
 
 .buttonLike__reaction{
     font-size: 14px;
-    color: var(--color-info);
+    color: var(--color-gray);
     transition: 0.3s ease-in-out;
     margin-left: 4px;
 }
 
 
 .buttonUnlike:hover svg{
-    fill: var( --color-bg-component-level);
-    stroke: var( --color-bg-component-level)
+    fill: var(--color-gray);
+    stroke: var(--color-gray)
 }
 
 .buttonLike:hover .buttonLike__reaction{
-    color: var( --color-bg-component-level)
+    color: var(--color-info);
+}
+
+.buttonLike__icon:hover svg{
+    fill: var(--color-info);
+    stroke: var(--color-info)
+}
+
+.buttonUnlike .buttonLike__reaction{
+    color: var(--color-info);
 }
 
 .buttonLike svg{

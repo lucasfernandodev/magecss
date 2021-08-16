@@ -1,6 +1,6 @@
 .post-header {
   width: 100%;
-  background: var(--color-bg-component);
+  background: var(--color-bg-components);
   height: auto;
 
   margin: 0;
@@ -8,6 +8,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  padding-top: 64px;
 }
 
 .post-header .content {

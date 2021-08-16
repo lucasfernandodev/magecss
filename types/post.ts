@@ -1,18 +1,16 @@
-import Author from './author'
+import TagType from './tag'
 
 type PostType = {
-  slug: string
-  title: string
-  date: string
-  coverImage: string
-  author: Author
-  tags: string
-  summary: string
-  ogImage: {
-    url: string
-  }
-  content: string
-  readTime: string
+  id: string;
+  slug: string,
+  title: string,
+  excerpt: string,
+  published_at: string,
+  feature_image: string,
+  html: string,
+  tags: TagType[],
+  views?: number;
+  reading_time: number;
 }
 
 export default PostType

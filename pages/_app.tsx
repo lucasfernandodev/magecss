@@ -5,6 +5,7 @@ import '../styles/config/typography.css';
 import '../styles/config/scrollbar.css';
 import '../styles/config/code.css';
 import '../styles/global.css';
+import '../styles/config/colors.css';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />

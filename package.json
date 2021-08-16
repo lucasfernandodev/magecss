@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@next/eslint-plugin-next": "^11.1.0",
+    "@tryghost/content-api": "^1.5.12",
     "classnames": "2.3.1",
     "csstype": "^3.0.8",
     "date-fns": "2.21.3",

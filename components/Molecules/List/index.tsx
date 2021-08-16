@@ -1,44 +1,50 @@
-import Link from '@/Atoms/Link';
+import Link from "@/Atoms/Link";
 import styles from "./style.module.css";
 import Title from "@/Atoms/Title";
 import Icon from "@/components/Utils/Icon";
 import Topics from "@/types/topics";
-import Badge from '@/components/Atoms/Badge';
+import Badge from "@/components/Atoms/Badge";
+import ListType from "@/types/list";
 
 type ListsProp = {
-  id: number;
-  content: Topics[];
-  title: string;
-  tag: string;
-  icon?: boolean;
-  target: string | undefined;
+  data: ListType;
+  id: number
 };
 
-const List = ({ id, title, content, tag, target, icon }: ListsProp) => {
+const List = ({ data, id }: ListsProp) => {
   return (
     <div className={styles.list}>
+
       <header>
-        {icon !== true ? null : <Icon icon="hash" />}
-        <Title variant="h3">{title}</Title>
+        {id === 0 ? null : (
+          <Icon strokeWidth={2} icon="hash" height={30} width={30} />
+        )}
+        <Title variant="h3">{data.title}</Title>
       </header>
 
-      <section>
-        <ul>
-          {content && content.map((item, key) => (
-              <li key={key}>
-                <Link href={item.slug}>
-                  <Title variant="h4">{item.title}</Title>
-                </Link>
-                {id === 0 ? <Badge text={tag} type="transparent" /> : <Badge text={tag} />}
-              </li>
-            ))}
-        </ul>
-      </section>
 
-      {target && (
+          <section>
+            <ul>
+              {data &&
+                data.content.map((item, key) => (
+                  <li key={key}>
+                    <Link href={item.slug}>
+                      <Title variant="h4">{item.title}</Title>
+                    </Link>
+                    {id === 0 ? (
+                      <Badge text={data.slug} type="transparent" />
+                    ) : (
+                      <Badge text={data.slug} />
+                    )}
+                  </li>
+                ))}
+            </ul>
+          </section>
+
+      {data.slug && (
         <footer>
-          Ver mais postagens de 
-          <Link href={target}> {tag}</Link>
+          Ver mais postagens de
+          <Link href={data.slug}> {data.title}</Link>
         </footer>
       )}
     </div>

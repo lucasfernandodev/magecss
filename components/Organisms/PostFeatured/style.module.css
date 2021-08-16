@@ -5,13 +5,14 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: 550px;
+  height: 540px;
   justify-content: flex-start;
   margin: 64px auto;
-  margin-top: 0;
-  background-color: var(--color-bg-component);
+    margin-top: 32px;
+  background-color: var(--color-bg-components);
   display: flex;
   position: relative;
+  border: 1px solid var(--color-border)
 }
 
 
@@ -23,7 +24,6 @@
   align-items: flex-start;
   justify-content: center;
   height: 100%;
-  width: 50%;
 }
 
 .PostFeatured__thumbnail {
@@ -32,6 +32,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 50%;
+
 }
 
 .PostFeatured__thumbnail div,
@@ -51,10 +53,10 @@
   min-height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: brightness(0.7);
 }
 
 .PostFeatured__header {
+  width: 50%;
   padding: 64px 32px;
   padding-right: 64px;
   flex-direction: column;
@@ -72,11 +74,11 @@
 
 .PostFeatured__tag{
   padding: 3px 12px;
-  background: var(--color-bg-component);
+  background: var(--color-bg-components);
   color: var(--color-text);
   margin-right: 4px;
   border-radius: 4px;
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--color-secondary);
   font-size: 14px;
   font-weight: bold;
   display: flex;
@@ -91,7 +93,7 @@
   display: flex;
   align-items: center;
   margin-top: -3px;
-  fill: var(--color-secondary-light);
+  fill: var(--color-secondary);
   stroke: var(--color-secondary);
 }
 
@@ -99,8 +101,12 @@
   font-size: 36px !important;
   line-height: 1.2;
   max-width: 60ch;
-  margin-top: 32px;
   margin-bottom: 16px;
+ 
+}
+
+.PostFeatured__title a:hover * {
+  color: var(--color-secondary);
 }
 
 
@@ -118,7 +124,7 @@
 .PostFeatured__more{
   display: flex;
   border-bottom: 1px solid transparent;
-  color: var(--color-secondary);
+  color: var(--color-text);
   margin-bottom: 16px;
 }
 
@@ -130,11 +136,17 @@
   font-weight: 500;
   letter-spacing: 1.2px;
   font-size: 16px;
+ color: inherit
+}
+
+.PostFeatured__more a:hover{
+  color: var(--color-secondary);
 }
 
 .PostFeatured__more:hover{
-  border-bottom: 1px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-secondary);
 }
+
 
 .PostFeatured__more:hover svg{
   transform: translateX(5px);

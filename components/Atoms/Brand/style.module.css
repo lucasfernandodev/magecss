@@ -4,27 +4,27 @@
 }
 
 .brand__title {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bold;
-  text-transform: uppercase;
+
   display: flex;
   align-items: center;
   font-family: "Play", sans-serif;
-}
-
-.brand__title-point{
-  color: var(--color-primary);
 }
 
 .brand h1,
 .brand svg {
   cursor: pointer;
   color: var(--color-title);
-  fill: var(--color-secondary);
-  stroke: var(--color-secondary);
+  fill:var(--color-title);
+  stroke: var(--color-title);
+}
+
+.brand *:hover{
+  color: var(--color-title);
 }
 
 .brand svg {
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
 }

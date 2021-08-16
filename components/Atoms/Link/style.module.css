@@ -4,9 +4,9 @@
 }
 
 .link *:hover{
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 .link:hover{
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }

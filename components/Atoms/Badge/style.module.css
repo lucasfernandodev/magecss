@@ -4,8 +4,12 @@
   padding: 2px 4px;
   font-size: 12px;
   border-radius: 4px;
+  display: flex;
+  max-width: fit-content;
 }
 
 .badge[data-type="transparent"]{
   background: transparent;
+  color: var(--color-info);
+
 }

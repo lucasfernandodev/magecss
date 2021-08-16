@@ -1,33 +1,37 @@
-import Home from "@/components/Templates/Home";
-import { getAllPosts } from "../lib/api";
-import Post from "../types/post";
+import HomeTemplate from "@/components/Templates/HomeTemplate";
+import { getPosts, getList } from "../lib/ghost";
 
-type Props = {
-  allPosts: Post[];
+import PostType from "@/types/post";
+import ListType from '@/types/list'
+
+type HomeProp = {
+  posts: PostType[];
+  list: ListType[];
+}
+
+const Home = ({ posts, list }: HomeProp) => {
+  console.log("Lista", list)
+  const lastPost = posts[0];
+  const listPost = posts.slice(1);
+
+  return <HomeTemplate lastPost={lastPost} listPost={listPost} listTopics={list} />;
 };
 
-const Index = ({ allPosts }: Props) => {
-  const lastPost = allPosts[0];
-  const listPost = allPosts.slice(1);
-
-  return <Home lastPost={lastPost} listPost={listPost} />;
-};
-
-export default Index;
+export default Home;
 
 
-export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    "title",
-    "date",
-    "slug",
-    "coverImage",
-    "summary",
-    "readTime",
-    "tags",
-  ]);
+export async function getStaticProps() {
+
+  const posts = await getPosts() ?? null;
+  const list = await getList() ?? null;
+
+  if (!posts) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
-    props: { allPosts },
+    props: { posts, list },
   };
-};
+}

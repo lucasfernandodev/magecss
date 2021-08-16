@@ -1,39 +1,35 @@
-import getPostByTags from "../../lib/api";
-import { useRouter } from "next/router";
-import postTags from "../../data/postTags";
 import Tags from '@/Templates/Tags';
-import PostType from '../../types/post';
+import PostType from '@/types/post';
+import { getTagsAll, getPostsFilterByTag } from '../../lib/ghost';
 
+type TagsProp = {
+  posts: PostType[];
+  tags: string
+}
+const Tag = ( posts : TagsProp) => {
 
-const Tag = ( posts : PostType[]) => {
-  const router = useRouter();
-  const {slug}  = router.query;
-  const tag = slug as string;
-
-  const obj = Object.values(posts);
-  return <Tags posts={obj} tag={tag}/>
+  return <Tags posts={posts.posts} tag={posts.tags}/>
 };
+
+export default Tag;
+
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   const tags = params.slug;
-  const posts = getPostByTags(tags); // Tem que ser um array
+  const posts = await getPostsFilterByTag(tags); // Tem que ser um array
 
   return {
-    props: {
-      ...posts,
-    },
+    props: {posts, tags},
   };
 }
 
 export async function getStaticPaths() {
-  const paths = postTags.map((item: { name: string }) => ({
-    params: { slug: item.name },
-  }));
+  const Tags = await getTagsAll()
+  const paths = Tags.map((tag : {slug: string, name: string}) => ({
+    params: { slug: tag.slug },
+  }))
 
-  return {
-    paths,
-    fallback: false,
-  };
+  return { paths, fallback: false }
 }
 
-export default Tag;
+

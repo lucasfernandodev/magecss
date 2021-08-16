@@ -10,6 +10,15 @@
   margin-top: 0;
 }
 
+.markdown hr{
+  margin: 40px 0;
+  height: 1px;
+  background-color: var(--color-bg-lines);
+  border: unset;
+  opacity: 0.2;
+}
+
+
 .markdown p {
   font-size: 18px;
   width: 100%;
@@ -128,6 +137,9 @@
 
 /* Lista */
 @media only screen{
+  .markdown ul{
+    margin: 40px 0;
+  }
   .markdown ul li {
     padding-left: 30px;
     position: relative;
@@ -135,7 +147,7 @@
   }
   
   .markdown ul li + li {
-    margin: 12px 0;
+    margin: 18px 0;
   }
   
   .markdown ul li::before {
@@ -146,7 +158,7 @@
     transform: translateY(-50%);
     width: 6px;
     height: 6px;
-    background: var(--color-white-medium);
+    background: var(--color-info);
     border-radius: 50%;
   }
 }
@@ -158,4 +170,8 @@
 @media only screen{}
 @media only screen{}
 @media only screen{}
+
+.markdown a{
+  color: palevioletred;
+}
 

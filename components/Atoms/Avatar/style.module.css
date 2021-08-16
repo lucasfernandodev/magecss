@@ -4,7 +4,7 @@
     height: 42px;
     border-radius: 50%;
     overflow: hidden;
-    background-color: var(--color-bg-component-high);
+    background-color: var(--color-border);
     align-items: center;
     justify-content: center;
 }

@@ -10,7 +10,7 @@
 }
 
 .buttonLike__icon svg{
-    stroke: var(--color-info);
+    stroke: var(--color-gray);
     transition: 0.3s ease-in-out;
 }
 
@@ -21,9 +21,10 @@
     margin-left: 4px;
 }
 
-.buttonLike:hover svg{
-    stroke: var( --color-bg-component-level)
+.buttonLike:hover .buttonLike__icon svg{
+    fill: var(--color-gray);
+
 }
 .buttonLike:hover .buttonLike__reaction{
-    color: var( --color-bg-component-level)
+    color: var(--color-info)
 }

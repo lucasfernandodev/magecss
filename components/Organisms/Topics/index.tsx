@@ -7,26 +7,10 @@ type TopicsListProp = {
 };
 
 const Topics = ({ listTopics }: TopicsListProp) => {
+  console.log("TOPCS", listTopics)
   return (
     <aside className={style.TopicsList}>
-      {listTopics
-        ? listTopics.map((list, key) => {
-            return (
-            
-              <List
-                id={key}
-                key={key}
-                target={list.target}
-                content={list.data}
-                title={list.title}
-                tag={list.tag}
-                icon={key === 0 ? false : true}
-              />
-            );
-          })
-        : (
-        <span>Sem listas no momento!</span>)
-      }
+      {listTopics && listTopics.map((list, key) => {return <List key={key} id={key} data={list}/> })}
     </aside>
   );
 };

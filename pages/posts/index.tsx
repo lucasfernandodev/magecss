@@ -1,31 +1,32 @@
 import Posts from "@/Templates/Posts";
-import { getAllPosts } from "../../lib/api";
-import Post from "../../types/post";
-
-type Props = {
-  allPosts: Post[];
-};
+import PostType from '@/types/post';
+import { getPosts } from "../../lib/ghost";
+import {GetStaticPropsContext } from 'next'
 
 
-const Index = ({ allPosts }: Props) => {
-  const postAll = allPosts;
-  return <Posts listPosts={postAll} />;
+
+type GhostProps = {
+  posts: PostType[]
+}
+
+const Index = ({ posts }: GhostProps) => {
+
+  const postAll = posts;
+  return <Posts posts={postAll} />;
 };
 
 export default Index;
 
-export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    "title",
-    "date",
-    "slug",
-    "author",
-    "coverImage",
-    "summary",
-    "tags",
-  ]);
+export async function getStaticProps(context: GetStaticPropsContext) {
+  const posts = await getPosts() ?? null;
+ 
+  if (!posts) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
-    props: { allPosts },
+    props: { posts },
   };
-};
+}

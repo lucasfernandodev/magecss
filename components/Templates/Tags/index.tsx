@@ -5,6 +5,7 @@ import Header from "@/Organisms/Header";
 import Summary from "@/Atoms/Summary";
 import Divider from "@/Atoms/Divider";
 import PostType from "@/types/post";
+import TagType from '@/types/tag';
 import Feed from "@/components/Organisms/Feed";
 import Container from "@/components/Atoms/Container";
 

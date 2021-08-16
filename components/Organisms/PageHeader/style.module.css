@@ -5,12 +5,11 @@
 }
 
 .header--primary{
-  background-color: var(--color-bg-component);
-
+  background-color: var(--color-bg-components);
+  margin-bottom: 0;
 }
 
 .header__content {
-
 
   height: 100%;
   width: 100%;
