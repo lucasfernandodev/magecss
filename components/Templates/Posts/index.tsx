@@ -7,18 +7,17 @@ import Divider from "@/components/UI/Atoms/Divider";
 import Summary from "@/components/UI/Atoms/Summary";
 import Feed from "@/components/UI/Organisms/Feed";
 import Container from "@/components/UI/Atoms/Container";
-
-
+import PostPreview from "@/components/UI/Organisms/PostPreview";
 
 type GhostProps = {
-  posts: PostType[]
+  posts: PostType[];
 }
 
-const PostsTemplate = ({posts}: GhostProps) => {
+const PostsTemplate: React.FC<GhostProps> = ({posts}) => {
 
   return (
     <Layout pageType="primary">
-      <Head title="Todos as postagens" />
+      <Head title="Todas as postagens" />
 
       <Header align="center">
         <Title variant="h1">Todas as postagens</Title>
@@ -29,9 +28,23 @@ const PostsTemplate = ({posts}: GhostProps) => {
 
       <Divider type="space" space="large"/>
 
-      <Container>
-        <Feed  listPost={posts} template="full-post"/>
+      <Container gap={16}>
+        {posts && posts.map((post) => (
+          <PostPreview
+          key={post.id}
+          title={post.title}
+          coverImage={post.feature_image}
+          date={post.published_at}
+          slug={post.slug}
+          tags={post.tags}
+          reading_time={post.reading_time}
+          layout="column"
+          excerpt={post.excerpt}
+        />
+        ))}
       </Container>
+      
+      <Divider type="space" space="large"/>
     </Layout>
   );
 };

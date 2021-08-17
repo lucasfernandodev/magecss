@@ -3,7 +3,7 @@
     margin: 0px auto;
 }
 
-.feed header {
+.feed > header {
   position: relative;
   z-index: 1;
 
@@ -15,11 +15,11 @@
   padding-right: 8px;
 }
 
-.feed header h3 {
+.feed > header h3 {
   color: var(--color-text);
 }
 
-.feed article {
+.feed > article {
     gap: 32px;
     display: flex;
     flex-direction: column;

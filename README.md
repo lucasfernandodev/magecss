@@ -8,7 +8,7 @@
 - add Cooke para views
 - add lista de cores das tags
 - add caminho certa para o slug das tags renderizadas em listas
-- diminuir o espaçamento do title do postPreview entre o titulo e o autor
+[PRONTO] diminuir o espaçamento do title do postPreview entre o titulo e o autor
 - deixar o botão de seguir do componente author funcionando
 
 - Add / no url do site
@@ -19,3 +19,4 @@
 - add style module ao site 
 - Criar um readme apresentável..
 - Add page de erro
+- O postPreview deveria estar com h2 mais o postPreview com layout-column está com h3

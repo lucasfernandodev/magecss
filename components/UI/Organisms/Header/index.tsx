@@ -1,13 +1,15 @@
 import styles from "./style.module.css";
 
 type Props = {
-  children: React.ReactNode;
   align?: string;
 };
-const Header = ({ children, align }: Props) => {
+
+const Header : React.FC<Props> = ({ children, align }) => {
   return (
     <header className={styles.header}>
-      <div className={`${styles.content} ${align ? styles[`${align}`] : null}`}>{children}</div>
+      <div className={`${styles.content} ${align ? styles[`${align}`] : null}`}>
+        {children}
+      </div>
     </header>
   );
 };

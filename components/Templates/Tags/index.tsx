@@ -5,9 +5,8 @@ import Header from "@/components/UI/Organisms/Header";
 import Summary from "@/components/UI/Atoms/Summary";
 import Divider from "@/components/UI/Atoms/Divider";
 import PostType from "@/types/post";
-import TagType from '@/types/tag';
-import Feed from "@/components/UI/Organisms/Feed";
 import Container from "@/components/UI/Atoms/Container";
+import PostPreview from "@/components/UI/Organisms/PostPreview";
 
 type TagsProps = {
   posts: PostType[];
@@ -27,7 +26,23 @@ const TagsTemplate = ({ posts, tag }: TagsProps) => {
       </Header>
       <Divider type="space" space="large" />
       <Container>
-        <Feed listPost={posts} template="full-post" />
+      <Container gap={16}>
+        {posts && posts.map((post) => (
+          <PostPreview
+          key={post.id}
+          title={post.title}
+          coverImage={post.feature_image}
+          date={post.published_at}
+          slug={post.slug}
+          tags={post.tags}
+          reading_time={post.reading_time}
+          layout="column"
+          excerpt={post.excerpt}
+        />
+        ))}
+      </Container>
+      
+      <Divider type="space" space="large"/>
       </Container>
     </Layout>
   );
