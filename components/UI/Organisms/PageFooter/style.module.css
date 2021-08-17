@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   display: flex;
-  border-top: 1px solid var(--color-bg-scrollbar-thumb);
+  border-top: 1px solid var(--color-border);
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -22,7 +22,7 @@
 
 .footer p {
   font-weight: bold;
-  color: var(--color-gray);
+  color: var(--color-text);
   font-size: 12px;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .footer ul li svg {
-  stroke: var(--color-white);
+  stroke: var(--color-text);
 }
 
 .footer ul li {

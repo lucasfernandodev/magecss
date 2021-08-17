@@ -12,7 +12,7 @@ const PageFooter = () => {
           <Navbar />
           <ul className="container-social">
             <li>
-              <Link href="#">
+              <Link href="https://github.com/lucasfernandodev">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -30,7 +30,7 @@ const PageFooter = () => {
               </Link>
             </li>
             <li>
-              <Link href="#">
+              <Link href="https://www.instagram.com/lucasfernandodev/">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
