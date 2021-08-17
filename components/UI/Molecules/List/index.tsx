@@ -19,6 +19,7 @@ const List = ({ data, id }: ListsProp) => {
         {id === 0 ? null : (
           <Icon strokeWidth={2} icon="hash" height={30} width={30} />
         )}
+
         <Title variant="h3">{data.title}</Title>
       </header>
 
@@ -28,7 +29,7 @@ const List = ({ data, id }: ListsProp) => {
               {data &&
                 data.content.map((item, key) => (
                   <li key={key}>
-                    <Link href={item.slug}>
+                    <Link href={`/posts/${item.slug}`}>
                       <Title variant="h4">{item.title}</Title>
                     </Link>
                     {id === 0 ? (
@@ -44,7 +45,7 @@ const List = ({ data, id }: ListsProp) => {
       {data.slug && (
         <footer>
           Ver mais postagens de
-          <Link href={data.slug}> {data.title}</Link>
+          <Link href={`/tags/${data.title}`}> {data.title}</Link>
         </footer>
       )}
     </div>

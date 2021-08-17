@@ -7,7 +7,7 @@
 - adicionar page de Busca
 - add Cooke para views
 - add lista de cores das tags
-- add caminho certa para o slug das tags renderizadas em listas
+[PRONTO] add caminho certo no slug das tags renderizadas em listas
 [PRONTO] diminuir o espaçamento do title do postPreview entre o titulo e o autor
 - deixar o botão de seguir do componente author funcionando
 

@@ -8,6 +8,7 @@ import Head from "@/components/UI/Atoms/Head";
 import PostReaction from "@/components/UI/Organisms/PostReaction";
 import PostType from "@/types/post";
 import Author from "@/components/UI/Molecules/Author";
+import CommentsTemplate from "../Comments";
 
 type GhostProps = {
   post: PostType
