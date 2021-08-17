@@ -1,20 +1,20 @@
-import Layout from "@/Molecules/Layout";
-import Head from "@/Atoms/Head";
-import Title from "@/components/Atoms/Title";
-import Header from "@/Organisms/Header";
-import Summary from "@/Atoms/Summary";
-import Divider from "@/Atoms/Divider";
+import Layout from "@/components/UI/Molecules/Layout";
+import Head from "@/components/UI/Atoms/Head";
+import Title from "@/components/UI/Atoms/Title";
+import Header from "@/components/UI/Organisms/Header";
+import Summary from "@/components/UI/Atoms/Summary";
+import Divider from "@/components/UI/Atoms/Divider";
 import PostType from "@/types/post";
 import TagType from '@/types/tag';
-import Feed from "@/components/Organisms/Feed";
-import Container from "@/components/Atoms/Container";
+import Feed from "@/components/UI/Organisms/Feed";
+import Container from "@/components/UI/Atoms/Container";
 
 type TagsProps = {
   posts: PostType[];
   tag: string;
 };
 
-const Tags = ({ posts, tag }: TagsProps) => {
+const TagsTemplate = ({ posts, tag }: TagsProps) => {
   return (
     <Layout pageType={"primary"}>
       <Head title={`Todas as postagens com a tag ${tag}`} />
@@ -33,4 +33,4 @@ const Tags = ({ posts, tag }: TagsProps) => {
   );
 };
 
-export default Tags;
+export default TagsTemplate;

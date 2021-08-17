@@ -8,7 +8,7 @@ type Post = {
 
 }
 
-const Comments = ({ post } : Post) => {
+const CommentsTemplate = ({ post } : Post) => {
   const disqusShortname = "Magecss"
 
   const disqusConfig = {
@@ -27,4 +27,4 @@ const Comments = ({ post } : Post) => {
   )
 }
 
-export default Comments;
+export default CommentsTemplate;

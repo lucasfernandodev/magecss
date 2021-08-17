@@ -1,4 +1,4 @@
-import HomeTemplate from "@/components/Templates/HomeTemplate";
+import HomeTemplate from "@/components/Templates/Home";
 import { getPosts, getList } from "../lib/ghost";
 
 import PostType from "@/types/post";
@@ -10,7 +10,6 @@ type HomeProp = {
 }
 
 const Home = ({ posts, list }: HomeProp) => {
-  console.log("Lista", list)
   const lastPost = posts[0];
   const listPost = posts.slice(1);
 

@@ -1,14 +1,14 @@
-import Layout from "@/Molecules/Layout";
-import Head from "@/Atoms/Head";
-import Section from "@/Atoms/Section";
-import Header from "@/Organisms/Header";
-import Container from "@/Atoms/Container";
-import Title from "@/components/Atoms/Title";
-import Summary from "@/Atoms/Summary";
-import Divider from "@/Atoms/Divider";
-import Text from "@/components/Atoms/Text";
+import Layout from "@/components/UI/Molecules/Layout";
+import Head from "@/components/UI/Atoms/Head";
+import Section from "@/components/UI/Atoms/Section";
+import Header from "@/components/UI/Organisms/Header";
+import Container from "@/components/UI/Atoms/Container";
+import Title from "@/components/UI/Atoms/Title";
+import Summary from "@/components/UI/Atoms/Summary";
+import Divider from "@/components/UI/Atoms/Divider";
+import Text from "@/components/UI/Atoms/Text";
 
-const About = () => {
+const AboutTemplate = () => {
   return (
     <Layout pageType="primary">
       <Head title="Sobre mim" />
@@ -42,4 +42,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutTemplate;

@@ -1,12 +1,12 @@
-import Layout from "@/Molecules/Layout";
-import Head from '@/Atoms/Head';
+import Layout from "@/components/UI/Molecules/Layout";
+import Head from '@/components/UI/Atoms/Head';
 import PostType from "@/types/post";
-import Header from "@/Organisms/Header";
-import Title from "@/components/Atoms/Title";
-import Divider from "@/Atoms/Divider";
-import Summary from "@/Atoms/Summary";
-import Feed from "@/components/Organisms/Feed";
-import Container from "@/components/Atoms/Container";
+import Header from "@/components/UI/Organisms/Header";
+import Title from "@/components/UI/Atoms/Title";
+import Divider from "@/components/UI/Atoms/Divider";
+import Summary from "@/components/UI/Atoms/Summary";
+import Feed from "@/components/UI/Organisms/Feed";
+import Container from "@/components/UI/Atoms/Container";
 
 
 
@@ -14,7 +14,7 @@ type GhostProps = {
   posts: PostType[]
 }
 
-const Posts = ({posts}: GhostProps) => {
+const PostsTemplate = ({posts}: GhostProps) => {
 
   return (
     <Layout pageType="primary">
@@ -36,4 +36,4 @@ const Posts = ({posts}: GhostProps) => {
   );
 };
 
-export default Posts;
+export default PostsTemplate;

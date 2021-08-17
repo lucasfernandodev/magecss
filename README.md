@@ -1,6 +1,6 @@
 # FEATURES A SEREM DESENVOLVIDAS
 
-- criar uma page FRONTEND, BACKEND e LABORATÓRIO
+[PRONTO] criar uma page FRONTEND, BACKEND e LABORATÓRIO
 - Add comentários
 - add links de redes sociais no footer
 - estilizar o HMTL das postagens
@@ -17,3 +17,5 @@
 - editar paginas de tags
 - adicionar siteMap
 - add style module ao site 
+- Criar um readme apresentável..
+- Add page de erro

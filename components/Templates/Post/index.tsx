@@ -1,19 +1,19 @@
-import Section from "@/Atoms/Section";
-import Header from "@/Organisms/PostHeader";
-import Article from "@/Organisms/PostBody";
-import Footer from "@/Organisms/PostFooter";
-import Layout from "@/Molecules/Layout";
-import Head from "@/Atoms/Head";
+import Section from "@/components/UI/Atoms/Section";
+import Header from "@/components/UI/Organisms/PostHeader";
+import Article from "@/components/UI/Organisms/PostBody";
+import Footer from "@/components/UI/Organisms/PostFooter";
+import Layout from "@/components/UI/Molecules/Layout";
+import Head from "@/components/UI/Atoms/Head";
 
-import PostReaction from "@/Organisms/PostReaction";
+import PostReaction from "@/components/UI/Organisms/PostReaction";
 import PostType from "@/types/post";
-import Author from "@/components/Molecules/Author";
+import Author from "@/components/UI/Molecules/Author";
 
 type GhostProps = {
   post: PostType
 }
 
-const Post = ({ post }: GhostProps) => {
+const PostTemplate = ({ post }: GhostProps) => {
   const bioAuthor = 'Dev Apaixonado por Tecnologia & Educação! Evolua rápido como a tecnologia, aprendizado é contínuo e sempre haverá um próximo nível. Boost Yourself! 🚀'
 
   return (
@@ -40,4 +40,4 @@ const Post = ({ post }: GhostProps) => {
   );
 };
 
-export default Post;
+export default PostTemplate;
