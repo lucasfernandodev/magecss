@@ -1,9 +1,13 @@
-import remark from "remark";
-import Gfm from "remark-gfm";
-import html from "remark-html";
-import prism from "remark-prism";
+import { unified } from "unified";
+import parse from 'rehype-parse'
+import rehype2remark from 'rehype-remark'
+import stringify from 'remark-stringify'
 
 export default async function markdownToHtml(markdown: string) {
-  const result = await remark().use(Gfm).use(prism).use(html).process(markdown);
+  const result = await unified()
+  .use(parse)
+  .use(rehype2remark)
+  .use(stringify)
+  .processSync(markdown);
   return result.toString();
 }

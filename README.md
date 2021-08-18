@@ -1,8 +1,8 @@
 # FEATURES A SEREM DESENVOLVIDAS
 
 [PRONTO] criar uma page FRONTEND, BACKEND e LABORATÓRIO
-- Add comentários
-- add links de redes sociais no footer
+[ADIADO] Add comentários
+[PRONTO] add links de redes sociais no footer
 - estilizar o HMTL das postagens
 - adicionar page de Busca
 - add Cooke para views

@@ -25,5 +25,5 @@
     }
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/PostAll", "pages/api/[slug].js", "pages/api/likes/[slug].js", "pages/api/views/[slug].js", "pages/notion/index.tsx", "pages/ghost/[slug].tsx", "components/Context/Feed.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/PostAll", "pages/api/[slug].js", "pages/api/likes/[slug].js", "pages/api/views/[slug].js", "pages/notion/index.tsx", "pages/ghost/[slug].tsx", "components/Context/Feed.tsx", "lib/markdownToHtml.ts"]
 }

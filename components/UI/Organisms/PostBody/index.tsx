@@ -1,36 +1,38 @@
-import markdownStyles from "./markdown-styles.module.css";
+import PostStyle from "./post-styles.module.css";
 import styles from "./style.module.css";
-import Container from "../../Atoms/Container";
 import CardImage from "../../Molecules/CardImage";
+import Prism from "prismjs";
+import { useEffect, useState } from "react";
 type Props = {
   content: string;
-  children?: React.ReactNode;
   thumbnail: string;
   title: string;
 };
 
-const PostBody = ({ content, children, thumbnail, title }: Props) => {
-  if (children) {
-    return (
+const PostBody = ({ content, thumbnail, title }: Props) => {
+  const [post, setPost] = useState("loading...");
+  useEffect(() => {
+    function highlightCodeInHTML(html: string): string {
+      const container = document.createElement("div");
+      container.innerHTML = html; // unsafe but whatever
+
+      Prism.highlightAllUnder(container);
+
+      return container.innerHTML;
+    }
+    setPost(highlightCodeInHTML(content));
+  }, [content]);
+  return (
+    <>
+      <CardImage src={thumbnail} alt={title} />
       <article className={styles.section__article}>
-        <Container>
-          <div>{children}</div>
-        </Container>
+        <div
+          className={`${PostStyle["post"]}`}
+          dangerouslySetInnerHTML={{ __html: post }}
+        />
       </article>
-    );
-  } else {
-    return (
-      <>
-        <CardImage src={thumbnail} alt={title}/>
-        <article className={styles.section__article}>
-          <div
-            className={`${markdownStyles["markdown"]} ${markdownStyles["language-"]}`}
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
-        </article>
-      </>
-    );
-  }
+    </>
+  );
 };
 
 export default PostBody;

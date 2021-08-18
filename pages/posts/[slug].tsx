@@ -3,8 +3,8 @@ import ErrorPage from "next/error";
 import { getSinglePost, getPosts } from '../../lib/ghost';
 import PostType from "@/types/post";
 import Post from "@/Templates/Post";
-
-
+import markdownToHtml from "lib/markdownToHtml";
+import {useEffect} from 'react';
 type GhostProps = {
   post: PostType
 }
@@ -12,9 +12,11 @@ type GhostProps = {
 const Index = ({ post }: GhostProps) => {
   const router = useRouter();
 
+
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+
 
   return (
     <>{router.isFallback ? <h1>Loading…</h1> : <Post post={post} />}</>

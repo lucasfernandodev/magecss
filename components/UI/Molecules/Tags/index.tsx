@@ -10,24 +10,18 @@ type Props = {
 const Tags = ({ data, limitTags }: Props) => {
   let Tag = data;
   const getTagPath = "/tags/";
-
-  // const tagsIsValid = tags.length < 3 ? false : true;
-
-  // const tagsInLowerCase = tags.toLocaleLowerCase();
-  // ArrayOfTags = tagsInLowerCase.split(" ");
-
+  
   if (limitTags) {
     if(typeof(data) != 'undefined'){
       Tag = data.length > 1 ? data.slice(0, limitTags) : data;
     }
-    
   }
 
   return (
     <>
-      {Tag && (
+      {Tag && typeof(Tag[0]) !== 'undefined' ? (
         <ul className={styles.tags}>
-          {Tag.length > 1 ? (
+          {Tag && Tag.length > 1 ? (
             Tag.map((item) => (
               <li key={item.id} className={styles.item} data-tag={item}>
                 <Link href={`${getTagPath}${item.slug}`}>{item.name}</Link>
@@ -41,7 +35,7 @@ const Tags = ({ data, limitTags }: Props) => {
             </li>
           )}
         </ul>
-      )}
+      ): null}
     </>
   );
 };

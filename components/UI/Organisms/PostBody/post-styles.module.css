@@ -1,16 +1,16 @@
 
-.markdown p,
-.markdown ul,
-.markdown ol,
-.markdown blockquote {
+.post p,
+.post ul,
+.post ol,
+.post blockquote {
   margin: 4px auto;
 }
 
-.markdown *:first-child{
+.post > *:first-child{
   margin-top: 0;
 }
 
-.markdown hr{
+.post hr{
   margin: 40px 0;
   height: 1px;
   background-color: var(--color-bg-lines);
@@ -19,34 +19,57 @@
 }
 
 
-.markdown p {
-  font-size: 18px;
+.post p {
+  font-size: 20px;
   width: 100%;
   letter-spacing: 0.4px;
   line-height: 1.6;
   max-width: 65ch;
 }
 
-.markdown p + p{
+.post p + p{
   margin-top: 40px;
  
 }
 
+.post img{
+  margin: 40px 0;
+  display: block;
+}
+.post figure{
+  margin-bottom: 40px;
+}
+.post figure img{
+  margin-bottom: 16px;
+}
+.post figcaption{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
 /* Title */
 @media only screen{
-  .markdown h1 {
+  .post h1 {
     margin: 20px 0;
     font-size: 32px;
     line-height: 1.5;
   }
   
-  .markdown h2 {
+
+  .post h2 {
     font-size: 22px;
     line-height: 2;
-    margin: 20px 0;
+    margin: 16px 0;
+  }
+
+  .post p + h2{
+    margin-top: 40px;
   }
   
-  .markdown h3 {
+  .post h3 {
     font-size: 18px;
     line-height: 1.375;
     margin: 20px 0;
@@ -56,16 +79,16 @@
 /* Links */
 @media only screen{
 
-  .markdown a {
-    color: var(--color-primary);
+  .post a {
+    color: #B33771;
     transition: 0.3s;
-    opacity: 0.8;
     text-decoration: underline;
     font-weight: 500;
+    letter-spacing: 1.5px;
   }
   
-  .markdown a:hover {
-    opacity: 1;
+  .post a:hover {
+    color:#FC427B;
   } 
 }
 
@@ -73,7 +96,7 @@
 @media only screen{
 
 
-  .markdown table {
+  .post table {
 
     table-layout: auto;
     text-align: left;
@@ -85,72 +108,72 @@
     padding: 15px;
   }
   
-  .markdown thead th {
+  .post thead th {
     vertical-align: bottom;
     padding-right: 8px;
     padding-bottom: 8px;
     padding-left: 8px;
   }
   
-  .markdown thead th:first-child {
+  .post thead th:first-child {
     padding-left: 0;
   }
   
-  .markdown thead th:last-child {
+  .post thead th:last-child {
     padding-right: 0;
   }
   
-  .markdown tbody {
+  .post tbody {
     display: table-row-group;
     vertical-align: middle;
     border-color: inherit;
   }
   
-  .markdown tbody tr {
+  .post tbody tr {
     border-bottom: 1px solid #ddd;
     display: table-row;
     vertical-align: inherit;
   }
   
-  .markdown table tbody tr:first-child {
+  .post table tbody tr:first-child {
     border-top: 1px solid #ddd;
   }
   
-  .markdown tbody tr:last-child {
+  .post tbody tr:last-child {
     border-bottom-width: 0;
   }
   
-  .markdown table tbody td {
+  .post table tbody td {
     vertical-align: top;
     padding: 0.5714286em;
     color: #555;
   }
   
-  .markdown table tbody td:first-child {
+  .post table tbody td:first-child {
     padding-left: 0;
   }
   
-  .markdown table body td:last-child {
+  .post table body td:last-child {
     padding-right: 0;
   }
 }
 
 /* Lista */
 @media only screen{
-  .markdown ul{
+  .post ul{
     margin: 40px 0;
   }
-  .markdown ul li {
+  .post ul li {
     padding-left: 30px;
     position: relative;
-    font-size: 1rem;
+    font-size: 20px
   }
   
-  .markdown ul li + li {
+  .post ul li + li {
     margin: 18px 0;
   }
   
-  .markdown ul li::before {
+  .post ul li::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -171,7 +194,25 @@
 @media only screen{}
 @media only screen{}
 
-.markdown a{
-  color: palevioletred;
+.post h2{
+  font-size: 28px;
+}
+
+.post blockquote{
+  position: relative;
+  font-style: italic;
+  font-size: 20px;
+  padding: 16px 0;
+  border-left: 4px solid #B33771;
+  padding-left: 32px;
+  transform: translateX(-32px);
+  margin: 40px 0;
+  line-height: 2;
+}
+
+.post pre{
+  padding: 16px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px -2px rgba(0,0,0,.1),0 0 1px rgba(0,0,0,.4);
 }
 
