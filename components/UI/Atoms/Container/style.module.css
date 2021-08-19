@@ -1,6 +1,6 @@
 .container{
     width: 100%;
-    max-width: calc(100vw - 200px);
+    max-width: calc(100% - 200px);
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -56,18 +56,24 @@
 
 @media (max-width: 1200px){
     .container{
-        max-width: calc(100vw - 200px);
+        max-width: calc(100% - 200px);
     }
 }
 
 @media (max-width: 900px){
     .container{
-        max-width: calc(100vw - 100px);
+        max-width: calc(100% - 100px);
     }
 }
 
 @media (max-width: 600px){
     .container{
-        max-width: calc(100vw - 50px);
+        max-width: calc(100% - 50px);
+    }
+}
+
+@media (max-width: 720px){
+    .container {
+        max-width: calc(100% - 35px);
     }
 }

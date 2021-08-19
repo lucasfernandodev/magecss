@@ -1,28 +1,11 @@
 .section__article {
-  width: calc(100% - 30px);
-  max-width: var(--width-post);
   height: 100%;
+  max-width: 100%;
   margin: 0 auto;
   display: block;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: left;
-  color: var(--color-white-transparent-subtitle);
-  padding: 0 45px;
   overflow-x: visible;
-}
-
-
-
-
-
-@media (max-width: 410px) {
-  .section__article div p:nth-child(1) {
-    margin-top: 36px;
-  }
-  .section__article div p {
-    font-size: 16px;
-    line-height: 2;
-  }
 }

@@ -1,179 +1,224 @@
-
-.post p,
-.post ul,
-.post ol,
-.post blockquote {
-  margin: 4px auto;
+.Article {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+/* Aplica max-width a todos os elementos menos img, figure */
+.Article *:not(img, figure) {
+  max-width: var(--width-post);
+  margin: 0;
 }
 
-.post > *:first-child{
+/* Aplica max-width a todos os elementos menos div, img */
+.Article figure *:not(div, img) {
+  max-width: var(--width-post);
+}
+
+
+
+.Article p + figure {
+  margin: 40px 0;
+}
+
+.Article hr + h2{
   margin-top: 0;
 }
 
-.post hr{
-  margin: 40px 0;
-  height: 1px;
-  background-color: var(--color-bg-lines);
-  border: unset;
-  opacity: 0.2;
+
+/* Figure */
+@media screen {
+  .Article figure{
+    width: 100%;
+  }
+
+  .Article figure:not(figure +figure){
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .Article figure iframe {
+    display: block;
+    width: var(--width-post);
+    height: 100%;
+    min-height: 420px;
+    margin: 0 auto;
+    position: relative !important;
+  }
+
+  .Article figure img {
+    max-width: 1000px;
+  }
+
+  .Article figure pre{
+    margin: 0 auto;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  .Article figure figcaption {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-info);
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-weight: 500;
+  }
 }
 
-
-.post p {
-  font-size: 20px;
-  width: 100%;
-  letter-spacing: 0.4px;
-  line-height: 1.6;
-  max-width: 65ch;
+@media (max-width: 1000px){
+  .Article figure img {
+    max-width: 100%;
+  }
 }
 
-.post p + p{
-  margin-top: 40px;
- 
-}
-
-.post img{
-  margin: 40px 0;
-  display: block;
-}
-.post figure{
-  margin-bottom: 40px;
-}
-.post figure img{
-  margin-bottom: 16px;
-}
-.post figcaption{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  font-size: 14px;
+/* Paragrafo */
+@media screen{
+  .Article p {
+    margin: 0 auto;
+    font-size: 20px;
+    width: 100%;
+    letter-spacing: 0.65px;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+  
+  .Article p + p {
+    margin-top: 40px;
+  }
 }
 
 /* Title */
-@media only screen{
-  .post h1 {
-    margin: 20px 0;
+@media only screen {
+  .Article h1,
+  .Article h2,
+  .Article h3,
+  .Article h4,
+  .Article h5,
+  .Article h6 {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 25px;
+  }
+
+  .Article h1 {
     font-size: 32px;
     line-height: 1.5;
   }
-  
 
-  .post h2 {
-    font-size: 22px;
+  .Article h2 {
+    font-size: 36px;
     line-height: 2;
-    margin: 16px 0;
   }
 
-  .post p + h2{
-    margin-top: 40px;
-  }
-  
-  .post h3 {
-    font-size: 18px;
+  .Article h3 {
+    font-size: 30px;
     line-height: 1.375;
-    margin: 20px 0;
   }
 }
 
 /* Links */
-@media only screen{
-
-  .post a {
-    color: #B33771;
+@media only screen {
+  .Article a {
+    color: #b33771;
     transition: 0.3s;
     text-decoration: underline;
     font-weight: 500;
     letter-spacing: 1.5px;
   }
-  
-  .post a:hover {
-    color:#FC427B;
-  } 
+
+  .Article a:hover {
+    color: #fc427b;
+  }
 }
 
 /* Table  */
-@media only screen{
-
-
-  .post table {
-
+@media only screen {
+  .Article table {
     table-layout: auto;
     text-align: left;
     margin: 36px 0;
     font-size: 15px;
     line-height: 1.5;
     border-collapse: collapse;
-  
+
     padding: 15px;
   }
-  
-  .post thead th {
+
+  .Article thead th {
     vertical-align: bottom;
     padding-right: 8px;
     padding-bottom: 8px;
     padding-left: 8px;
   }
-  
-  .post thead th:first-child {
+
+  .Article thead th:first-child {
     padding-left: 0;
   }
-  
-  .post thead th:last-child {
+
+  .Article thead th:last-child {
     padding-right: 0;
   }
-  
-  .post tbody {
+
+  .Article tbody {
     display: table-row-group;
     vertical-align: middle;
     border-color: inherit;
   }
-  
-  .post tbody tr {
+
+  .Article tbody tr {
     border-bottom: 1px solid #ddd;
     display: table-row;
     vertical-align: inherit;
   }
-  
-  .post table tbody tr:first-child {
+
+  .Article table tbody tr:first-child {
     border-top: 1px solid #ddd;
   }
-  
-  .post tbody tr:last-child {
+
+  .Article tbody tr:last-child {
     border-bottom-width: 0;
   }
-  
-  .post table tbody td {
+
+  .Article table tbody td {
     vertical-align: top;
     padding: 0.5714286em;
     color: #555;
   }
-  
-  .post table tbody td:first-child {
+
+  .Article table tbody td:first-child {
     padding-left: 0;
   }
-  
-  .post table body td:last-child {
+
+  .Article table body td:last-child {
     padding-right: 0;
   }
 }
 
 /* Lista */
-@media only screen{
-  .post ul{
+@media only screen {
+  .Article ul {
     margin: 40px 0;
+    width: 100%;
   }
-  .post ul li {
+  .Article ul li {
     padding-left: 30px;
     position: relative;
-    font-size: 20px
+    font-size: 20px;
   }
-  
-  .post ul li + li {
+
+  .Article ul li + li {
     margin: 18px 0;
   }
-  
-  .post ul li::before {
+
+  .Article ul li::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -186,33 +231,59 @@
   }
 }
 
-
-@media only screen{}
-@media only screen{}
-@media only screen{}
-@media only screen{}
-@media only screen{}
-@media only screen{}
-
-.post h2{
-  font-size: 28px;
+/* Blockquote */
+@media only screen {
+  .Article blockquote {
+    position: relative;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 0;
+    margin: 40px 0;
+    line-height: 1.6em;
+  }
+  .Article blockquote::before{
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: #b33771;
+    position: absolute;
+    left: -24px;
+  }
 }
 
-.post blockquote{
-  position: relative;
-  font-style: italic;
-  font-size: 20px;
-  padding: 16px 0;
-  border-left: 4px solid #B33771;
-  padding-left: 32px;
-  transform: translateX(-32px);
-  margin: 40px 0;
-  line-height: 2;
+/* Image */
+@media only screen {
+  .Article > img {
+    display: block;
+    margin: 0 auto;
+  }
+  
 }
 
-.post pre{
-  padding: 16px 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 6px -2px rgba(0,0,0,.1),0 0 1px rgba(0,0,0,.4);
+/* h2/linha */
+@media only screen {
+  .Article hr {
+    margin: 40px 0;
+    height: 1px;
+    width: 100%;
+    display: block;
+    background-color: var(--color-border);
+    border: unset;
+    opacity: 0.2;
+  }
 }
 
+.Article > pre{
+  width: 100%;
+  margin: 20px 0;
+}
+
+.Article p > code{
+  background: #b33771;
+  border-radius: 4px;
+  padding: 4px 8px;
+  width: 100%;
+  font-size: 16px;
+  margin: 0 4px
+}

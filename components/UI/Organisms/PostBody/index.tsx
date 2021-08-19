@@ -3,6 +3,7 @@ import styles from "./style.module.css";
 import CardImage from "../../Molecules/CardImage";
 import Prism from "prismjs";
 import { useEffect, useState } from "react";
+import Container from "../../Atoms/Container";
 type Props = {
   content: string;
   thumbnail: string;
@@ -22,16 +23,17 @@ const PostBody = ({ content, thumbnail, title }: Props) => {
     }
     setPost(highlightCodeInHTML(content));
   }, [content]);
+
   return (
-    <>
+    <Container>
       <CardImage src={thumbnail} alt={title} />
       <article className={styles.section__article}>
         <div
-          className={`${PostStyle["post"]}`}
+          className={`${PostStyle["Article"]}`}
           dangerouslySetInnerHTML={{ __html: post }}
         />
       </article>
-    </>
+    </Container>
   );
 };
 

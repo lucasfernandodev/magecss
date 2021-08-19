@@ -7,9 +7,9 @@ type Props = {
 const PostFooter = ({ children }: Props) => {
   return (
     <footer className={styles.footer}>
-      <Container>
+
         {children}
-      </Container>
+
     </footer>
   )
 };

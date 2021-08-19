@@ -1,0 +1,122 @@
+/* Tratamento de componentes especiais vindos do ghost */
+
+/* Card */
+.kg-bookmark-card{
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+  max-width: 720px;
+}
+
+a.kg-bookmark-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-decoration: none !important;
+}
+
+.kg-bookmark-content{
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.kg-bookmark-title{
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 14px;
+}
+.kg-bookmark-description{
+  color: var(--color-info);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.kg-bookmark-metadata{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.kg-bookmark-metadata img{
+  width: 26px;
+  height: 26px;
+  overflow: hidden;
+  margin: 0 !important;
+}
+
+.kg-bookmark-icon{
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.kg-bookmark-author{
+  color: var(--color-subtitle);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.kg-bookmark-thumbnail{
+  width: 35%;
+}
+
+.kg-bookmark-thumbnail img{
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+}
+
+.kg-width-wide img{
+  width: 100%;
+}
+
+/* Galeria imagens */
+
+.kg-card-hascaption{
+  width: 100%;
+  max-width: unset !important;
+  margin-top: 16px;
+}
+
+.kg-gallery-container{
+  max-width: unset !important;
+}
+
+.kg-gallery-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+  max-width: unset !important;
+}
+
+.kg-gallery-row > div{
+  display: flex;
+  height: calc(720px / 2);
+  width: calc(50% - 6px);
+  max-width: unset !important;
+  position: relative
+}
+
+.kg-gallery-row div img{
+  object-fit: fill;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+}
+
+.kg-card-hascaption figcaption{
+  margin-top: 8px !important;
+}
