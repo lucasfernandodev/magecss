@@ -1,6 +1,7 @@
 :root{
   --color-primary: #7158e2;
-  --color-secondary: #7158e2;
+  --color-secondary: #F50057;
+  --color-secondary-dark: #f50056d7;
 
   --color-title: #f2f9ff;
   --color-title-hover: #7158e2;
@@ -9,8 +10,8 @@
   --color-subtitle: #f2f9ffab;
   --color-info: #f2f9ff55;
 
-  --color-bg: #111;
-  --color-bg-components: #1f1f1f;
+  --color-bg: #131417;;
+  --color-bg-components: #1f2229;;
 
   --color-border: #3f3f3f;
   --color-lines: #3a3a3f;

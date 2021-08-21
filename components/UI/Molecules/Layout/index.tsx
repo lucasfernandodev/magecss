@@ -2,20 +2,31 @@ import Footer from "../../Organisms/PageFooter";
 import Meta from "../../Atoms/Meta";
 import Header from "../../Organisms/PageHeader";
 type Props = {
-  preview?: boolean;
   children: React.ReactNode;
   pageType?: string;
+  simply?: boolean;
 };
 
-const Layout = ({ preview, children, pageType }: Props) => {
-  return (
-    <>
-      <Meta />
-      {pageType == 'primary' ? <Header bg='primary' /> : <Header />}
-      <main>{children}</main>
-      <Footer />
-    </>
-  );
-};
+const Layout = ({ children, pageType,simply }: Props) => {
+
+
+  if(simply == true){
+    return (
+      <>
+        <Meta /> 
+        <main>{children}</main>
+      </>
+    )
+  }else{
+      return (
+        <>
+          <Meta />
+          {pageType == 'primary' ? <Header bg='primary' /> : <Header />}
+          <main>{children}</main>
+          <Footer />
+        </>
+      );
+    }
+  };
 
 export default Layout;

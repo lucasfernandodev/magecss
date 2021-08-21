@@ -44,8 +44,7 @@ const List = ({ data, id }: ListsProp) => {
 
       {data.slug && (
         <footer>
-          Ver mais postagens de
-          <Link href={`/tags/${data.title}`}> {data.title}</Link>
+          Ver mais em <Link href={`/tags/${data.title}`}> {data.title}</Link>
         </footer>
       )}
     </div>

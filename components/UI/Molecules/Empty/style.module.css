@@ -1,0 +1,18 @@
+.empty{
+  max-width: 490px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 64px auto;
+  height: auto;
+}
+
+.empty .text{
+  width: 100%;
+  text-align: center;
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -11,11 +11,15 @@ const Tags = ({ data, limitTags }: Props) => {
   let Tag = data;
   const getTagPath = "/tags/";
   
-  if (limitTags) {
-    if(typeof(data) != 'undefined'){
-      Tag = data.length > 1 ? data.slice(0, limitTags) : data;
+  const fancy = data && data.length > 1 ? true : false;
+  if(fancy){
+    if (limitTags) {
+      if(typeof(data) != 'undefined'){
+        Tag = data.length > 1 ? data.slice(0, limitTags) : data;
+      }
     }
   }
+
 
   return (
     <>

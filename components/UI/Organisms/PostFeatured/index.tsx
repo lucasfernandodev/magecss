@@ -18,8 +18,9 @@ type Props = {
 };
 
 const PostFeatured = ({ title,tags, coverImage, summary, slug }: Props) => {
+
   return (
-    <section className={styles.PostFeatured}>
+    <section className={styles.PostFeatured} style={{backgroundImage: `url(${coverImage})`}}>
       <div className={styles.PostFeatured__thumbnail}>
         <CoverImage title={title} src={coverImage} slug={slug} />
       </div>
@@ -30,10 +31,12 @@ const PostFeatured = ({ title,tags, coverImage, summary, slug }: Props) => {
             <Icon icon="fire" /> Novo
           </span>
         </div>
-
+        
         <div className={styles.PostFeatured__title}>
           <Link as={`/posts/${slug}`} href="/posts/[slug]">
-            <Title variant="h2"> {title} </Title>
+            <Title variant="h2">
+            {title}
+            </Title>
           </Link>
         </div>
 

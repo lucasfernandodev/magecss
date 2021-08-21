@@ -1,5 +1,6 @@
 :root {
   --width-post: 720px;
+  --card-width: calc((100% - 32px) / 3);
 }
 
 @media (max-width: 720px){

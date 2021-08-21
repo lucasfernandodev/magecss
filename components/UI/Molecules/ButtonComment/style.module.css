@@ -1,4 +1,4 @@
-.buttonLike{
+.buttonComment{
     height: 32px;
     width: 132px;
     background: transparent;
@@ -9,22 +9,31 @@
     cursor: pointer;
 }
 
-.buttonLike__icon svg{
+.buttonComment__icon svg{
     stroke: var(--color-gray);
     transition: 0.3s ease-in-out;
 }
 
-.buttonLike__reaction{
+.buttonComment__reaction{
     font-size: 14px;
     color: var(--color-info);
     transition: 0.3s ease-in-out;
     margin-left: 4px;
 }
 
-.buttonLike:hover .buttonLike__icon svg{
+.buttonComment:hover .buttonComment__icon svg{
     fill: var(--color-gray);
 
 }
-.buttonLike:hover .buttonLike__reaction{
+.buttonComment:hover .buttonComment__reaction{
     color: var(--color-info)
+}
+
+@media (max-width: 639px){
+    .buttonComment{
+        width: 40px
+    }
+    .buttonComment__reaction{
+        display: none;
+    }
 }

@@ -6,7 +6,6 @@ import ListType from '@/types/list'
 import Feed from "@/components/UI/Organisms/Feed";
 import Container from "@/components/UI/Atoms/Container";
 import TopicsList from "@/components/UI/Organisms/Topics";
-
 import Divider from "@/components/UI/Atoms/Divider";
 import { FeedProvider } from "@/components/Context/Feed";
 
@@ -19,6 +18,7 @@ type HomeProps = {
 };
 
 const HomeTemplate = ({ lastPost, listPost, listTopics}: HomeProps) => {
+
   return (
     <Layout>
       <Head title="MAGE CSS - Dicas de front-end"/>

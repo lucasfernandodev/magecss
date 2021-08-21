@@ -61,9 +61,9 @@ const ButtonLike = ({
       }}
     >
       <span className={styles.buttonLike__icon}>
-        <Icon icon="heart" width={24} height={24} strokeWidth={2} />
+        <Icon icon="heart" width={20} height={20} strokeWidth={2} />
       </span>
-      <span className={styles.buttonLike__reaction}>{likeCount} Reações</span>
+      <span className={styles.buttonLike__reaction}>{likeCount} <span>Reações</span></span>
     </button>
   );
 };

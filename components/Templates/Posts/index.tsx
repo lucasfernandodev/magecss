@@ -5,7 +5,6 @@ import Header from "@/components/UI/Organisms/Header";
 import Title from "@/components/UI/Atoms/Title";
 import Divider from "@/components/UI/Atoms/Divider";
 import Summary from "@/components/UI/Atoms/Summary";
-import Feed from "@/components/UI/Organisms/Feed";
 import Container from "@/components/UI/Atoms/Container";
 import PostPreview from "@/components/UI/Organisms/PostPreview";
 
@@ -33,12 +32,12 @@ const PostsTemplate: React.FC<GhostProps> = ({posts}) => {
           <PostPreview
           key={post.id}
           title={post.title}
-          coverImage={post.feature_image}
+          thumbnail={post.feature_image}
           date={post.published_at}
           slug={post.slug}
           tags={post.tags}
           reading_time={post.reading_time}
-          layout="column"
+          layout="block"
           excerpt={post.excerpt}
         />
         ))}

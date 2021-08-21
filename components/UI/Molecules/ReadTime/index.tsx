@@ -1,9 +1,12 @@
 import style from "./style.module.css";
 import Label from "../../Atoms/Label";
 
-const ReadTime = ({time} : {time : number}) => {
+type Props = {
+  time : number
+}
+const ReadTime: React.FC<Props> = ({time}) => {
   return (
-    <Label icon="time" text={` ${time} min de leitura`} />
+    <Label style={{color: 'red'}} icon="time" text={` ${time} min de leitura`} />
   );
 };
 

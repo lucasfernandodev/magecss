@@ -8,14 +8,12 @@
   height: 540px;
   justify-content: flex-start;
   margin: 64px auto;
-    margin-top: 32px;
-  background-color: var(--color-bg-components);
+  margin-top: 32px;
   display: flex;
   position: relative;
-  border: 1px solid var(--color-border)
+  border: 1px solid var(--color-border);
+  z-index: 1;
 }
-
-
 
 .PostFeatured__thumbnail,
 .PostFeatured__header {
@@ -24,7 +22,9 @@
   align-items: flex-start;
   justify-content: center;
   height: 100%;
+  background-color: var(--color-bg-components);
 }
+
 
 .PostFeatured__thumbnail {
   height: 100%;
@@ -64,6 +64,12 @@
   justify-content: flex-start;
 }
 
+@media (max-width: 1023px){
+  .PostFeatured__header{
+    padding-right: 32px;
+  }
+}
+
 .PostFeatured__tags{
   display: flex;
   flex-wrap: wrap;
@@ -78,7 +84,7 @@
   color: var(--color-text);
   margin-right: 4px;
   border-radius: 4px;
-  border: 1px solid var(--color-secondary);
+  border: 1px solid var(--color-primary);
   font-size: 14px;
   font-weight: bold;
   display: flex;
@@ -93,8 +99,8 @@
   display: flex;
   align-items: center;
   margin-top: -3px;
-  fill: var(--color-secondary);
-  stroke: var(--color-secondary);
+  fill: var(--color-primary);
+  stroke: var(--color-primary);
 }
 
 .PostFeatured h2{
@@ -102,11 +108,10 @@
   line-height: 1.2;
   max-width: 60ch;
   margin-bottom: 16px;
- 
 }
 
 .PostFeatured__title a:hover * {
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 
@@ -140,11 +145,11 @@
 }
 
 .PostFeatured__more a:hover{
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .PostFeatured__more:hover{
-  border-bottom: 1px solid var(--color-secondary);
+  border-bottom: 1px solid var(--color-primary);
 }
 
 
@@ -153,7 +158,7 @@
 }
 
 .PostFeatured__more svg{
-  stroke: var(--color-secondary);
+  stroke: var(--color-primary);
   margin-left: 4px;
 }
 
@@ -173,4 +178,50 @@
 
 .PostFeatured__publishTime{
   margin-bottom: 16px;
+}
+
+
+
+@media (max-width: 920px){
+  .PostFeatured{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .PostFeatured::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+  }
+
+  .PostFeatured__thumbnail,
+  .PostFeatured__header {
+    background-color: unset;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 10;
+  }
+
+  .PostFeatured__thumbnail{
+    display: none;
+  }
+  .PostFeatured__header{
+    width: 80%;
+  }
+}
+
+@media (max-width: 640px){
+  .PostFeatured__header{
+    width: 100%;
+  }
 }

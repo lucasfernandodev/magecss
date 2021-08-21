@@ -3,8 +3,6 @@ import ErrorPage from "next/error";
 import { getSinglePost, getPosts } from '../../lib/ghost';
 import PostType from "@/types/post";
 import Post from "@/Templates/Post";
-import markdownToHtml from "lib/markdownToHtml";
-import {useEffect} from 'react';
 type GhostProps = {
   post: PostType
 }

@@ -14,17 +14,23 @@
 }
 
 .title h3 {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .title h4{
+  font-size: 18px;
+}
+.title h5{
   font-size: 16px;
 }
 .title h5{
   font-size: 14px;
 }
-.title h5{
-  font-size: 12px;
+
+@media(max-width: 720px){
+  .title h2{
+    font-size: 30px;
+  }
 }
 
 .title__item {
@@ -41,10 +47,20 @@
   display: block;
   text-transform: lowercase;
   max-width: 60ch;
+  text-rendering: optimizeLegibility;
+  word-break: break-word;
 }
 
 
 .title__item:first-letter,
 .title__item *:first-letter {
   text-transform: capitalize;
+}
+
+.limited .title__item{
+  display: -webkit-box;
+  overflow-y: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
 }

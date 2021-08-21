@@ -1,5 +1,6 @@
 import Container from "@/components/UI/Atoms/Container";
 import Head from "@/components/UI/Atoms/Head";
+import Empty from "@/components/UI/Molecules/Empty";
 import Layout from "@/components/UI/Molecules/Layout";
 
 const FrontendTemplate = () => {
@@ -8,7 +9,7 @@ const FrontendTemplate = () => {
     <Head title="Frontend - MAGE CSS"/>
 
     <Container>
-      Aqui vai o conteúdo de Frontend
+    <Empty />
       </Container>
   </Layout>
   )

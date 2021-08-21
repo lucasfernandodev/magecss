@@ -1,0 +1,27 @@
+.error{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  height: 70vh;
+
+  margin: 0 auto;
+}
+
+.msg{
+  max-width: 550px;
+  text-align: center;
+}
+.msg a{
+  color: #F50057;
+}

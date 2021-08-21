@@ -58,14 +58,15 @@ const Feed = ({ listPost, title, template }: FeedType) => {
         {RenderPost &&
           RenderPost.map((post, key) => (
             <PostPreview
-              id={key}
               key={post.id}
               title={post.title}
-              coverImage={post.feature_image}
+              thumbnail={post.feature_image}
               date={post.published_at}
               slug={post.slug}
               tags={post.tags}
               reading_time={post.reading_time}
+              layout="row"
+              featured={key === 0 ? true : false}
             />
           ))}
       </article>

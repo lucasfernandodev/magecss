@@ -3,13 +3,14 @@ import styles from './style.module.css';
 type LinkProp = {
   href: string,
   as?: string,
-  children: React.ReactNode
+  children: React.ReactNode,
+  onClick?: () => void
 }
 
-const Link  = ({href,as, children}: LinkProp) => {
+const Link  = ({href,as, children,onClick}: LinkProp) => {
   return(
     <NextLink href={href} as={as} passHref>
-      <a className={styles.link}>
+      <a onClick={onClick} className={styles.link}>
       {children}
       </a>
     </NextLink>

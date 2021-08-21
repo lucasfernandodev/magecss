@@ -1,51 +1,45 @@
 import styles from "./style.module.css";
-import CSS from "csstype";
-import Box from "../Box";
+import cn from "classnames";
+
 type Props = {
-  children: React.ReactNode;
-  variant: string;
-  lineOverflow?: number;
+  text?: string;
+  variant: Extract<"h1" | "h2" | "h3" | "h4" | "h5" | "h6", string>;
+  limited?: boolean;
 };
 
-const Title = ({ children, variant, lineOverflow }: Props) => {
-  
-  const LimitWrap: CSS.Properties = {
-    display: "-webkit-box",
-    WebkitBoxOrient: "vertical",
-    WebkitLineClamp: lineOverflow ?? 0,
-    overflow: "hidden",
-    textOverflow: "ellipsis",
-    height: "max-content",
-  };
+const Title: React.FC<Props> = ({ text, children, variant, limited }) => {
 
-  const unlimitedLine: CSS.Properties = {
-    color: "currentColor",
-  };
+  let Text;
+
+  const TextAtribute = text && typeof(text) !== 'undefined' ? text : null;
+  const Children = children && typeof(children) !== 'undefined' ? children : null;
+
+
+  if(TextAtribute !== null && Children !== null){
+    Text = `${TextAtribute} ${Children}`;
+  }
+
+  if(TextAtribute !== null && Children === null){
+    Text = TextAtribute;
+  }
+
+  if(Children !== null && TextAtribute === null){
+    Text = Children;
+  }
+
+
+  const classNameTitle = cn(`${styles.title}`, {
+    limited: typeof limited == "undefined" ? true : false,
+  });
 
   return (
-
-    <div
-      className={styles.title}
-      style={lineOverflow ? LimitWrap : unlimitedLine}
-    >
-      {variant === "h1" ? (
-        <h1 className={styles.title__item}>{children}</h1>
-      ) : null}
-      {variant === "h2" ? (
-        <h2 className={styles.title__item}>{children}</h2>
-      ) : null}
-      {variant === "h3" ? (
-        <h3 className={styles.title__item}>{children}</h3>
-      ) : null}
-      {variant === "h4" ? (
-        <h4 className={styles.title__item}>{children}</h4>
-      ) : null}
-      {variant === "h5" ? (
-        <h5 className={styles.title__item}>{children}</h5>
-      ) : null}
-      {variant === "h6" ? (
-        <h6 className={styles.title__item}>{children}</h6>
-      ) : null}
+    <div className={classNameTitle}>
+      {variant === "h1" && <h1 className={styles.title__item}>{Text}</h1>}
+      {variant === "h2" && <h2 className={styles.title__item}>{Text}</h2>}
+      {variant === "h3" && <h3 className={styles.title__item}>{Text}</h3>}
+      {variant === "h4" && <h4 className={styles.title__item}>{Text}</h4>}
+      {variant === "h5" && <h5 className={styles.title__item}>{Text}</h5>}
+      {variant === "h6" && <h6 className={styles.title__item}>{Text}</h6>}
     </div>
   );
 };

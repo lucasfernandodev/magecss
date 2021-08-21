@@ -25,23 +25,20 @@ const TagsTemplate = ({ posts, tag }: TagsProps) => {
         </Summary>
       </Header>
       <Divider type="space" space="large" />
-      <Container>
-      <Container gap={16}>
+      <Container gap={16} alignX="center">
         {posts && posts.map((post) => (
           <PostPreview
           key={post.id}
           title={post.title}
-          coverImage={post.feature_image}
+          thumbnail={post.feature_image}
           date={post.published_at}
           slug={post.slug}
           tags={post.tags}
           reading_time={post.reading_time}
-          layout="column"
+          layout="block"
           excerpt={post.excerpt}
         />
         ))}
-      </Container>
-      
       <Divider type="space" space="large"/>
       </Container>
     </Layout>
