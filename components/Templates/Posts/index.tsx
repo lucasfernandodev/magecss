@@ -6,7 +6,7 @@ import Title from "@/components/UI/Atoms/Title";
 import Divider from "@/components/UI/Atoms/Divider";
 import Summary from "@/components/UI/Atoms/Summary";
 import Container from "@/components/UI/Atoms/Container";
-import PostPreview from "@/components/UI/Organisms/PostPreview";
+import PostPreview from "@/components/UI/Organisms/PostStory";
 
 type GhostProps = {
   posts: PostType[];

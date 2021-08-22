@@ -3,7 +3,7 @@ import FeedMenContext from "@/components/Context/Feed";
 import { useContext, useEffect, useState } from "react";
 import PostType from "@/types/post";
 import Title from "@/components/UI/Atoms/Title";
-import PostPreview from "@/components/UI/Organisms/PostPreview";
+import PostPreview from "@/components/UI/Organisms/PostStory";
 import FeedMenu from "@/components/UI/Molecules/FeedMenu";
 import useSWR from "swr";
 

@@ -16,7 +16,6 @@ type Data = {
   slug: string;
   tags: TagType[];
   reading_time?: number;
-  layout: Extract<"row" | "block", string>;
   excerpt?: string;
   featured?: boolean;
 };
@@ -28,7 +27,7 @@ type StoryProps = {
 
 const StoryBlock = ({data}: StoryProps) => {
 
-  const { title, thumbnail, date, slug, tags, reading_time, layout, excerpt, featured} = data;
+  const { title, thumbnail, date, slug, tags, reading_time, excerpt, featured} = data;
 
 
   return (

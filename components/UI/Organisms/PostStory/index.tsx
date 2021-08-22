@@ -15,7 +15,7 @@ type Props = {
   featured?: boolean;
 };
 
-export default function PostPreview (props : Props){
+export default function PostStory (props : Props){
   return (
     <>
     {props.layout == "row" ? <StoryRow  data={props} type="row"/>: null}

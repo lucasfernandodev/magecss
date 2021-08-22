@@ -6,7 +6,7 @@ import Summary from "@/components/UI/Atoms/Summary";
 import Divider from "@/components/UI/Atoms/Divider";
 import PostType from "@/types/post";
 import Container from "@/components/UI/Atoms/Container";
-import PostPreview from "@/components/UI/Organisms/PostPreview";
+import PostPreview from "@/components/UI/Organisms/PostStory";
 
 type TagsProps = {
   posts: PostType[];
