@@ -1,6 +1,6 @@
+import Label from "@/Atoms/Label";
 import { parseISO, format } from "date-fns";
 import pt from "date-fns/locale/pt-BR";
-import Label from "../../Atoms/Label";
 
 const PublishTime = ({ data }: { data: string }) => {
   const date = parseISO(data);

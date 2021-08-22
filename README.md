@@ -9,7 +9,7 @@
 [Pronto] corrigir fontes das tags
 - adicionar page de Busca
 - add Cooke para views
-- add lista de cores das tags
+[PRONTO] add lista de cores das tags
 [PRONTO] add caminho certo no slug das tags renderizadas em listas
 [PRONTO] diminuir o espaçamento do title do postPreview entre o titulo e o autor
 [PRONTO] deixar o botão de seguir do componente author funcionando
@@ -23,5 +23,5 @@
 [Pronto] Add page de erro
 [Pronto] O postPreview deveria estar com h2 mais o postPreview com layout-column está com h3
 - Adicionar componente de SEO
-- Resolver problema dos Title das page duplicado
+[Pronto] Resolver problema dos Title das page duplicado
 <!-- ////////////// -->

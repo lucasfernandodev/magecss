@@ -29,7 +29,7 @@
     font-weight: 500;
 }
 
-.item:hover{
+.item a:hover{
     color: var(--color-text);
 }
 
@@ -39,97 +39,65 @@
     opacity: 1;
 }
 
-.item[data-tag="html"] a:hover{
-    background: #f0932b;
-    border-color: #f0932b;
-}
-
+.item[data-tag="html"] a:hover, 
 .item[data-tag="html5"] a:hover{
-    background: #f0932b;
-    border-color: #f0932b;
+    background: var(--tag-html);
+    border-color: var(--tag-html);
 }
 
-.item[data-tag="css"] a:hover{
-    background: #686de0;
-    border-color: #686de0;
-}
-
+.item[data-tag="css"] a:hover,
 .item[data-tag="css3"] a:hover{
-    background: #686de0;
-    border-color: #686de0;
+    background: var(--tag-css);
+    border-color: var(--tag-css);
 }
 
-.item[data-tag="js"] a:hover{
-    background: #f9ca24;
-    color: var(--color-dark);
-    border-color: #f9ca24;
-}
-
+.item[data-tag="js"] a:hover,
 .item[data-tag="javascript"] a:hover{
-    background: #f9ca24;
+    background: var(--tag-javascript);
     color: var(--color-dark);
-    border-color: #f9ca24;
+    border-color: var(--tag-javascript);
 }
 
-.item[data-tag="react"] a:hover{
-    background: #7ed6df;
-    border-color: #7ed6df;
-}
-
-
+.item[data-tag="react"] a:hover,
 .item[data-tag="reactjs"] a:hover{
-    background: #7ed6df;
-    border-color: #7ed6df;
+    background: var(--tag-reactjs);
+    border-color: var(--tag-reactjs);
 }
 
-.item[data-tag="frontend"] a:hover{
+.item[data-tag="frontend"] a:hover,
+.item[data-tag="front-end"] a:hover
+{
     background: #ffffff;
     border-color: #ffffff;
-    color: var(--color-dark);
-}
-
-.item[data-tag="front-end"] a:hover{
-    background: #ffffff;
-    border-color: #ffffff;
-    color: var(--color-dark);
+    color: var(--tag-frontend);
 }
 
 .item[data-tag="facebook"] a:hover{
-    background: #4267B2;
-    border-color: #4267B2;
+    background: var(--tag-facebook);
+    border-color: var(--tag-facebook);
 }
 
-.item[data-tag="node"] a:hover{
-    background: #6ab04c;
-    border-color: #6ab04c;
+.item[data-tag="node"] a:hover,
+.item[data-tag="nodejs"] a:hover
+{
+    background: var(--tag-node);
+    border-color: var(--tag-node);
 }
 
-.item[data-tag="nodejs"] a:hover{
-    background: #6ab04c;
-    border-color: #6ab04c;
-}
-
-.item[data-tag="next"] a:hover{
-    border-color: #111;
-    background: #111;
-}
-
+.item[data-tag="next"] a:hover,
 .item[data-tag="nextjs"] a:hover{
-    border-color: #111;
-    background: #111;
+    border-color: var(--tag-nextjs);
+    background: var(--tag-nextjs);
 }
 
-.item[data-tag="backend"] a:hover{
-    border-color: #e056fd;
-    background: #e056fd;
-}
-
+.item[data-tag="backend"] a:hover,
 .item[data-tag="back-end"] a:hover{
-    border-color: #e056fd;
-    background: #e056fd;
+    border-color: var(--tag-backend);
+    background: var(--tag-backend);
 }
 
-.item[data-tag="Getting Started"] a:hover{
-    border-color: #e056fd;
-    background: #e056fd;
+
+.item[data-tag="getting started"] a:hover{
+    border-color: var(--tag-all);
+    background: var(--tag-all);
 }

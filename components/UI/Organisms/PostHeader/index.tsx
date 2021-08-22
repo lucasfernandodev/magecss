@@ -1,41 +1,38 @@
-import PostMeta from "../../Molecules/PostMeta";
-import Summary from "../../Atoms/Summary";
 import styles from "./style.module.css";
 import Title from "@/components/UI/Atoms/Title";
+import ViewCounter from "@/Molecules/ViewCounter";
+import Author from "../../Molecules/Author";
+import ReadTime from "../../Molecules/ReadTime";
+import Summary from "../../Atoms/Summary";
+
 type Props = {
   title: string;
-  subtitle?: string;
   date: string;
-  readTime?: string;
-  summary?: string;
+  summary: string;
+  reading_time: number;
   slug: string;
 };
 
-const PostHeader = ({
-  slug,
-  title,
-  subtitle,
-  date,
-  readTime,
-  summary,
-}: Props) => {
+const PostHeader: React.FC<Props> = ({ slug,reading_time, title, date, summary,}) => {
   return (
     <header className={`${styles["post-header"]}`}>
       <div className={styles.content}>
         <Title variant="h1">{title}</Title>
 
-        <div className={styles["post-header__text"]}>
-          <Summary>{summary ? summary : null}</Summary>
-          {subtitle ? subtitle : null}
-        </div>
-        
+        <Summary>
+          {summary}
+        </Summary>
+
         <div className={styles["post-header__meta"]}>
-          <PostMeta
-            slug={slug}
-            views={{ slug, observer: true }}
-            date={date}
-            // readTime={readTime}
-          />
+          <div>
+          <Author name="Lucas Fernando" data={date}/>
+          <span>•</span>
+          <ReadTime time={reading_time} />
+          </div>
+         <div>
+
+         <ViewCounter observer={true} slug={slug} />
+         </div>
         </div>
       </div>
     </header>

@@ -11,7 +11,7 @@ const ErrorTemplate: React.FC<Props> = ({ code }) => {
 
   return (
     <Layout simply={true}>
-      <Head title={`Pagina não encontrada`} />
+      <Head title="Pagina não encontrada" />
 
       <div className={styles.error}>
         <div className={styles.content}>

@@ -39,7 +39,7 @@ const StoryBlock = ({data}: StoryProps) => {
 
       <section>
         <div className={styles.tags}>
-          <Tags data={tags} limitTags={3} />
+          <Tags data={tags} limited />
         </div>
 
         <div className={styles.title}>

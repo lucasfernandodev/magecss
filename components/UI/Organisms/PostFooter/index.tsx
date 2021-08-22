@@ -1,15 +1,9 @@
-import Container from '../../Atoms/Container'
 import styles from './style.module.css';
-type Props = {
-  children: React.ReactNode;
-};
 
-const PostFooter = ({ children }: Props) => {
+const PostFooter: React.FC<any> = ({children}) => {
   return (
     <footer className={styles.footer}>
-
         {children}
-
     </footer>
   )
 };

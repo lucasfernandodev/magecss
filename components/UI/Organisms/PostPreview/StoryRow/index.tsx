@@ -56,7 +56,7 @@ const StoryRow = ({ data }: StoryProps) => {
 
       <footer>
         <div className={styles.tags}>
-          <Tags data={tags} limitTags={3} />
+          <Tags data={tags} limited />
         </div>
         <div className={styles.group_button}>
           <ButtonLike slug={slug} />

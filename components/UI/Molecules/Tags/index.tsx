@@ -3,44 +3,29 @@ import styles from "./style.module.css";
 import TagType from "@/types/tag";
 
 type Props = {
-  data: TagType[] | undefined;
-  limitTags?: number;
+  data: TagType[];
+  limited?: boolean | number | undefined;
 };
 
-const Tags = ({ data, limitTags }: Props) => {
-  let Tag = data;
-  const getTagPath = "/tags/";
-  
-  const fancy = data && data.length > 1 ? true : false;
-  if(fancy){
-    if (limitTags) {
-      if(typeof(data) != 'undefined'){
-        Tag = data.length > 1 ? data.slice(0, limitTags) : data;
-      }
-    }
-  }
-
+const Tags = ({ data, limited }: Props) => {
+  const limitedItems = 3;
+  const content =
+    limited && typeof limited != "undefined"
+      ? data.slice(0, limitedItems)
+      : data;
 
   return (
-    <>
-      {Tag && typeof(Tag[0]) !== 'undefined' ? (
-        <ul className={styles.tags}>
-          {Tag && Tag.length > 1 ? (
-            Tag.map((item) => (
-              <li key={item.id} className={styles.item} data-tag={item}>
-                <Link href={`${getTagPath}${item.slug}`}>{item.name}</Link>
-              </li>
-            ))
-          ) : (
-            <li className={styles.item} data-tag={Tag[0].name}>
-              <Link href={`${getTagPath}${Tag[0].slug}`}>
-                {Tag[0].name}
-              </Link>
-            </li>
-          )}
-        </ul>
-      ): null}
-    </>
+    <ul className={styles.tags}>
+      {content.map((tag) => (
+        <li
+          className={styles.item}
+          key={tag.slug}
+          data-tag={tag.name.toLowerCase()}
+        >
+          <Link href={`/tags/${tag.slug}`}>{tag.name}</Link>
+        </li>
+      ))}
+    </ul>
   );
 };
 

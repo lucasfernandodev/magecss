@@ -6,7 +6,7 @@ import Layout from "@/components/UI/Molecules/Layout";
 const FrontendTemplate = () => {
   return (
     <Layout>
-    <Head title="Frontend - MAGE CSS"/>
+    <Head title="Frontend"/>
 
     <Container>
     <Empty />

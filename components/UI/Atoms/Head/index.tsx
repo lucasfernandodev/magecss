@@ -2,7 +2,7 @@ import NextHead from "next/head";
 import { HOME_OG_IMAGE_URL, BASE_URL } from "../../../../lib/constants";
 
 type HeadProp = {
-  title: string;
+  title?: string;
   ogImage?: string;
 };
 
@@ -12,7 +12,7 @@ const Head = ({ title, ogImage }: HeadProp) => {
       {title ? (
         <title>{title} - MAGE CSS</title>
       ) : (
-        <title>MAGE CSS - Dicas de front-end</title>
+        <title>MAGE CSS</title>
       )}
 
       {ogImage ? (

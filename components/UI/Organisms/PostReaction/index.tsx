@@ -16,7 +16,7 @@ const PostReaction = ({ tags, slug }: Props) => {
   const {asPath} = Router;
   return (
     <Box direction="column" gap="16px" width="100%">
-    <Tags data={tags} limitTags={3} />
+    <Tags data={tags}/>
 
     <Box justifyContent="space-between" width="100%" alignItens="center">
       <Box justifyContent="flex-end">

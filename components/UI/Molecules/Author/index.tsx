@@ -18,7 +18,7 @@ const Author = ({ name, data, subtitle, large }: AuthorProp) => {
         <Avatar src={pathImage} name={name} size={98} />
       </div>
       <div className={styles["postauthor__Content"]}>
-        <span className="author-name">{name}</span>
+        <span className={`${styles.author_name}`}>{name}</span>
         <span className="author-data-post">
           {subtitle ? subtitle : "Erro subtitle não informado"}
         </span>

@@ -6,7 +6,7 @@ import Layout from "@/components/UI/Molecules/Layout";
 const LaboratoryTemplate = () => {
   return (
     <Layout>
-      <Head title="Laboratório - MAGE CSS" />
+      <Head title="Laboratório" />
 
       <Container>
         <Empty />

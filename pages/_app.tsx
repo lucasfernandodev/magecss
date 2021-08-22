@@ -11,6 +11,8 @@ import '../styles/global/ghostStyle.css';
 import '../styles/global/prismTheme.css';
 import '../styles/global.css';
 
+import '../styles/variaveis/colors-tecnologies.css';
+
 export default function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }

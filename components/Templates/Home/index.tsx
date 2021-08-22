@@ -21,7 +21,7 @@ const HomeTemplate = ({ lastPost, listPost, listTopics}: HomeProps) => {
 
   return (
     <Layout>
-      <Head title="MAGE CSS - Dicas de front-end"/>
+      <Head />
 
       <Container>
         <PostFeatured

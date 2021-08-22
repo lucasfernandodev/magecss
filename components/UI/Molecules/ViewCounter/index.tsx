@@ -1,7 +1,6 @@
+import Label from "@/Atoms/Label";
 import { useEffect } from "react";
 import useSWR from "swr";
-import Label from "../../Atoms/Label";
-import style from "./style.module.css";
 
 async function fetcher(...args: [string]) {
   const res = await fetch(...args);
@@ -28,10 +27,10 @@ export default function ViewCounter({ slug, observer, size }: ViewCountProp) {
 
       registerView();
     }
-  }, [slug]);
+  }, [slug, observer]);
 
   return (
-    <div className={`${style.viewCounter} ${style[`${size ? size : null}`]}`}>
+    <div>
       <Label icon="view" text={`${views > 0 ? views.toLocaleString() : ""} ${
             views === 1 ? "Visualização" : "Visualizações"
           }`} />

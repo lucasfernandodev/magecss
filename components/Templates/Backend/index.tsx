@@ -6,7 +6,7 @@ import Layout from "@/components/UI/Molecules/Layout";
 const BackendTemplate = () => {
   return (
     <Layout>
-      <Head title="Backend - MAGE CSS" />
+      <Head title="Backend" />
 
       <Container><Empty /></Container>
     </Layout>

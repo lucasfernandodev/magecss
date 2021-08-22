@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: space-between;
     background: var(--color-bg-components);
-    border: 2px solid rgba(0,0,0,0.2);
+    border: 2px solid var(--color-border-dark);
     border-radius: 4px;
 }
 
@@ -18,8 +18,8 @@
 }
 
 .list section{
-    border-top: 2px solid rgba(0,0,0,0.2);
-    border-bottom: 2px solid rgba(0,0,0,0.2);
+    border-top: 2px solid var(--color-border-dark);
+    border-bottom: 2px solid var(--color-border-dark);
 }
 
 .list header{
@@ -63,10 +63,12 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 16px;
+    
 }
 
 .list section ul li{
-    width: 100%
+    width: 100%;
+
 }
 
 .list section ul li a:hover *{

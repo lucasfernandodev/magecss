@@ -26,6 +26,7 @@ const PostTemplate = ({ post }: GhostProps) => {
           date={post.published_at}
           summary={post.excerpt}
           slug={post.slug}
+          reading_time={post.reading_time}
         />
         <Article
           content={post.html}

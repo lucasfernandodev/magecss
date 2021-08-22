@@ -1,0 +1,15 @@
+:root{
+  --tag-html: #f06529;
+  --tag-css: #2965f1;
+  --tag-javascript: #f0db4f;
+  --tag-reactjs: #61DBFB;
+  --tag-node: #68a063;
+  --tag-nextjs: #111;
+  --tag-python: #FFD43B;
+  --tag-facebook: #4267B2;
+  --tag-ruby: #cc0000;
+  --tag-frontend: #111;
+  --tag-backend: #fff;
+  --tag-bootstrap: #563d7c;
+  --tag-all: #7158e2;
+}
