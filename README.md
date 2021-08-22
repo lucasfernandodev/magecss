@@ -2,7 +2,7 @@
 
 [PRONTO] criar uma page FRONTEND, BACKEND e LABORATÓRIO
 [ADIADO] Add comentários
-[PRONTO] add links de redes sociais no fPooter
+[PRONTO] add links de redes sociais no footer
 [PRONTO] estilizar o HMTL das postagens
 - Criar menu dropdown;
 - Adicionar responsividade a todos os elementos
@@ -24,4 +24,8 @@
 [Pronto] O postPreview deveria estar com h2 mais o postPreview com layout-column está com h3
 - Adicionar componente de SEO
 [Pronto] Resolver problema dos Title das page duplicado
+- Transformar o icone de search em um componente / button
+- Transformar o icon de github em component (footer)
+- Estilizar as listas / adicionar opção de featured;
+- Estilizar artigos na versão mobile
 <!-- ////////////// -->

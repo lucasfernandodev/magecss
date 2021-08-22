@@ -1,7 +1,6 @@
-import { ReactNode, FunctionComponent } from 'react'
-import styles from './style.module.css';
+import cn from "classnames";
+import styles from "./style.module.css";
 type Props = {
-  children?: ReactNode;
   alignX?: string;
   alignY?: string;
   display?: string;
@@ -9,24 +8,39 @@ type Props = {
   wrap?: string;
   direction?: string;
   gap?: number;
-}
+};
 
-const Container = ({ children, alignX,direction, alignY, display, overflow, wrap, gap }: Props) => {
+const Container: React.FC<Props> = ({
+  children,
+  alignX,
+  direction,
+  alignY,
+  display,
+  overflow,
+  wrap,
+  gap,
+}) => {
+  
+  const classNamesContainer = cn(
+    `${styles.container}`,
+    `${typeof alignX != "undefined" ? styles[`align-x-${alignX}`] : ""}`,
+    `${typeof alignY != "undefined" ? styles[`align-y-${alignY}`] : ""}`,
+    `${typeof display != "undefined" ? styles[`display-${display}`] : ""}`,
+    `${typeof overflow != "undefined" ? styles[`overflow-${overflow}`] : ""}`,
+    `${
+      typeof direction != "undefined" ? styles[`direction-${direction}`] : ""
+    }`,
+    `${typeof wrap != "undefined" ? styles[`wrap-${wrap}`] : ""}`
+  );
 
   return (
-  <div style={{gap:`${gap}px` }}className={ `
-    ${styles.container}
-    ${alignX ? styles[`align-x-${alignX}`] : " "}
-    ${alignY ? styles[`align-y-${alignY}`] : " "}
-    ${display ? styles[`display-${display}`] : " "}
-    ${overflow ? styles[`overflow-${overflow}`] : " "}
-    ${direction ? styles[`direction-${direction}`] : " "}
-    ${wrap ? styles[`wrap-${wrap}`] : ""}
-    `
-    }>
-    {children}
-  </div>
-  )
-}
+    <div
+      style={{ gap: `${typeof gap !== "undefined" ? gap : 0}px` }}
+      className={classNamesContainer}
+    >
+      {children}
+    </div>
+  );
+};
 
-export default Container
+export default Container;

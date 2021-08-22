@@ -7,7 +7,6 @@ import PostMeta from "@/components/UI/Molecules/PostMeta";
 import TagType from "@/types/tag";
 import Title from "@/components/UI/Atoms/Title";
 import Author from "@/components/UI/Molecules/Author";
-import cn from "classnames";
 
 type Data = {
   title: string;

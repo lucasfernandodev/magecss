@@ -1,4 +1,4 @@
-import Icon from "../../../Utils/Icon";
+import Icon from "@/Utils/Icon";
 import style from "./style.module.css";
 
 type Props = {
@@ -8,10 +8,10 @@ type Props = {
   style?: React.CSSProperties; 
 };
 
-const Label: React.FC<Props> = ({size, text, icon, ...arg}) => {
+const Label: React.FC<Props> = ({size, text, icon}) => {
 
   return (
-    <div className={style.label} {...arg}>
+    <div className={style.label}>
       <span className={style.label__icon}>
         {icon ? <Icon width={20} height={20} icon={icon} strokeWidth={2}/> : null}
       </span>

@@ -1,16 +1,19 @@
 import styles from "./style.module.css";
 import Avatar from "@/components/UI/Atoms/Avatar";
 import DataFormatter from "@/components/UI/Atoms/DateFormatter";
+
 type AuthorProp = {
   src?: string;
   name: string;
   data?: string;
-  subtitle?: string;
   large?: boolean;
 };
 
-const Author = ({ name, data, subtitle, large }: AuthorProp) => {
-  const pathImage = '/assets/author/lucas-transparent.png'
+const Author = ({ name, data, large }: AuthorProp) => {
+  const subtitle =
+    "Dev Apaixonado por Tecnologia & Educação! Evolua rápido como a tecnologia, aprendizado é contínuo e sempre haverá um próximo nível. Boost Yourself! 🚀";
+
+  const pathImage = "/assets/author/lucas-transparent.png";
 
   const PostAuthor = (
     <div className={styles.postAuthor}>
@@ -19,10 +22,15 @@ const Author = ({ name, data, subtitle, large }: AuthorProp) => {
       </div>
       <div className={styles["postauthor__Content"]}>
         <span className={`${styles.author_name}`}>{name}</span>
-        <span className="author-data-post">
-          {subtitle ? subtitle : "Erro subtitle não informado"}
-        </span>
-        <a target="_blank" rel="noreferrer" href="https://www.instagram.com/lucasfernandodev/" className={styles.button}>Seguir</a>
+        <span className="author-data-post">{subtitle}</span>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.instagram.com/lucasfernandodev/"
+          className={styles.button}
+        >
+          Seguir
+        </a>
       </div>
     </div>
   );

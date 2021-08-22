@@ -60,7 +60,7 @@ const StoryRow = ({ data }: StoryProps) => {
         </div>
         <div className={styles.group_button}>
           <ButtonLike slug={slug} />
-          <ButtonComment onClick={() => {}} />{" "}
+          <ButtonComment onClick={() => {}} />
         </div>
 
         <PostMeta slug={slug} reading_time={reading_time} />

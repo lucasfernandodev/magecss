@@ -1,6 +1,9 @@
 import Link from "@/components/UI/Atoms/Link";
 import styles from "./style.module.css";
+
+
 function Navbar() {
+  
   return (
     <nav className={styles.navbar}>
       <ul>

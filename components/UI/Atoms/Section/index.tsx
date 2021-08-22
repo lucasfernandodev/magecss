@@ -3,7 +3,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Article = ({ children }: Props) => {
+const Section = ({ children }: Props) => {
   return (
     <section className={styles.section}>
       {children}
@@ -11,4 +11,4 @@ const Article = ({ children }: Props) => {
   );
 };
 
-export default Article;
+export default Section;

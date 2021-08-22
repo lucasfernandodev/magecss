@@ -7,17 +7,15 @@ import Icon from "@/components/Utils/Icon";
 import Box from "@/components/UI/Atoms/Box";
 import ButtonLike from "@/components/UI/Molecules/ButtonLike";
 import ButtonComment from "@/components/UI/Molecules/ButtonComment";
-import Tags from "@/components/UI/Molecules/Tags";
-import TagsType from '@/types/tag';
+
 type Props = {
   title: string;
   coverImage: string;
   summary: string;
   slug: string;
-  tags: TagsType[];
 };
 
-const PostFeatured = ({ title,tags, coverImage, summary, slug }: Props) => {
+const PostFeatured = ({ title, coverImage, summary, slug }: Props) => {
 
   return (
     <section className={styles.PostFeatured} style={{backgroundImage: `url(${coverImage})`}}>
@@ -34,14 +32,14 @@ const PostFeatured = ({ title,tags, coverImage, summary, slug }: Props) => {
         
         <div className={styles.PostFeatured__title}>
           <Link as={`/posts/${slug}`} href="/posts/[slug]">
-            <Title variant="h2">
-            {title}
-            </Title>
+            <Title variant="h2" text={title} />
           </Link>
         </div>
 
         <div className={styles.PostFeatured__subtitle}>
-          <Summary limitRow={4}>{summary}</Summary>
+          <Summary limitRow={4}>
+            {summary}
+          </Summary>
         </div>
 
         <div className={styles.PostFeatured__more}>

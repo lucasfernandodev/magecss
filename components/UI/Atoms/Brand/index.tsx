@@ -1,8 +1,7 @@
 import Link from "@/components/UI/Atoms/Link";
 import styles from "./style.module.css";
 
-const Brand = () => {
-  return (
+const Brand = () => (
     <div className={styles["brand"]}>
       <Link href="/">
         <h1 className={styles["brand__title"]}>
@@ -23,6 +22,5 @@ const Brand = () => {
       </Link>
     </div>
   );
-};
 
 export default Brand;

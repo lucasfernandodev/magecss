@@ -2,8 +2,8 @@ import Section from "@/components/UI/Atoms/Section";
 import Header from "@/components/UI/Organisms/PostHeader";
 import Article from "@/components/UI/Organisms/PostBody";
 import Footer from "@/components/UI/Organisms/PostFooter";
-import Layout from "@/components/UI/Molecules/Layout";
-import Head from "@/components/UI/Atoms/Head";
+import Layout from "@/components/Utils/Layout";
+import Head from "@/components/Utils/Head";
 
 import PostReaction from "@/components/UI/Organisms/PostReaction";
 import PostType from "@/types/post";
@@ -15,7 +15,7 @@ type GhostProps = {
 }
 
 const PostTemplate = ({ post }: GhostProps) => {
-  const bioAuthor = 'Dev Apaixonado por Tecnologia & Educação! Evolua rápido como a tecnologia, aprendizado é contínuo e sempre haverá um próximo nível. Boost Yourself! 🚀'
+ 
 
   return (
     <Layout pageType="primary">
@@ -35,7 +35,7 @@ const PostTemplate = ({ post }: GhostProps) => {
         />
         <Footer>
           <PostReaction  slug={post.slug} tags={post.tags}/>
-          <Author name={'Lucas Fernando'} src="/assets/author/lucas-transparent.png" subtitle={bioAuthor} large/>
+          <Author name={'Lucas Fernando'} src="/assets/author/lucas-transparent.png" large/>
         </Footer>
       </Section>
     </Layout>

@@ -7,11 +7,11 @@ type LinkProp = {
   onClick?: () => void
 }
 
-const Link  = ({href,as, children,onClick}: LinkProp) => {
+const Link: React.FC<LinkProp> = ({href,as, children,onClick}) => {
   return(
-    <NextLink href={href} as={as} passHref>
+    <NextLink as={as} href={href} passHref>
       <a onClick={onClick} className={styles.link}>
-      {children}
+        {children}
       </a>
     </NextLink>
   )

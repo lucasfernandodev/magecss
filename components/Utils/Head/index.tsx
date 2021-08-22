@@ -1,5 +1,5 @@
 import NextHead from "next/head";
-import { HOME_OG_IMAGE_URL, BASE_URL } from "../../../../lib/constants";
+import { HOME_OG_IMAGE_URL, BASE_URL } from "../../../lib/constants";
 
 type HeadProp = {
   title?: string;

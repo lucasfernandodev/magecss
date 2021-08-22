@@ -11,7 +11,7 @@
 }
 
 .header .content {
-  color: var(--color-title-primary);
+  color: var(--color-title);
   width: 100%;
   max-width: var(--width-post);
   margin: 0 auto;

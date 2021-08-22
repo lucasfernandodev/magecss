@@ -26,8 +26,7 @@ const List = ({ data, id }: ListsProp) => {
 
           <section>
             <ul>
-              {data &&
-                data.content.map((item, key) => (
+              {data && data.content.map((item, key) => (
                   <li key={key}>
                     <Link href={`/posts/${item.slug}`}>
                       <Title variant="h4">{item.title}</Title>

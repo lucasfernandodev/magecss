@@ -1,5 +1,5 @@
-import Layout from "@/components/UI/Molecules/Layout";
-import Head from "@/components/UI/Atoms/Head";
+import Layout from "@/components/Utils/Layout";
+import Head from "@/components/Utils/Head";
 import Section from "@/components/UI/Atoms/Section";
 import Header from "@/components/UI/Organisms/Header";
 import Container from "@/components/UI/Atoms/Container";

@@ -1,9 +1,6 @@
 import style from "./style.module.css";
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import FeedContext from '@/components/Context/Feed';
-
-
-
 
 
 
@@ -14,10 +11,10 @@ const FeedMenu = () => {
 
   const ToggleTab = (e: string) => {
     changeTab(e);
+    
     if(e !== stateTab){
       setStateTab(e);
     }
-
   }
 
   return (

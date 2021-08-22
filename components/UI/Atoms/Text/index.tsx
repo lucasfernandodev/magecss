@@ -1,15 +1,20 @@
-import styles from './style.module.css';
+import styles from "./style.module.css";
+import cn from "classnames";
 
 type Props = {
-    children : React.ReactNode
-    color?: string;
-    fontSize?: string;
+  color?: string;
+  fontSize?: string;
 };
 
-const Text  = ({children, color, fontSize}: Props) => {
-    return (
-        <p className={`${styles.text} ${color ? styles[`color-${color}`] : null} ${fontSize ? styles[`font-size-${fontSize}`] : null}`}>{children}</p>
-    )
+const Text: React.FC<Props> = ({ children, color, fontSize }) => {
+    
+  const classNameText = cn(
+    `${styles.text}`,
+    `${color ? styles[`color-${color}`] : null}`,
+    `${fontSize ? styles[`font-size-${fontSize}`] : null}`
+  );
+
+  return <p className={classNameText}>{children}</p>;
 };
 
 export default Text;

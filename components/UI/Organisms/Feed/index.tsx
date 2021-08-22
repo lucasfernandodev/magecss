@@ -1,6 +1,6 @@
 import styles from "./style.module.css";
 import FeedMenContext from "@/components/Context/Feed";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import PostType from "@/types/post";
 import Title from "@/components/UI/Atoms/Title";
 import PostPreview from "@/components/UI/Organisms/PostStory";
