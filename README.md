@@ -6,7 +6,7 @@
 [PRONTO] estilizar o HMTL das postagens
 - Criar menu dropdown;
 - Adicionar responsividade a todos os elementos
-[Pronto] corrigir fontes das tags
+[PRONTO] corrigir fontes das tags
 - adicionar page de Busca
 - add Cooke para views
 [PRONTO] add lista de cores das tags
@@ -17,15 +17,17 @@
 - Add / no url do site
 - lincar o botão de comentários com o componente de comentário dentro do post
 - Remover o site fornecido pelo ghost por padrão
-[Pronto] editar paginas de tags
+[PRONTO] editar paginas de tags
 - adicionar siteMap
 - Criar um readme apresentável..
-[Pronto] Add page de erro
-[Pronto] O postPreview deveria estar com h2 mais o postPreview com layout-column está com h3
+[PRONTO] Add page de erro
+[PRONTO] O postPreview deveria estar com h2 mais o postPreview com layout-column está com h3
 - Adicionar componente de SEO
-[Pronto] Resolver problema dos Title das page duplicado
+[PRONTO] Resolver problema dos Title das page duplicado
 - Transformar o icone de search em um componente / button
 - Transformar o icon de github em component (footer)
-- Estilizar as listas / adicionar opção de featured;
+[Pronto] Estilizar as listas / adicionar opção de featured;
 - Estilizar artigos na versão mobile
+[PRONTO] Add &:hover muda de cor de acordo com a cor da tag no menu de list
+[PRONTO] corrigir erro de imagens de card
 <!-- ////////////// -->

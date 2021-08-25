@@ -7,11 +7,12 @@ import '../styles/config/scrollbar.css';
 import '../styles/variaveis/sizes.css';
 import '../styles/variaveis/colors.css';
 
+import '../styles/global/tags.css';
 import '../styles/global/ghostStyle.css';
 import '../styles/global/prismTheme.css';
 import '../styles/global.css';
 
-import '../styles/variaveis/colors-tecnologies.css';
+import '../styles/variaveis/colors-tags.css';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />

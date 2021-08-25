@@ -24,12 +24,12 @@
   overflow: hidden;
 }
 
-.card header .card-thumbnail img {
+.card header img {
   background: var(--color-dark);
   transition: 0.3s linear;
   width: 100%;
   height: 260px;
-  max-height: 300px;
+  max-height: 260px;
   overflow: hidden;
   width: 100%;
   max-width: 100%;

@@ -12,7 +12,11 @@ type GhostProps = {
 const Index = ({ posts }: GhostProps) => {
 
   const postAll = posts;
-  return <Posts posts={postAll} />;
+  return (
+   <>
+    {posts !== null ?<Posts posts={postAll} /> : null}
+   </>
+  )
 };
 
 export default Index;

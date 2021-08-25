@@ -1,12 +1,13 @@
 .link{
-  color: var(--color-text);
+  color: currentColor;
   text-decoration: none;
+  transform: 0.2s;
 }
 
-.link *:hover{
-  color: var(--color-secondary-dark);
+.link a:hover{
+  color: var(--color-primary);
 }
 
 .link:hover{
-  color: var(--color-secondary-dark);
+  color: var(--color-primary);
 }

@@ -13,7 +13,7 @@
     margin: 16px 0;
 }
 
-.list header, .list section,.list footer{
+.list header,.list footer{
     padding: 16px;
 }
 
@@ -68,10 +68,29 @@
 
 .list section ul li{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 14px 16px;
+}
+
+.list section ul li a{
+    display: flex;
+    width: 100%;
 
 }
 
-.list section ul li a:hover *{
-    color: var(--color-secondary);
+.list section ul li:hover{
+    color: var(--color-primary);
+    background: var(--color-dark);
 }
 
+.list section ul li:hover a *{
+    color: currentColor;
+}
+
+.list a footer{
+    width: 100%;
+    height: 100%;
+    display: block;
+}

@@ -1,0 +1,142 @@
+.tag[data-tag]:hover {
+  color: var(--tag-all);
+  stroke: var(--tag-all);
+}
+.tag[data-tag="html"]:hover {
+  color: var(--tag-html);
+  stroke: var(--tag-html);
+}
+.tag[data-tag="css"]:hover {
+  color: var(--tag-css);
+  stroke: var(--tag-css);
+}
+.tag[data-tag="javascript"]:hover {
+  color: var(--tag-javascript);
+  stroke: var(--tag-javascript);
+}
+.tag[data-tag="reactjs"]:hover {
+  color: var(--tag-reactjs);
+  stroke: var(--tag-reactjs);
+}
+.tag[data-tag="node"]:hover {
+  color: var(--tag-node);
+  stroke: var(--tag-node);
+}
+.tag[data-tag="nextjs"]:hover {
+  color: var(--tag-nextjs);
+  stroke: var(--tag-nextjs);
+}
+.tag[data-tag="python"]:hover {
+  color: var(--tag-python);
+  stroke: var(--tag-python);
+}
+.tag[data-tag="facebook"]:hover {
+  color: var(--tag-facebook);
+  stroke: var(--tag-facebook);
+}
+.tag[data-tag="ruby"]:hover {
+  color: var(--tag-ruby);
+  stroke: var(--tag-ruby);
+}
+.tag[data-tag="frontend"]:hover {
+  color: var(--tag-frontend);
+  stroke: var(--tag-frontend);
+}
+.tag[data-tag="backend"]:hover {
+  color: var(--tag-backend);
+  stroke: var(--tag-backend);
+}
+.tag[data-tag="bootstrap"]:hover {
+  color: var(--tag-bootstrap);
+  stroke: var(--tag-bootstrap);
+}
+.tag[data-tag="all"]:hover {
+  color: var(--tag-all);
+  stroke: var(--tag-all);
+}
+
+.tag[data-tag] *:hover {
+  color: var(--tag-all);
+}
+.tag[data-tag="html"] *:hover {
+  color: var(--tag-html);
+}
+.tag[data-tag="css"] *:hover {
+  color: var(--tag-css);
+}
+.tag[data-tag="javascript"] *:hover {
+  color: var(--tag-javascript);
+}
+.tag[data-tag="reactjs"] *:hover {
+  color: var(--tag-reactjs);
+}
+.tag[data-tag="node"] *:hover {
+  color: var(--tag-node);
+}
+.tag[data-tag="nextjs"] *:hover {
+  color: var(--tag-nextjs);
+}
+.tag[data-tag="python"] *:hover {
+  color: var(--tag-python);
+}
+.tag[data-tag="facebook"] *:hover {
+  color: var(--tag-facebook);
+}
+.tag[data-tag="ruby"] *:hover {
+  color: var(--tag-ruby);
+}
+.tag[data-tag="frontend"] *:hover {
+  color: var(--tag-frontend);
+}
+.tag[data-tag="backend"] *:hover {
+  color: var(--tag-backend);
+}
+.tag[data-tag="bootstrap"] *:hover {
+  color: var(--tag-bootstrap);
+}
+.tag[data-tag="all"] *:hover {
+  color: var(--tag-all);
+}
+
+.tag-highlight[data-tag] {
+  stroke: var(--tag-all);
+}
+.tag-highlight[data-tag="html"] {
+  stroke: var(--tag-html);
+}
+.tag-highlight[data-tag="css"] {
+  stroke: var(--tag-css);
+}
+.tag-highlight[data-tag="javascript"] {
+  stroke: var(--tag-javascript);
+}
+.tag-highlight[data-tag="reactjs"] {
+  stroke: var(--tag-reactjs);
+}
+.tag-highlight[data-tag="node"] {
+  stroke: var(--tag-node);
+}
+.tag-highlight[data-tag="nextjs"] {
+  stroke: var(--tag-nextjs);
+}
+.tag-highlight[data-tag="python"] {
+  stroke: var(--tag-python);
+}
+.tag-highlight[data-tag="facebook"] {
+  stroke: var(--tag-facebook);
+}
+.tag-highlight[data-tag="ruby"] {
+  stroke: var(--tag-ruby);
+}
+.tag-highlight[data-tag="frontend"] {
+  stroke: var(--tag-frontend);
+}
+.tag-highlight[data-tag="backend"] {
+  stroke: var(--tag-backend);
+}
+.tag-highlight[data-tag="bootstrap"] {
+  stroke: var(--tag-bootstrap);
+}
+.tag-highlight[data-tag="all"] {
+  stroke: var(--tag-all);
+}
