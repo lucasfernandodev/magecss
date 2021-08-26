@@ -17,9 +17,21 @@
     cursor: pointer;
     border-bottom: 4px solid transparent;
 }
+
+@media (max-width: 639px){
+    .feedMenu ul{
+        gap: 8px
+    }
+
+    .feedMenu ul li{
+        padding: 6px;
+    }
+}
+
 .feedMenu ul li:hover{
     background: rgba(55, 55, 55, 0.5);
 }
+
 .feedMenu ul li[data-active="true"]{
     border-bottom: 4px solid var(--color-primary);
     color: var(--color-text);
