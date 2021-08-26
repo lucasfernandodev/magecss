@@ -17,7 +17,7 @@ const List = ({ data, id, featured }: ListsProp) => {
     <div className={styles.list}>
       <header>
         {id === 0 ? null : (
-          <Icon ClassName="tag" data-tag={data.slug.toLowerCase()} strokeWidth={2} icon="hash" height={30} width={30} />
+          <Icon data-tag={data.slug.toLowerCase()} strokeWidth={2} icon="hash" height={30} width={30} />
         )}
 
         {featured === false ? (
