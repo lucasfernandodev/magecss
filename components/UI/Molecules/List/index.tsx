@@ -16,14 +16,12 @@ const List = ({ data, id, featured }: ListsProp) => {
   return (
     <div className={styles.list}>
       <header>
-        {id === 0 ? null : (
-          <Icon data-tag={data.slug.toLowerCase()} strokeWidth={2} icon="hash" height={30} width={30} />
-        )}
 
         {featured === false ? (
-          <Link href={`/tags/${data.slug.toLowerCase()}`}>
+          <Link className="tag" href={`/tags/${data.slug.toLowerCase()}`} data-tag={data.slug.toLowerCase()}>
+            <Icon strokeWidth={2} icon="hash" height={30} width={30} />
             <Title variant="h3">
-              <span className="tag" data-tag={data.slug}>{data.title}</span>
+            {data.title}
             </Title>
           </Link>
         ) : (

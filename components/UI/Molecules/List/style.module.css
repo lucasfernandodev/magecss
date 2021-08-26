@@ -28,6 +28,16 @@
     align-items: center;
 }
 
+.list header a{
+    display: flex;
+    align-items: center;
+}
+
+.list header a:hover *{
+    stroke: currentColor;
+    color: currentColor;
+}
+
 
 .list header *{
     margin: 0;

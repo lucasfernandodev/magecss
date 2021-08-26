@@ -8,7 +8,7 @@ export const iconMap: Record<string, iconProvider> = {
   hash: {
     icon: (
       <g>
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path strokeWidth="0" d="M0 0h24v24H0z" fill="none"></path>
         <line x1="5" y1="9" x2="19" y2="9"></line>
         <line x1="5" y1="15" x2="19" y2="15"></line>
         <line x1="11" y1="4" x2="7" y2="20"></line>
