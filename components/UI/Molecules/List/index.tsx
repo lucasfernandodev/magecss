@@ -4,13 +4,13 @@ import Title from "@/components/UI/Atoms/Title";
 import Icon from "@/components/Utils/Icon";
 import Badge from "@/components/UI/Atoms/Badge";
 import ListType from "@/types/list";
+
 type ListsProp = {
   data: ListType;
-  id: number;
   featured?: boolean;
 };
 
-const List = ({ data, id, featured }: ListsProp) => {
+const List = ({ data, featured }: ListsProp) => {
 
 
   return (
@@ -45,9 +45,9 @@ const List = ({ data, id, featured }: ListsProp) => {
             ))}
         </ul>
       </section>
+
       {featured !== false ?
       (
-        
           <Link href={`/tags/${data.slug}`}>
             <footer>
             Ver todas as postagens

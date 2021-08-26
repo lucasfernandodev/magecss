@@ -20,3 +20,38 @@
   position: relative;
  
 }
+.header .button-navigation{
+  display: none;
+}
+
+@media (max-width: 639px){
+  .header{
+    height: 100px;
+  }
+
+  .header .group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 5000;
+
+  }
+
+  .header .group[data-navigationVisivility="true"]{
+    position: fixed;
+  }
+
+  
+  .header .button-navigation{
+    display: block;
+    background: none;
+    border: none;
+    margin-right: 8px;
+  }
+  
+  .header .button-navigation svg{
+    height: 26px;
+    width: 26px;
+  }
+}

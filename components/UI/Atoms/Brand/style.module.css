@@ -28,3 +28,13 @@
   height: 45px;
   width: 45px;
 }
+
+@media (max-width: 639px){
+  .brand__title h1{
+    font-size: 18px;
+  }
+  .brand svg{
+    height: 30px;
+    width: 30px;
+  }
+}
