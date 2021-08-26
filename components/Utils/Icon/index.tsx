@@ -40,7 +40,7 @@ const Icon: React.FC<Props> = ({
       height={data.height}
       {...arg}
     >
-      {iconMap[icon].icon}
+      {iconMap[icon] ? iconMap[icon].icon : 'error de icon'}
     </svg>
   );
 };

@@ -19,7 +19,7 @@ const socialShareMap: Record<string, SocialShareProvider> = {
   },
   LinkedIn: {
     shareUrl: "http://www.linkedin.com/shareArticle?mini=true&url=",
-    display: <Icon icon="linkedin" />,
+    display: <Icon icon="linkedIn" />,
   },
 };
 
