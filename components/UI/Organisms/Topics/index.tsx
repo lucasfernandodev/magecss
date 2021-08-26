@@ -8,7 +8,7 @@ type Props = {
 
 const Topics: React.FC<Props> = ({ listTopics }) => (
   <aside className={style.TopicsList}>
-    {listTopics.map((list, key) => ( <List key={key} id={key} data={list} featured={key === 0 ? true : false} /> ))}
+    {listTopics.map((list, key) => ( <List key={key} data={list} featured={key === 0 ? true : false} /> ))}
   </aside>
 );
 
